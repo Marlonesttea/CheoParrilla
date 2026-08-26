@@ -1,0 +1,73 @@
+.admin-container {
+    padding-top: 100px;
+    margin: auto;
+    text-align: center;
+    
+}
+.nav-admin {
+    display: inline-block;
+    gap: 50px;
+    margin: auto;
+   
+}
+.nav-admin a {
+color: black;
+margin: 50px 10px;
+}
+
+ /* CONTENEDOR DASHBOARD */
+.admin-container-dashboard {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.dashboard-card {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* ESTADÍSTICAS */
+.adm-stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stat-total { background-color: #2ecc71; }
+.stat-activos { background-color: #3498db; }
+.stat-inactivos { background-color: #e74c3c; }
+
+/* BOTONES DE ACCIÓN */
+.adm-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.adm-buttons a {
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.adm-buttons a:hover {
+    transform: scale(1.05);
+}
+
+.btn-crear { background-color: #2ecc71; }
+.btn-editar { background-color: #3498db; }
+.btn-salir  { background-color: #e67e22; }

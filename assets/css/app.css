@@ -1,0 +1,18 @@
+/* ========= base ======= */
+@import url('./base/global.css');
+
+
+/* ========= componentes ======= */
+@import url('./componentes/navbar.css');
+
+
+/* ========= layout ======= */
+@import url('./layout/styles.css');
+@import url('./layout/style.css');
+
+
+
+/* ========= paginas ======= */
+@import url('./paginas/admin.css');
+@import url('./paginas/crear.css');
+@import url('./paginas/menu.css');

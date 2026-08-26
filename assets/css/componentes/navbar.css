@@ -1,0 +1,42 @@
+/* NAVBAR */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-link:hover {
+    color: inherit;
+    border: 0;
+    text-decoration: none;
+    transform: none;
+    font-size: inherit;
+}
+
+.nav > nav:last-child {
+    text-align: right;
+}
+
+nav a {
+    margin-left: 20px;
+    transition: 0.3s;
+
+}
