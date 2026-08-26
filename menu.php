@@ -25,3 +25,5 @@ incluirTemplates('header');
 
 
     <?php  //include 'includes/templates/footer.php' ?>
+
+    
