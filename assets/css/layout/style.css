@@ -12,7 +12,7 @@ a{
     color: white;
 }
 
-a:not(.btn):not(.logo-link):not(.social-links a):hover{
+a:not(.btn):not(.logo-link):not(.social-links a):not(.btn-enviar1):hover{
     color: #ffffff;
     text-decoration: underline white;
     border: 1px solid #ff0000;
@@ -25,7 +25,7 @@ a:not(.btn):not(.logo-link):not(.social-links a):hover{
     margin-top: 20px;
 }
 
-a:not(.logo-link):not(.btn):not(.social-links a):hover::after {
+a:not(.logo-link):not(.btn):not(.social-links a):not(.btn-enviar1):hover::after {
     content: "\f06d";
     margin-left: 8px;
     color: #ff7b00;
@@ -330,6 +330,7 @@ a:not(.logo-link):not(.btn):not(.social-links a):hover::after {
 .contacto {
     padding: 100px 20px;
     text-align: center ;
+    
 }
 
 .contacto h1 {
@@ -341,6 +342,8 @@ a:not(.logo-link):not(.btn):not(.social-links a):hover::after {
     margin-bottom: 30px;
     color: #111;
 }
+
+
 
 .formulario{
     max-width: 700px;
@@ -367,6 +370,7 @@ a:not(.logo-link):not(.btn):not(.social-links a):hover::after {
 .campo label{
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
 
 .campo input,
@@ -424,4 +428,38 @@ textarea{
     margin: auto;
     border-radius: 10px;
 }
+
+.btn-enviar1{
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: 0.3s;
+    gap: 10px;
+    margin-left: auto;
+    float: inline-end;
+}
+.btn-enviar1:hover{
+    color: #ff5714;
+    font-size: 18px;
+
+}
+#principal{
+    color: white;
+}
+
+#subtitulo{
+    color:white;
+}
+
+
+.prueba {
+    
+}
+
+
 
