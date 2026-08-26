@@ -28,7 +28,7 @@
             </a>
             <nav>
 
-                <a href="<?php echo BASE_URL;?>index.php#">Pedir Ahora</a>
+                <a href="<?php echo BASE_URL;?>pedir.php">Pedir Ahora</a>
                 <a href="<?php echo BASE_URL;?>index.php#">Reservas</a>
                 <a href="<?php echo BASE_URL;?>contacto.php">Contacto</a>
                 <a href="<?php echo BASE_URL;?>index.php#redes">Redes</a>

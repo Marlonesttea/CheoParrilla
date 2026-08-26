@@ -10,8 +10,7 @@ incluirTemplates('header');
 
     <section class="container contacto">
         <h1> Contáctanos</h1>
-        <p>Déjanos tu mens
-            aje y te responderemos pronto</p>
+        <p>Déjanos tu mensaje y te responderemos pronto</p>
 
         <form class="formulario">
             <div class="fila">
