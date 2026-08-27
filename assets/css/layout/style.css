@@ -425,3 +425,7 @@ textarea{
     border-radius: 10px;
 }
 
+.fondo-contacto {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}

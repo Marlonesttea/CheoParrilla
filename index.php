@@ -6,6 +6,7 @@ incluirTemplates('header');
 
 // include 'includes/templates/header.php';
 ?>
+
     <!-- hero    -->
     <section class="hero">
         <div class="overlay"></div>
