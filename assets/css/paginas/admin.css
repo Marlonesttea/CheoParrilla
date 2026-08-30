@@ -71,3 +71,19 @@ margin: 50px 10px;
 .btn-crear { background-color: #2ecc71; }
 .btn-editar { background-color: #3498db; }
 .btn-salir  { background-color: #e67e22; }
+
+@media (max-width: 768px) {
+    .adm-stats,
+    .adm-buttons {
+        flex-direction: column;
+    }
+
+    .stat-card,
+    .adm-buttons a {
+        width: 100%;
+    }
+
+    .admin-container {
+        padding-top: 70px;
+    }
+}

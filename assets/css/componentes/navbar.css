@@ -11,10 +11,12 @@
 }
 
 .nav {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     color: white;
+    position: relative;
+    justify-content: space-around;
 }
 
 .logo {
@@ -38,5 +40,130 @@
 nav a {
     margin-left: 20px;
     transition: 0.3s;
+}
 
+.nav-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.nav-group--right {
+    justify-content: flex-end;
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 30;
+}
+
+.nav-toggle span {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(260px, calc(100vw - 32px));
+    background: rgba(13, 13, 13, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    z-index: 25;
+}
+
+.nav-panel.is-open {
+    display: block;
+}
+
+.nav-panel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-panel-links a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: left;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+.nav-panel-links a:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.16);
+    
+}
+
+@media (max-width: 900px) {
+    .header {
+        position: sticky;
+    }
+
+    .nav {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 10px;
+        padding: 12px 8px;
+        text-align: center;
+    }
+
+    .nav-group {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+        justify-self: end;
+    }
+
+    .logo-link {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        padding: 10px 6px;
+    }
+
+    .logo {
+        max-width: 90px;
+    }
 }

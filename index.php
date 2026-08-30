@@ -1,6 +1,6 @@
 <?php 
 
-$scripts = ['app']; // JS global
+$scripts = ['app', 'carrusel']; // JS global
 require 'includes/funciones.php';
 incluirTemplates('header');
 
@@ -12,12 +12,13 @@ incluirTemplates('header');
         <div class="overlay"></div>
         <img src="img/logoc.png" class="hero-logo" alt="logo">
         <div class="hero-content">
-            <h1>CheoParrilla</h1>
+            <h1 class="cheoTransicion">CheoParrilla</h1>
             <p>Hamburguesas artesanales y algo más...</p>
             <h4>Cheo Parrilla es el lugar ideal para disfrutar del auténtico sabor de la parrilla. Ubicado en el Barrio Blanquizal, ofrece una amplia variedad de hamburguesas, carnes, picadas y más, preparados con ingredientes de alta calidad y el mejor sabor. Un espacio pensado para compartir en familia o con amigos, donde cada plato se convierte en una experiencia deliciosa. </h4>
             <a href="menu.php" class="btn">Menú</a>
             <a href="#menu" class="btn">Pedir a domicilio</a>
             <a href="#menu" class="btn">Reservar mesa</a>
+            
         </div>
     </section>
 
@@ -25,7 +26,7 @@ incluirTemplates('header');
         <h2>Nuestros platos</h2>
         <div class="cards">
 
-           <!-- inicia tarejta -->
+        <!-- inicia tarejta -->
             <div class="card">
                 <img src="imgmenú/images.png" alt="plato1">
                 <div class="card-body">
@@ -91,4 +92,10 @@ incluirTemplates('header');
         </div>  
     </section>
 
-    <?php  include 'includes/templates/footer.php' ?>
+<?php include __DIR__ . '/includes/templates/carrusel.php'; ?>
+
+
+<?php  include 'includes/templates/mouse.php' ?>
+
+
+<?php  include 'includes/templates/footer.php' ?>

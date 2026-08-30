@@ -4,10 +4,10 @@
 
 /* ========= componentes ======= */
 @import url('./componentes/navbar.css');
+@import url('./componentes/carrusel.css');
 
 
 /* ========= layout ======= */
-@import url('./layout/styles.css');
 @import url('./layout/style.css');
 
 
