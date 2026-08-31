@@ -40,7 +40,7 @@ incluirTemplates('header');
                     placeholder="Ej 3001243567">
                 </div>
                 <div class="campo">
-                    <label for="email">Email<span></span></label>
+                    <label for="email">Email</label>
                     <input type="email" 
                     id="email" 
                     placeholder="correo@email.com"
@@ -53,7 +53,7 @@ incluirTemplates('header');
                 <textarea name="mensaje" 
                 id="mensaje"
                 rows="5"
-                placeholder="Escriba tu mensaje..."
+                placeholder="Escriba su mensaje..."
                 >
                 </textarea>
             </div>
