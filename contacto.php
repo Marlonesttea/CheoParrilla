@@ -8,10 +8,9 @@ incluirTemplates('header');
 
 ?>
 
-    <section class="container contacto">
-        <h1> Contáctanos</h1>
-        <p>Déjanos tu mens
-            aje y te responderemos pronto</p>
+    <section class="prueba container contacto ">
+        <h1 id= principal> Contáctanos</h1>
+        <p id =subtitulo >Déjanos tu mensaje y te responderemos pronto</p>
 
         <form class="formulario">
             <div class="fila">
@@ -25,7 +24,7 @@ incluirTemplates('header');
                 </div>
 
                 <div class="campo">
-                    <label for="apellido">Apellido</label>
+                    <label for="apellido">Apellido<span>*</span></label>
                     <input type="text" 
                     id="apellido" 
                     placeholder="Tu apellido" 
@@ -35,13 +34,13 @@ incluirTemplates('header');
 
             <div class="fila">
                 <div class="campo">
-                    <label for="celular">Celular</label>
+                    <label for="celular">Celular<span>*</span></label>
                     <input type="tel" 
                     id="celular" 
                     placeholder="Ej 3001243567">
                 </div>
                 <div class="campo">
-                    <label for="email">Email<span>*</span></label>
+                    <label for="email">Email</label>
                     <input type="email" 
                     id="email" 
                     placeholder="correo@email.com"
@@ -54,12 +53,15 @@ incluirTemplates('header');
                 <textarea name="mensaje" 
                 id="mensaje"
                 rows="5"
-                placeholder="Escriba tu mensaje..."
+                placeholder="Escriba su mensaje..."
                 >
                 </textarea>
             </div>
 
             <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            <a href="ReservarMesa.php" class="btn-enviar1"> ReservarMesa</a>
+
+            
         </form>
     </section>
 

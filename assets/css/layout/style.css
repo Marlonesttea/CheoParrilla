@@ -181,25 +181,39 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
     margin-left: 0;}
 
 .btn{
-    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 25px;
     color: white;
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
-    margin: 20px 0;
-    background: none;
+    margin: 20px 20px 20px 0;
+    background: rgba(255, 255, 255, 0.02);
     border: 2px solid #f7f5f4;
     border-radius: 0;
-    transition: transform 0.2s ease;
-    margin-right: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+    z-index: -1;
 }
 
 .btn:hover{
     font-size: 17px;
-    transform: translateY(-10px);
-    box-shadow: 0 0.5em 0.5em -0.5em #b8b5b1;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0.8em 1em -0.7em rgba(185, 112, 3, 0.9);
     color:#ff9100fa;
     border: 2px solid #b97003fa;
     border-radius: 4px;
@@ -572,6 +586,7 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
 .contacto {
     padding: 100px 20px;
     text-align: center ;
+    
 }
 
 .contacto h1 {
@@ -583,6 +598,8 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
     margin-bottom: 30px;
     color: #111;
 }
+
+
 
 .formulario{
     max-width: 700px;
@@ -609,6 +626,7 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
 .campo label{
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
 
 .campo input,
@@ -666,6 +684,74 @@ textarea{
     margin: auto;
     border-radius: 10px;
 }
+
+.btn-enviar1{
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: 0.3s;
+    gap: 10px;
+    margin-left: auto;
+    float: inline-end;
+    transition-duration:2s;
+}
+.btn-enviar1:hover{
+    scale:2;
+    box-shadow: 0 0 10px red;
+}
+#principal{
+    color: white;
+}
+
+#subtitulo{
+    color:white;
+}
+
+
+.prueba {
+    
+}
+
+
+
+.btn-enviar1{
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: 0.3s;
+    gap: 10px;
+    margin-left: auto;
+    float: inline-end;
+    transition-duration:2s;
+}
+.btn-enviar1:hover{
+    scale:2;
+    box-shadow: 0 0 10px red;
+}
+#principal{
+    color: white;
+}
+
+#subtitulo{
+    color:white;
+}
+
+
+.prueba {
+    
+}
+
+
 
 .fondo-contacto {
     background-color: #f4f4f4;
