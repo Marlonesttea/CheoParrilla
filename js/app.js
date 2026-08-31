@@ -95,6 +95,8 @@
 // })
 
 
+const loader = document.querySelector('.loader-fondo');
+
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const navPanel = document.getElementById('nav-panel');
@@ -126,4 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+window.addEventListener('load', () => {
+    console.log('Página cargada completamente');
 
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 500);
+    }
+});

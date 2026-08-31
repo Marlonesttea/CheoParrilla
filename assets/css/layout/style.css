@@ -315,7 +315,7 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
 
 @media (max-width: 480px) {
     .hero {
-        padding: 110px 16px 30px;
+        padding: 90px 16px 30px;
     }
 
     .hero-logo {
@@ -323,6 +323,10 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
         height: 72px;
         top: 22px;
         right: 20px;
+    }
+
+    .hero-content h1 {
+        margin-top: 18px;
     }
 
     .btn {

@@ -10,7 +10,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -27,7 +27,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -44,7 +44,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -61,7 +61,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -78,7 +78,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -95,7 +95,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -112,7 +112,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Chase the Northern Lights under star-lit skies along scenic fjord roads.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -129,7 +129,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Wander dramatic, mist-laden mountain paths that feel straight out of a dream.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
@@ -146,7 +146,7 @@
                 <div class="carrusel-content">
                     <div class="carrusel-name">CheoParrilla BBQ</div>
                     <div class="carrusel-des">
-                        Discover serene mountain temples shrouded in dusk and ancient forest trails.
+                        Texto...
                     </div>
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>

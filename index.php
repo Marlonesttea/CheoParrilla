@@ -3,6 +3,7 @@
 $scripts = ['app', 'carrusel']; // JS global
 require 'includes/funciones.php';
 incluirTemplates('header');
+include 'includes/templates/loader.php';
 
 // include 'includes/templates/header.php';
 ?>

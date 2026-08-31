@@ -5,6 +5,7 @@
 /* ========= componentes ======= */
 @import url('./componentes/navbar.css');
 @import url('./componentes/carrusel.css');
+@import url('./componentes/loader.css');
 
 
 /* ========= layout ======= */

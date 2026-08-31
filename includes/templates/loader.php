@@ -1,0 +1,9 @@
+<div class="loader-fondo">
+    <div class="loader">
+        <div class="orbe" style="--index: 0"></div>
+        <div class="orbe" style="--index: 1"></div>
+        <div class="orbe" style="--index: 2"></div>
+        <div class="orbe" style="--index: 3"></div>
+        <div class="orbe" style="--index: 4"></div>
+    </div>
+</div>
