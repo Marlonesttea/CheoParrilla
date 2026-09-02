@@ -3,8 +3,8 @@
 $scripts = ['app', 'contacto']; // global + específico
 require 'includes/funciones.php';
 incluirTemplates('header');
+include 'includes/templates/loader.php';
 
-// include 'includes/templates/header.php';
 
 ?>
 
@@ -59,7 +59,7 @@ incluirTemplates('header');
             </div>
 
             <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            <a href="ReservarMesa.php" class="btn-enviar1"> ReservarMesa</a>
+            <a href="reservas.php" class="btn-enviar1"> ReservarMesa</a>
 
             
         </form>

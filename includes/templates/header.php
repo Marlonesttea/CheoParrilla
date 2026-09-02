@@ -22,7 +22,7 @@
         <div class="container nav">
             <nav class="nav-group nav-group--left" aria-label="Navegación principal izquierda">
                 <a href="<?php echo BASE_URL;?>index.php">Inicio</a>
-                <a href="<?php echo BASE_URL;?>index.php#nosotros">Nosotros</a>
+                <a href="<?php echo BASE_URL;?>nosotros.php">Nosotros</a>
                 <a href="<?php echo BASE_URL;?>index.php#galeria">Galeria</a>
                 <a href="<?php echo BASE_URL;?>menu.php">Menú</a>
             </nav>
@@ -32,8 +32,8 @@
             </a>
 
             <nav class="nav-group nav-group--right" aria-label="Navegación principal derecha">
-                <a href="<?php echo BASE_URL;?>index.php#">Pedir Ahora</a>
-                <a href="<?php echo BASE_URL;?>index.php#">Reservas</a>
+                <a href="<?php echo BASE_URL;?>pedir.php">Pedir Ahora</a>
+                <a href="<?php echo BASE_URL;?>reservas.php">Reservas</a>
                 <a href="<?php echo BASE_URL;?>contacto.php">Contacto</a>
                 <a href="<?php echo BASE_URL;?>index.php#redes">Redes</a>
             </nav>
@@ -47,11 +47,11 @@
             <div class="nav-panel" id="nav-panel" aria-hidden="true">
                 <nav class="nav-panel-links" aria-label="Menú móvil">
                     <a href="<?php echo BASE_URL;?>index.php">Inicio</a>
-                    <a href="<?php echo BASE_URL;?>index.php#nosotros">Nosotros</a>
+                    <a href="<?php echo BASE_URL;?>nosotros.php">Nosotros</a>
                     <a href="<?php echo BASE_URL;?>index.php#galeria">Galeria</a>
                     <a href="<?php echo BASE_URL;?>menu.php">Menú</a>
-                    <a href="<?php echo BASE_URL;?>index.php#">Pedir Ahora</a>
-                    <a href="<?php echo BASE_URL;?>index.php#">Reservas</a>
+                    <a href="<?php echo BASE_URL;?>pedir.php">Pedir Ahora</a>
+                    <a href="<?php echo BASE_URL;?>reservas.php">Reservas</a>
                     <a href="<?php echo BASE_URL;?>contacto.php">Contacto</a>
                     <a href="<?php echo BASE_URL;?>index.php#redes">Redes</a>
                 </nav>

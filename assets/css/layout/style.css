@@ -59,7 +59,7 @@ a{
     color: white;
 }
 
-a:not(.btn):not(.logo-link):not(.social-links a):not(.carrusel-see-more):hover{
+a:not(.btn):not(.logo-link):not(.social-links a):not(.carrusel-see-more):not(.btn-enviar1):hover{
     color: #ffffff;
     border: 1px solid #ff0000;
     font-size: 17px;
@@ -72,7 +72,7 @@ a:not(.btn):not(.logo-link):not(.social-links a):not(.carrusel-see-more):hover{
 }
 
 @media (max-width: 900px) {
-    a:not(.btn):not(.logo-link):not(.social-links a):not(.carrusel-see-more):hover{
+    a:not(.btn):not(.logo-link):not(.social-links a):not(.carrusel-see-more):not(.btn-enviar1):hover{
     color: #ffffff;
     border: 1px solid #ff0000;
     font-size: 20px;
@@ -86,7 +86,7 @@ a:not(.btn):not(.logo-link):not(.social-links a):not(.carrusel-see-more):hover{
 }
 }
 
-a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::after {
+a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):not(.btn-enviar1):hover::after {
     content: "\f06d";
     margin-left: 8px;
     color: #ff7b00;
@@ -229,7 +229,8 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
     }
 
     .cards {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        flex-direction: row;
     }
 
     .card {
@@ -297,6 +298,7 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
     .cards {
         flex-direction: column;
         align-items: center;
+        flex-direction: row;
     }
 
     .card {
@@ -370,6 +372,11 @@ a:not(.logo-link):not(.btn):not(.social-links a):not(.carrusel-see-more):hover::
     gap: 20px;
     justify-content: center;
     color: white;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+
 
 }
 
@@ -698,45 +705,13 @@ textarea{
     gap: 10px;
     margin-left: auto;
     float: inline-end;
-    transition-duration:2s;
-}
-.btn-enviar1:hover{
-    scale:2;
-    box-shadow: 0 0 10px red;
-}
-#principal{
-    color: white;
-}
+    transition:0.5s;
 
-#subtitulo{
-    color:white;
 }
-
-
-.prueba {
-    
-}
-
-
-
-.btn-enviar1{
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px 0;
-    transition: 0.3s;
-    gap: 10px;
-    margin-left: auto;
-    float: inline-end;
-    transition-duration:2s;
-}
-.btn-enviar1:hover{
-    scale:2;
-    box-shadow: 0 0 10px red;
+    .btn-enviar1:hover{
+    box-shadow: 0 0 10px rgb(248, 248, 248);
+    transform: translateY(-5px);
+    box-shadow: #ccc 0 1 5px;
 }
 #principal{
     color: white;
@@ -747,16 +722,6 @@ textarea{
 }
 
 
-.prueba {
-    
-}
-
-
-
-.fondo-contacto {
-    background-color: #f4f4f4;
-    padding: 40px 0;
-}
 
 /* Mouse */
 
