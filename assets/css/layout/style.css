@@ -761,3 +761,18 @@ textarea{
         }
     }
 }
+.btn{
+    text-align: center;
+}
+#apartar{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-top: 100px;
+}
+#descripcion{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
