@@ -1,0 +1,118 @@
+/* From Uiverse.io by Novaxlo (modificado para evitar conflictos) */
+.uiv-card {
+  width: 250px;
+  height: 325px;
+  background: lightgrey;
+  border-radius: 20px;
+  box-shadow: -8px 8px 0px 5px rgb(50, 50, 50, 0.2);
+  border: solid 2px white;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transform: rotate(3deg) skewX(3deg);
+}
+
+#uiv-cardtop {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+  color: #131313;
+  background-image: url(https://6a935b0d923dbf1a1a8658ec.imgix.net/sandbox/heroimg2.jpeg);
+}
+
+#uiv-cardtop p {
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 2px;
+}
+
+#uiv-cardbottom {
+  width: 100%;
+  height: 31%;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  background-color: rgb(5, 5, 5);
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+#uiv-cardbottom hr {
+  height: 3px;
+  background-color: black;
+}
+
+#uiv-cardbottomtitle {
+  margin-bottom: 10px;
+}
+
+#uiv-cardbottomprice {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  border-top: 2px solid lightgrey;
+}
+
+#uiv-cardbrightfilter {
+  width: 450px;
+  height: 200px;
+  background-color: rgb(255, 255, 255, 0.5);
+  position: absolute;
+  transform: rotate(-40deg) translateX(-15%) translateY(-160%);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+#uiv-cardnewfilter {
+  width: 75px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #fc9637;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  font-weight: 500;
+}
+
+.uiv-card:hover {
+  transform: translateY(-5%);
+  box-shadow: 0px 20px 10px rgb(50, 50, 50, 0.2);
+}
+
+.uiv-card:hover #uiv-cardbrightfilter {
+  transform: rotate(-42deg) translateX(-15%) translateY(-79%);
+}
+
+.uiv-card:active #uiv-cardtop {
+  transform: scale(1.05);
+}
+
+.uiv-card:active #uiv-cardbottom {
+  background-color: #fc6969;
+  color: white;
+}
+
+.uiv-card:active #uiv-cardbottom hr {
+  background-color: white;
+}
+
+.uiv-cards-container{
+    margin-top: 175px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}

@@ -95,6 +95,45 @@
 // })
 
 
-// alert("hola mundo")
+const loader = document.querySelector('.loader-fondo');
 
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navPanel = document.getElementById('nav-panel');
 
+    if (!navToggle || !navPanel) return;
+
+    const closeMenu = () => {
+        navPanel.classList.remove('is-open');
+        navToggle.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navPanel.setAttribute('aria-hidden', 'true');
+    };
+
+    navToggle.addEventListener('click', () => {
+        const isOpen = navPanel.classList.toggle('is-open');
+        navToggle.classList.toggle('is-open', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navPanel.setAttribute('aria-hidden', String(!isOpen));
+    });
+
+    navPanel.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-toggle') && !event.target.closest('.nav-panel')) {
+            closeMenu();
+        }
+    });
+});
+
+window.addEventListener('load', () => {
+    console.log('Página cargada completamente');
+
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 500);
+    }
+});

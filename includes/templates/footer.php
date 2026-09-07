@@ -18,6 +18,7 @@
                 <h4>Contacto</h4>
                 <p>Medellin, Colombia</p>
                 <p>+57 323 438 2813</p>
+                <p>Calle 58 #92A - 126</p>
             </div>
 
             <div>
@@ -26,8 +27,8 @@
                     <a href="https://www.instagram.com/cheo.parrilla/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    <a href="https://www.tiktok.com/@cheo.parilla" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
                     </a>
                     <a href="https://wa.me/573234382813" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
