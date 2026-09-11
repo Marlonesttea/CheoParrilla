@@ -27,7 +27,7 @@ include 'includes/templates/loader.php';
         <div class="cards">
 
         <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Asados y Carnes</h3>
@@ -38,7 +38,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Hamburguesas Artesanales</h3>
@@ -49,7 +49,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Combo de Hamburguesas</h3>
@@ -60,7 +60,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Salchipapas</h3>
@@ -71,7 +71,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Perros y Perras Artesanales</h3>
@@ -82,7 +82,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Bebidas</h3>
@@ -93,7 +93,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Licores</h3>
