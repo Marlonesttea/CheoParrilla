@@ -5,9 +5,14 @@ require 'includes/funciones.php';
 incluirTemplates('header');
 include 'includes/templates/loader.php';
 ?>
-<h1 id="apartar">Reservas</h1>
-<p id="descripcion">Reserva tu lugar fácil y rápido.</p>
-<a href="https://wa.me/573234382813?text=Hola,%20quiero%20reservar" class="btn">Reservar Ahora</a>
+
+<div class="reservas-container">
+    <h1 id="apartar">Reservas</h1>
+    <p id="descripcion">Asegura tu lugar de forma fácil y rápida. Reserva vía WhatsApp y haz de tu visita una experiencia especial.</p>
+    <a href="https://wa.me/573234382813?text=Hola,%20quiero%20reservar" class="btn">Reservar Ahora</a>
+</div>
+
+
 
 
 
