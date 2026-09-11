@@ -5,7 +5,8 @@ function incluirTemplates($nombre): void {
 }
 
 
-define('BASE_URL', '/CheoParrilla/');
+// define('BASE_URL', '/CheoParrilla/'); //windows
+define('BASE_URL', '/'); //mac
 
 
 function auth() {
