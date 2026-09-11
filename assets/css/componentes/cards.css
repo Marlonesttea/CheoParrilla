@@ -1,4 +1,20 @@
 /* From Uiverse.io by Novaxlo (modificado para evitar conflictos) */
+
+.barra {
+  margin-top: 80px;
+  text-align: center;
+}
+.barra h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: 'Satisfy', cursive;
+    Color: #ffffff;
+    border: 3px solid #2e2727;
+    background: url(../../../img/barra1.png);
+    background-size: cover;
+
+}
+
 .uiv-card {
   width: 250px;
   height: 325px;
@@ -20,8 +36,8 @@
   justify-content: center;
   align-items: center;
   transition: all 0.1s ease;
-  color: #131313;
-  background-image: url(https://6a935b0d923dbf1a1a8658ec.imgix.net/sandbox/heroimg2.jpeg);
+  color: #574343;
+  
 }
 
 #uiv-cardtop p {
@@ -116,3 +132,245 @@
     justify-content: center;
     padding: 20px;
 }
+.imagenCards{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images1.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards2{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images2.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards3{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images3.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards4{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images4.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards5{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images5.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards6{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images6.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards7{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images7.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards8{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images8.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards9{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images9.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards10{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images10.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards11{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images11.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards12{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images12.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.imagenCards13{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images13.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards14{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images14.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.imagenCards15{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images15.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards16{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images16.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards17{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images17.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards18{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images18.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.imagenCards19{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images19.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards20{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images20.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards21{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images21.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards22{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenú/images22.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
