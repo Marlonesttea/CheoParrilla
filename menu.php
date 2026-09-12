@@ -3,6 +3,7 @@
 $scripts = ['app']; // JS global
 require 'includes/funciones.php';
 incluirTemplates('header');
+include 'includes/templates/loader.php';
 
 // include 'includes/templates/header.php';
 ?>
@@ -12,7 +13,7 @@ incluirTemplates('header');
 		<div class="carta-hero__overlay"></div>
 		<div class="carta-hero__content">
 			<p class="carta-hero__eyebrow">Sabor hecho en casa</p>
-			<h1 id="carta-title">Nuestra Carta</h1>
+			<h1 class ="cheoTransicion" id="carta-title">Nuestra Carta</h1>
 			<p>Explora nuestras especialidades y encuentra tu próximo plato favorito.</p>
 		</div>
 	</section>
