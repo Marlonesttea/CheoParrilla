@@ -21,10 +21,10 @@
     <header class="header">
         <div class="container nav">
             <nav class="nav-group nav-group--left" aria-label="Navegación principal izquierda">
-                <a href="<?php echo BASE_URL;?>index.php">Inicio</a>
-                <a href="<?php echo BASE_URL;?>nosotros.php">Nosotros</a>
-                <a href="<?php echo BASE_URL;?>index.php#galeria">Galeria</a>
-                <a href="<?php echo BASE_URL;?>menu.php">Menú</a>
+                <a href="<?php echo BASE_URL;?>index.php" class="link-fueguito">Inicio</a>
+                <a href="<?php echo BASE_URL;?>nosotros.php" class="link-fueguito">Nosotros</a>
+                <a href="<?php echo BASE_URL;?>index.php#galeria" class="link-fueguito">Galeria</a>
+                <a href="<?php echo BASE_URL;?>menu.php" class="link-fueguito">Menú</a>
             </nav>
 
             <a href="index.php" class="logo-link">
@@ -32,10 +32,10 @@
             </a>
 
             <nav class="nav-group nav-group--right" aria-label="Navegación principal derecha">
-                <a href="<?php echo BASE_URL;?>pedir.php">Pedir Ahora</a>
-                <a href="<?php echo BASE_URL;?>reservas.php">Reservas</a>
-                <a href="<?php echo BASE_URL;?>contacto.php">Contacto</a>
-                <a href="<?php echo BASE_URL;?>index.php#redes">Redes</a>
+                <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
+                <a href="<?php echo BASE_URL;?>reservas.php" class="link-fueguito">Reservas</a>
+                <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
+                <a href="<?php echo BASE_URL;?>index.php#redes" class="link-fueguito">Redes</a>
             </nav>
 
             <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
@@ -46,14 +46,14 @@
 
             <div class="nav-panel" id="nav-panel" aria-hidden="true">
                 <nav class="nav-panel-links" aria-label="Menú móvil">
-                    <a href="<?php echo BASE_URL;?>index.php">Inicio</a>
-                    <a href="<?php echo BASE_URL;?>nosotros.php">Nosotros</a>
-                    <a href="<?php echo BASE_URL;?>index.php#galeria">Galeria</a>
-                    <a href="<?php echo BASE_URL;?>menu.php">Menú</a>
-                    <a href="<?php echo BASE_URL;?>pedir.php">Pedir Ahora</a>
-                    <a href="<?php echo BASE_URL;?>reservas.php">Reservas</a>
-                    <a href="<?php echo BASE_URL;?>contacto.php">Contacto</a>
-                    <a href="<?php echo BASE_URL;?>index.php#redes">Redes</a>
+                    <a href="<?php echo BASE_URL;?>index.php" class="link-fueguito">Inicio</a>
+                    <a href="<?php echo BASE_URL;?>nosotros.php" class="link-fueguito">Nosotros</a>
+                    <a href="<?php echo BASE_URL;?>index.php#galeria" class="link-fueguito">Galeria</a>
+                    <a href="<?php echo BASE_URL;?>menu.php" class="link-fueguito">Menú</a>
+                    <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
+                    <a href="<?php echo BASE_URL;?>reservas.php" class="link-fueguito">Reservas</a>
+                    <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
+                    <a href="<?php echo BASE_URL;?>index.php#redes" class="link-fueguito">Redes</a>
                 </nav>
             </div>
         </div>
