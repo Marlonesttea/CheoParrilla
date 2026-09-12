@@ -73,7 +73,7 @@ include 'includes/templates/loader.php';
     </svg>
   </div>
 
-  <div class="BotonW">Whatsapp</div>
+  <a href="https://wa.me/573234382813" class="BotonW" target="_blank">Whatsapp</a>
 </button>
 
 
