@@ -381,6 +381,10 @@ a{
 
 /* CARDS */
 
+h3#nombre-corto {
+    margin-bottom: 35px;
+}
+
 .cards{
     display: flex;
     gap: 20px;
