@@ -22,90 +22,109 @@ include 'includes/templates/loader.php';
         </div>
     </section>
 
+
+
     <section class="menu container" id="menu">
         <h2>Nuestros platos</h2>
+        <hr class="divisor-linea" style="margin-top: 0px;">
         <div class="cards">
 
         <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php#asados">
+            <div class="card" style="margin-bottom: 25px;"> 
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Asados y Carnes</h3>
                     <p>Texto... </p>
-                    <span>Miralas todas en nuestro menú</span>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php#hamburguesas">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Hamburguesas Artesanales</h3>
                     <p>Texto...</p>
-                    <span>Pide nuestras picadas y salchipapas en nuestro menú</span>
+            
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php#hamburguesas">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Combo de Hamburguesas</h3>
                     <p>Texto...</p>
-                    <span> Encuentralas en nuestro menú </span>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Salchipapas</h3>
                     <p>Texto...</p>
-                    <span>Miralas todas en nuestro menú</span>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php#perros">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Perros y Perras Artesanales</h3>
                     <p>Texto...</p>
-                    <span>Pide nuestras picadas y salchipapas en nuestro menú</span>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Bebidas</h3>
                     <p>Texto...</p>
-                    <span> Encuentralas en nuestro menú </span>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <div class="card">
+            <a class="card-link" href="menu.php">
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
                     <h3>Licores</h3>
                     <p>Texto...</p>
-                    <span> Encuentralas en nuestro menú </span>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
-
+        
 
 
         </div>
+
+        <hr class="divisor-linea">
     </section>
 
     <section class="promocion container" id="promocion">
