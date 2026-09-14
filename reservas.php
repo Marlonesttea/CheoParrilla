@@ -6,11 +6,38 @@ incluirTemplates('header');
 include 'includes/templates/loader.php';
 ?>
 
-<div class="reservas-container">
-    <h1 id="apartar">Reservas</h1>
-    <p id="descripcion">Asegura tu lugar de forma fácil y rápida. Reserva vía WhatsApp y haz de tu visita una experiencia especial.</p>
-    <a href="https://wa.me/573234382813?text=Hola,%20quiero%20reservar" class="btn">Reservar Ahora</a>
-</div>
+<section class="reservas-container">
+    <h1 id="preReservas">Reservas</h1>
+    <p id="descripcionReservas">Reserva con nosotros y asegura tu lugar en Cheo Parrilla BBQ.</p>
+
+    <form class="reservas-formulario">
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre1" name="nombre" required>
+        </div>
+        <div class="campo">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </div>
+        <div class="campo">
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+        </div>
+        <div class="campo">
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required>
+        </div>
+        <div class="campo">
+            <label for="Datos">Datos Adicionales</label>
+            <input type="text" id="Datos" name="Datos" placeholder="Escriba datos adicionales" required>
+
+        </div>
+
+        <button type="submit" class="botonRes">Reservar</button>
+
+    </form>
+
+</section>
 
 
 
