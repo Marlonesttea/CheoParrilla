@@ -5,7 +5,6 @@ require 'includes/funciones.php';
 incluirTemplates('header');
 include 'includes/templates/loader.php';
 
-// include 'includes/templates/header.php';
 ?>
 
     <!-- hero    -->
@@ -23,45 +22,109 @@ include 'includes/templates/loader.php';
         </div>
     </section>
 
+
+
     <section class="menu container" id="menu">
         <h2>Nuestros platos</h2>
+        <hr class="divisor-linea" style="margin-top: 0px;">
         <div class="cards">
 
-        <!-- inicia tarejta -->
-            <div class="card">
-                <img src="imgmenú/images.png" alt="plato1">
+        <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php#asados">
+            <div class="card" style="margin-bottom: 25px;"> 
+                <img src="img/carnes-menu.png" alt="Carne-menu">
                 <div class="card-body">
-                    <h3>Hamburguesas</h3>
-                    <p>Nuestras Hamburguesas artesanales son las mejores de medellin, nuestros precios van desde 11.000$ hasta 22.000$ </p>
-                    <span>Miralas todas en nuestro menú</span>
+                    <h3 class="carrusel-name" id="nombre-corto">Asados y Carnes</h3>
+                    <p>Clic para ir al menú. </p>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
-            <!-- inicia tarejta -->
-            <div class="card">
-                <img src="imgmenú/images7.png" alt="plato2">
+            <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php#hamburguesas">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="img/hamburguesa-menu.png" alt="Hamburguesa_Menu">
                 <div class="card-body">
-                    <h3>Salchipapa</h3>
-                    <p>Lo mejor en salchipapas y picadas, una calidad excelente y un sabor único </p>
-                    <span>Pide nuestras picadas y salchipapas en nuestro menú</span>
+                    <h3 class="carrusel-name">Hamburguesas Artesanales</h3>
+                    <p>Clic para ir al menú.</p>
+            
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
 
-            <!-- inicia tarejta -->
-            <div class="card">
-                <img src="imgmenú/images10.png" alt="plato3">
+            <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php#combo-hamburguesas">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="img/combos-menu.png" alt="Combo_Hamburguesas">
                 <div class="card-body">
-                    <h3>Bebidas</h3>
-                    <p> Jugos, gaseosas, bebidas alcoholicas y más </p>
-                    <span> Encuentralas en nuestro menú </span>
+                    <h3 class="carrusel-name">Combo de Hamburguesas</h3>
+                    <p>Clic para ir al menú.</p>
+                    
                 </div>
             </div>
+            </a>
             <!-- termina tarjeta -->
+
+            <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="" alt="">
+                <div class="card-body">
+                    <h3 class="carrusel-name" id="nombre-corto">Salchipapas</h3>
+                    <p>Clic para ir al menú.</p>
+                    
+                </div>
+            </div>
+            </a>
+            <!-- termina tarjeta -->
+
+            <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php#perros">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="img/perros-menu.png" alt="Perros_Menu">
+                <div class="card-body">
+                    <h3 class="carrusel-name">Perros y Perras Artesanales</h3>
+                    <p>Clic para ir al menú.</p>
+                    
+                </div>
+            </div>
+            </a>
+            <!-- termina tarjeta -->
+
+            <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="" alt="">
+                <div class="card-body">
+                    <h3 class="carrusel-name" id="nombre-corto">Bebidas</h3>
+                    <p>Clic para ir al menú.</p>
+                    
+                </div>
+            </div>
+            </a>
+            <!-- termina tarjeta -->
+
+            <!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="" alt="">
+                <div class="card-body">
+                    <h3 class="carrusel-name" id="nombre-corto">Licores</h3>
+                    <p>Clic para ir al menú.</p>
+                    
+                </div>
+            </div>
+            </a>
+            <!-- termina tarjeta -->
+        
 
 
         </div>
+
+        <hr class="divisor-linea">
     </section>
 
     <section class="promocion container" id="promocion">
@@ -73,30 +136,20 @@ include 'includes/templates/loader.php';
             </div>
         </div>
     </section>
-    
+
     <section class="galeria container" id="galeria">
         <h2>Galería</h2>
-        <div class="grid-galeria">
-            <img src= "imgmenú/images.png" alt="imagen6">
-            <img src="imgmenú/images1.png" alt="imagen6">
-            <img src="imgmenú/images2.png" alt="imagen6">
-            <img src="imgmenú/images3.png" alt="imagen6">
-            <img src="imgmenú/images4.png" alt="imagen6">
-            <img src="imgmenú/images5.png" alt="imagen6">
-            <img src="imgmenú/images6.png" alt="imagen6">
-            <img src="imgmenú/images7.png" alt="imagen6">
-            <img src="imgmenú/images8.png" alt="imagen6">
-            <img src="imgmenú/images9.png" alt="imagen6">
-            <img src="imgmenú/images10.png" alt="imagen6">
-            <img src="imgmenú/images11.png" alt="imagen6">
 
+        <?php include __DIR__ . '/includes/templates/carrusel.php'; ?>
+
+        
         </div>  
     </section>
 
-<?php include __DIR__ . '/includes/templates/carrusel.php'; ?>
 
 
 <?php  include 'includes/templates/mouse.php' ?>
 
 
 <?php  include 'includes/templates/footer.php' ?>
+

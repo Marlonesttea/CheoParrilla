@@ -8,10 +8,10 @@
             
             <div>
                 <h4>Enlaces</h4>
-                <a href="index.php">Inicio</a>
-                <a href="menu.php">Menú</a>
-                <a href="index.php#galeria">Galeria</a>
-                <a href="contacto.php">Contacto</a>
+                <a href="index.php" class="link-fueguito">Inicio</a>
+                <a href="menu.php" class="link-fueguito">Menú</a>
+                <a href="index.php#galeria" class="link-fueguito">Galeria</a>
+                <a href="contacto.php" class="link-fueguito">Contacto</a>
             </div>
 
             <div>
