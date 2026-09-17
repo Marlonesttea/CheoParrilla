@@ -461,7 +461,7 @@
 .imagenCards{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images1.png);
+  background-image: url(../../../imgmenu/images14.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -472,7 +472,7 @@
 .imagenCards2{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images2.png);
+  background-image: url(../../../imgmenu/images13.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -483,7 +483,7 @@
 .imagenCards3{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images3.png);
+  background-image: url(../../../imgmenu/images16.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -494,7 +494,7 @@
 .imagenCards4{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images4.png);
+  background-image: url(../../../ImgDelMenu/CarneDeRes.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -505,7 +505,7 @@
 .imagenCards5{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images5.png);
+  background-image: url(../../../ImgDelMenu/ChuletasBBQ.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -516,7 +516,7 @@
 .imagenCards6{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images6.png);
+  background-image: url(../../../ImgDelMenu/Costichi.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -549,7 +549,7 @@
 .imagenCards9{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images9.png);
+  background-image: url(../../../ImgDelMenu/PechugaGratinada.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -560,7 +560,7 @@
 .imagenCards10{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images10.png);
+  background-image: url(../../../ImgDelMenu/Churrasco_PuntaDeAnca.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -571,7 +571,7 @@
 .imagenCards11{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images11.png);
+  background-image: url(../../../ImgDelMenu/Churrasco.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -671,7 +671,7 @@
 .imagenCards20{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images20.png);
+  background-image: url(../../../ImgDelMenu/Quesudas1.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -681,7 +681,7 @@
 .imagenCards21{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images21.png);
+  background-image: url(../../../ImgDelMenu/ChuzoBurguer.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -691,7 +691,297 @@
 .imagenCards22{
   width: 100%;
   height: 100%;
+  background-image: url(../../../ImgDelMenu/HamburguesaMixta.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards23{
+  width: 100%;
+  height: 100%;
   background-image: url(../../../imgmenu/images22.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards24{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images24.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards25{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images25.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards26{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images26.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards27{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images27.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards28{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images28.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards29{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images29.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards30{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images30.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards31{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images31.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards32{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images32.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards33{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images33.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards34{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images34.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards35{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images35.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards36{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images36.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards37{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images37.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards38{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images38.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards39{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images39.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards40{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images40.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards41{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards42{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards43{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards44{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards45{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards46{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards47{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards48{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards49{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards50{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
+  background-size: cover;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenCards51{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../imgmenu/images41.png);
   background-size: cover;
   gap: 20px;
   display: flex;
