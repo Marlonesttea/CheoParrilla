@@ -678,7 +678,7 @@
 
 
 
-<section class="barra container" id="combo-hambuguesas" style="margin: 50px;">
+<section class="barra container" id="combo-hamburguesas" style="margin: 50px;">
         <h2>Combos</h2>
 </section>
 
