@@ -639,7 +639,7 @@
 .imagenCards17{
   width: 100%;
   height: 100%;
-  background-image: url(../../../ImgDelMenu/Quesudas1.png);
+  background-image: url(../../../imgmenu/images17.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -671,7 +671,7 @@
 .imagenCards20{
   width: 100%;
   height: 100%;
-  background-image: url(../../../ImgDelMenu/HamburguesaMixta.png);
+  background-image: url(../../../ImgDelMenu/Quesudas1.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -691,7 +691,7 @@
 .imagenCards22{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images22.png);
+  background-image: url(../../../ImgDelMenu/HamburguesaMixta.png);
   background-size: cover;
   gap: 20px;
   display: flex;
