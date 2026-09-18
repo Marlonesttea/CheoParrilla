@@ -940,7 +940,7 @@ textarea{
 .pedir {
     padding: 100px 20px;
     font-size: 18px;
-    text-align: center;
+    text-align: left;
     color: white;
     margin: auto;
 }
@@ -953,7 +953,6 @@ textarea{
     margin-bottom: 5px;
     color: white;
     margin: auto;
-    padding-bottom: 70px;
 
 }
 
