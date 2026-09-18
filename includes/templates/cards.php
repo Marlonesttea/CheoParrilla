@@ -769,7 +769,7 @@
 
 
 
-<section class="barra container" id="combo-hambuguesas" style="margin: 50px;">
+<section class="barra container" id="combo-hamburguesas" style="margin: 50px;">
         <h2>Combos</h2>
 </section>
 
@@ -914,7 +914,7 @@
 
 
 
-<div class="uiv-card"  data-description="coca cola">
+<div class="uiv-card"  data-description="Coca Cola 315 mL">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
   <div id="uiv-cardtop" class="imagenCards57">
@@ -1007,7 +1007,7 @@
     <p></p>
   </div>
   <div id="uiv-cardbottom">
-    <p id="uiv-cardbottomtitle">Jugo en agua</p>
+    <p id="uiv-cardbottomtitle"></p>
     <p id="uiv-cardbottomprice">$5.000</p>
   </div>
 </div>
@@ -1140,11 +1140,11 @@
 </div>
 
 <!--Licores-->
-<section class="barra container" id="Licores" style="margin: 50px;">
+<section class="barra container" id="licores" style="margin: 50px;">
         <h2>Licores</h2>
 </section>
 
-<div class="uiv-card"  data-description="">
+<div class="uiv-card"  data-description="oe">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
   <div id="uiv-cardtop" class="imagenCards72">

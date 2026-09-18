@@ -32,10 +32,10 @@ include 'includes/templates/loader.php';
         <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#asados">
             <div class="card" style="margin-bottom: 25px;"> 
-                <img src="" alt="">
+                <img src="img/carnes-menu.png" alt="Carne-menu">
                 <div class="card-body">
-                    <h3>Asados y Carnes</h3>
-                    <p>Texto... </p>
+                    <h3 class="carrusel-name" id="nombre-corto">Asados y Carnes</h3>
+                    <p>Clic para ir al menú. </p>
                     
                 </div>
             </div>
@@ -45,10 +45,10 @@ include 'includes/templates/loader.php';
             <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#hamburguesas">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/hamburguesa-menu.png" alt="Hamburguesa_Menu">
                 <div class="card-body">
-                    <h3>Hamburguesas Artesanales</h3>
-                    <p>Texto...</p>
+                    <h3 class="carrusel-name">Hamburguesas Artesanales</h3>
+                    <p>Clic para ir al menú.</p>
             
                 </div>
             </div>
@@ -56,12 +56,12 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#hamburguesas">
+            <a class="card-link" href="menu.php#combo-hamburguesas">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/combos-menu.png" alt="Combo_Hamburguesas">
                 <div class="card-body">
-                    <h3>Combo de Hamburguesas</h3>
-                    <p>Texto...</p>
+                    <h3 class="carrusel-name">Combo de Hamburguesas</h3>
+                    <p>Clic para ir al menú.</p>
                     
                 </div>
             </div>
@@ -69,12 +69,12 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php">
+            <a class="card-link" href="menu.php#salchipapa">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
-                    <h3>Salchipapas</h3>
-                    <p>Texto...</p>
+                    <h3 class="carrusel-name" id="nombre-corto">Salchipapas</h3>
+                    <p>Clic para ir al menú.</p>
                     
                 </div>
             </div>
@@ -84,10 +84,10 @@ include 'includes/templates/loader.php';
             <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#perros">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/perros-menu.png" alt="Perros_Menu">
                 <div class="card-body">
-                    <h3>Perros y Perras Artesanales</h3>
-                    <p>Texto...</p>
+                    <h3 class="carrusel-name">Perros y Perras Artesanales</h3>
+                    <p>Clic para ir al menú.</p>
                     
                 </div>
             </div>
@@ -99,8 +99,8 @@ include 'includes/templates/loader.php';
             <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
-                    <h3>Bebidas</h3>
-                    <p>Texto...</p>
+                    <h3 class="carrusel-name" id="nombre-corto">Bebidas</h3>
+                    <p>Clic para ir al menú.</p>
                     
                 </div>
             </div>
@@ -112,8 +112,8 @@ include 'includes/templates/loader.php';
             <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
-                    <h3>Licores</h3>
-                    <p>Texto...</p>
+                    <h3 class="carrusel-name" id="nombre-corto">Licores</h3>
+                    <p>Clic para ir al menú.</p>
                     
                 </div>
             </div>
