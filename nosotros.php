@@ -48,7 +48,7 @@ include 'includes/templates/loader.php';
 
             <div class="nosotros-imagen">
                 <img 
-                    src="img/fondoCheo.jpg" 
+                    src="img/PrimeraImagenNosotros.png" 
                     alt="Historia de Cheo Parrilla"
                 >
             </div>
@@ -74,8 +74,8 @@ include 'includes/templates/loader.php';
 
             <div class="nosotros-imagen">
                 <img 
-                    src="img/restaurante.jpg" 
-                    alt="Enfoque de Cheo Parrilla"
+                    src="img/caballoHomosexual.jfif" 
+
                 >
             </div>
 
@@ -99,7 +99,7 @@ include 'includes/templates/loader.php';
 
             <div class="nosotros-imagen">
                 <img 
-                    src="img/restaurante.jpg" 
+                    src="img/sazón.jpg" 
                     alt="Sazón de Cheo Parrilla"
                 >
             </div>
@@ -139,7 +139,7 @@ include 'includes/templates/loader.php';
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.60)
             ),
-            url("img/restaurante.jpg");
+            url("img/Primeraimagennosotros2.png");
 
         background-size: cover;
         background-position: center;
@@ -202,7 +202,13 @@ include 'includes/templates/loader.php';
 
         min-height: 100vh;
 
-        background: #171312;
+        background: linear-gradient(
+        135deg,
+        #030303 0%,
+        #181411 50%,
+        #000000 100%
+    );
+    background-attachment: fixed;
 
         padding: 70px 5%;
 
