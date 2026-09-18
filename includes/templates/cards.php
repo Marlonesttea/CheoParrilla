@@ -576,6 +576,97 @@
 </div>
 
 
+<div class="uiv-card"  data-description="Una buena perra con bastante tocineta, salsa de la casa y más.">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards38">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Perra Especial</p>
+    <p id="uiv-cardbottomprice">$11.500</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="Perra con carne desmechada y ahogao, para probarlo 2 veces!!.">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards39">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Perra Fufa</p>
+    <p id="uiv-cardbottomprice">$11.500</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="Perra con pollo desmechado y maicitos, un sabor autentico">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards40">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Perra pollo y maicitos</p>
+    <p id="uiv-cardbottomprice">$11.500</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="Perra Quesuda, full queso y full sabor">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards41">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Perra Quesuda</p>
+    <p id="uiv-cardbottomprice">$14.500</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="Perra pollo con champiñones, una deliciosa combinación de sabores y texturas.">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards42">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Perra pollo con champiñones</p>
+    <p id="uiv-cardbottomprice">$14.500</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="Perra grilla, full sabor a la parrilla y el toque especial de la casa.">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards42">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Perra grilla</p>
+    <p id="uiv-cardbottomprice">$15.500</p>
+  </div>
+</div>
+
+
+
 
 
 <!-- Salchipapas y picadas -->
@@ -591,7 +682,7 @@
 <div class="uiv-card"  data-description="Salchipapa sencilla, papas fritas y salsas al gusto.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards38">
+  <div id="uiv-cardtop" class="imagenCards43">
 
     </svg>
     <p></p>
@@ -605,7 +696,7 @@
 <div class="uiv-card"  data-description="Salchipapa especial, con ingredientes premium y salsas exclusivas.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards39">
+  <div id="uiv-cardtop" class="imagenCards44">
 
     </svg>
     <p></p>
@@ -619,7 +710,7 @@
 <div class="uiv-card"  data-description="Salchipapa desgranada, con un toque especial.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards40">
+  <div id="uiv-cardtop" class="imagenCards45">
 
     </svg>
     <p></p>
@@ -633,7 +724,7 @@
 <div class="uiv-card"  data-description="Salchipapa con pollo, una deliciosa combinación de sabores.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards41">
+  <div id="uiv-cardtop" class="imagenCards46">
 
     </svg>
     <p></p>
@@ -647,7 +738,7 @@
 <div class="uiv-card"  data-description="Salchipapa con carne, un sabor autentico y delicioso.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards42">
+  <div id="uiv-cardtop" class="imagenCards47">
 
     </svg>
     <p></p>
@@ -661,7 +752,7 @@
 <div class="uiv-card"  data-description="Salchipapa paisa, un sabor autentico para un parche bacano!!">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards43">
+  <div id="uiv-cardtop" class="imagenCards48">
 
     </svg>
     <p></p>
@@ -685,7 +776,7 @@
 <div class="uiv-card"  data-description="Un combo de hamburguesas, cargado de sabor y acompañamientos!">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards44">
+  <div id="uiv-cardtop" class="imagenCards49">
 
     </svg>
     <p></p>
@@ -699,7 +790,7 @@
 <div class="uiv-card"  data-description="Un combo de alitas, con mucha salsa y sabor">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards45">
+  <div id="uiv-cardtop" class="imagenCards50">
 
     </svg>
     <p></p>
@@ -714,7 +805,7 @@
 <div class="uiv-card"  data-description="Un combo de muchas alitas, papas y 2 gaseosas.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards46">
+  <div id="uiv-cardtop" class="imagenCards51">
 
     </svg>
     <p></p>
@@ -730,7 +821,7 @@
 <div class="uiv-card"  data-description="Un combo de aun más alitas, papas y 2 gaseosas.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards47">
+  <div id="uiv-cardtop" class="imagenCards52">
 
     </svg>
     <p></p>
@@ -753,7 +844,7 @@
 <div class="uiv-card"  data-description="Una deliciosa arepa rellena de carne, queso, huevo, bacon y más">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards48">
+  <div id="uiv-cardtop" class="imagenCards53">
 
     </svg>
     <p></p>
@@ -767,7 +858,7 @@
 <div class="uiv-card"  data-description="Un burrito delicioso con carne, frijoles y salsa.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards49">
+  <div id="uiv-cardtop" class="imagenCards54">
 
     </svg>
     <p></p>
@@ -781,7 +872,7 @@
 <div class="uiv-card"  data-description="Un patacón crujiente con carne, queso y salsa.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards50">
+  <div id="uiv-cardtop" class="imagenCards55">
 
     </svg>
     <p></p>
@@ -796,7 +887,7 @@
 <div class="uiv-card"  data-description="Un ceviche fresco de chicharrón, con limón y cebolla.">
   <div id="uiv-cardnewfilter"><p>NEW</p></div>
   <div id="uiv-cardbrightfilter"></div>
-  <div id="uiv-cardtop" class="imagenCards50">
+  <div id="uiv-cardtop" class="imagenCards56">
 
     </svg>
     <p></p>
@@ -808,6 +899,449 @@
 </div>
 
 
+
+
+
+
+
+<!--Bebidas-->
+<section class="barra container" id="bebidas" style="margin: 50px;">
+        <h2>Bebidas</h2>
+</section>
+
+
+
+
+
+
+<div class="uiv-card"  data-description="coca cola">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards57">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Coca-Cola</p>
+    <p id="uiv-cardbottomprice">$3.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards58">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Coca-Cola Zero</p>
+    <p id="uiv-cardbottomprice">$2.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards59">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Agua</p>
+    <p id="uiv-cardbottomprice">$2.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards60">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Premio</p>
+    <p id="uiv-cardbottomprice">$4.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards61">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Quatro</p>
+    <p id="uiv-cardbottomprice">$4.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards62">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Sprite</p>
+    <p id="uiv-cardbottomprice">$4.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards63">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Jugo en agua</p>
+    <p id="uiv-cardbottomprice">$5.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards64">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Jugo en leche</p>
+    <p id="uiv-cardbottomprice">$6.500</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards65">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Limonada natural</p>
+    <p id="uiv-cardbottomprice">$5.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards66">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Limonada Hierbabuena</p>
+    <p id="uiv-cardbottomprice">$7.000</p>
+  </div>
+</div>
+
+
+
+
+
+<!--Sodas-->
+<section class="barra container" id="Sodas" style="margin: 50px;">
+        <h2>Soda Saborizada</h2>
+</section>
+
+
+
+
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards67">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Fresa</p>
+    <p id="uiv-cardbottomprice">$7.000</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards68">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Cereza</p>
+    <p id="uiv-cardbottomprice">$7.000</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards69">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Mango</p>
+    <p id="uiv-cardbottomprice">$7.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards70">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Maracuyá</p>
+    <p id="uiv-cardbottomprice">$7.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards71">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Sandia</p>
+    <p id="uiv-cardbottomprice">$7.000</p>
+  </div>
+</div>
+
+<!--Licores-->
+<section class="barra container" id="Licores" style="margin: 50px;">
+        <h2>Licores</h2>
+</section>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards72">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Copa de Vino</p>
+    <p id="uiv-cardbottomprice">$10.000</p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards73">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Botella de Vino</p>
+    <p id="uiv-cardbottomprice">$55.000</p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards74">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Ron 8 años</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards75">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Guaro Tapa roja</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards76">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Buchanans</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards77">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Old Parr</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards78">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Tequila 1800</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards79">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Corona</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards80">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">3 Cordilleras</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards81">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Heineken</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards82">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Club Colombia</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards83">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Aguila</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards84">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle">Aguila Light</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
+
+<div class="uiv-card"  data-description="">
+  <div id="uiv-cardnewfilter"><p>NEW</p></div>
+  <div id="uiv-cardbrightfilter"></div>
+  <div id="uiv-cardtop" class="imagenCards85">
+
+    </svg>
+    <p></p>
+  </div>
+  <div id="uiv-cardbottom">
+    <p id="uiv-cardbottomtitle"> Pilsen</p>
+    <p id="uiv-cardbottomprice"></p>
+  </div>
+</div>
 
 
 
