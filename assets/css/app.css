@@ -7,7 +7,7 @@
 @import url('./componentes/carrusel.css');
 @import url('./componentes/loader.css');
 @import url('./componentes/cards.css');
-
+@import url('./componentes/pedirCards.css');
 
 /* ========= layout ======= */
 @import url('./layout/style.css');
