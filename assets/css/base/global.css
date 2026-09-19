@@ -4,3 +4,9 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+h1{
+    font-size: 100px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    margin-top: 100px;}
