@@ -847,29 +847,6 @@ textarea{
     }
 }
 
-
-.btn{
-    text-align: center;
-}
-#apartar{
-    text-align: center;
-    color: white;
-    font-size: 50px;
-    margin-top: 100px;
-}
-#descripcion{
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    margin-top: 20px;
-}
-.reservas-container{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
 /* Botón de WhatsApp */
 
 .whatsapp {
@@ -1025,4 +1002,76 @@ textarea{
     text-align: left;
     margin-left: 0;
     
+}
+/* Reservas */
+.reservas-container
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 8px 0;
+    width: 40%;
+}
+#preReservas {
+    color: white;
+    text-align: center;
+}
+
+#descripcionReservas {
+    color: white;
+    text-align: center;
+}
+.botonRes{
+    background-color: white;
+    width: 470px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    transition: 0.3s;
+}
+
+.botonRes:hover{
+    background-color: #b97003fa;
+}
+.hora{
+    border-bottom: 0.5px solid white;
+    background-color: transparent;
+    display:flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+.datos-adicionales{
+    border-bottom: 0.5px solid white;
+    background-color: transparent;
+    display:flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+.nombre1{
+    border-bottom: 0.5px solid white;
+    background-color: transparent;
+    display:flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
+.personas{
+    border-bottom: 0.5px solid white;
+    background-color: transparent;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.personas,.nombre1,.datos-adicionales,.hora{
+    border-bottom: 0.5px solid white;
+    background-color: transparent;
+    display:flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
 }
