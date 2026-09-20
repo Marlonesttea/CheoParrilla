@@ -70,16 +70,20 @@ a{
     color: white;
 }
 
+.link-fueguito{
+    font-size: 15px;
+}
+
 .link-fueguito:hover{
     color: #ffffff;
     border: 1px solid #ff0000;
     font-size: 17px;
     transform: translateY(-10px);
-    padding: 9px 24px;
+    padding: 2px 10px;
     transition: 1s;
     border-radius: 20px;
     font: 120% 'Satisfy', cursive;
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 @media (max-width: 900px) {
