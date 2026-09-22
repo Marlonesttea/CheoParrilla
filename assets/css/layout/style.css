@@ -540,8 +540,10 @@ h3#nombre-corto {
     font-family: 'Satisfy', cursive;
     Color: #ffffff;
     border: 3px solid #2e2727;
-    background: url(../../../img/barra1.png);
+    background: url(../../../img/barra.png);
     background-size: cover;
+    box-shadow: 0 4px 10px white;
+    text-shadow: 2px 3px 1px #000000;
 }
 
 .promocion-content{
@@ -598,8 +600,10 @@ h3#nombre-corto {
     font-family: 'Satisfy', cursive;
     Color: #ffffff;
     border: 3px solid #2e2727;
-    background: url(../../../img/barra1.png);
+    background: url(../../../img/barra.png);
     background-size: cover;
+    box-shadow: 0 4px 10px white;
+    text-shadow: 2px 3px 1px #000000;
 
 }
 
