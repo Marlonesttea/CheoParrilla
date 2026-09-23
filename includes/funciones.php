@@ -22,10 +22,12 @@ define('BASE_URL', $basePath);
 
 
 function auth() {
-    session_start();
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
 
-    if (!isset($_SESSION['login'])) {
-        header("Location: /admin/login.php");
+    if (($_SESSION['login'] ?? false) !== true) {
+        header('Location: ' . BASE_URL . 'admin/login.php');
         exit;
     }
 }

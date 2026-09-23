@@ -1,10 +1,12 @@
 
 
 <?php
+require '../includes/funciones.php';
+auth();
+
 require __DIR__ . '/../includes/config/database.php';
 $db = conectarDB();
 
-require '../includes/funciones.php';
 incluirTemplates('header');
 
 // ======================

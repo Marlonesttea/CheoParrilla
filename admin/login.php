@@ -3,14 +3,16 @@
 require __DIR__ . '/../includes/config/database.php';
 $db = conectarDB();
 
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
 
 $errores = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $username = trim($_POST['username']);
-    $password = $_POST['password'];
+    $username = trim($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
 
     if (!$username || !$password) {
         $errores[] = "Todos los campos son obligatorios";
@@ -27,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($usuario && password_verify($password, $usuario['password'])) {
 
-            // 🔐 LOGIN OK
+            session_regenerate_id(true);
             $_SESSION['login'] = true;
             $_SESSION['usuario'] = $usuario['username'];
 
