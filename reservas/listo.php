@@ -5,8 +5,8 @@
    igual que se hace con los pedidos del restaurante.
    ============================================================ */
 
-require_once __DIR__ . '/config/agenda.php';
-$db = bd();
+require_once __DIR__ . '/../includes/agenda_reservas.php';
+$db = conectarDB();
 
 $codigo = trim($_GET['codigo'] ?? '');
 
@@ -17,7 +17,7 @@ $reserva = $stmt->get_result()->fetch_assoc();
 
 $titulo = 'Reserva registrada';
 $raiz   = '..';
-require __DIR__ . '/includes/cabecera.php';
+require __DIR__ . '/../includes/templates/header_reservas.php';
 
 if (!$reserva):
     echo '<div class="rsv-aviso rsv-aviso-malo"><p>No encontramos esa reserva.</p>'
@@ -69,4 +69,4 @@ else:
 </div>
 
 <?php endif; ?>
-<?php require __DIR__ . '/includes/pie.php'; ?>
+<?php require __DIR__ . '/../includes/templates/footer_reservas.php'; ?>

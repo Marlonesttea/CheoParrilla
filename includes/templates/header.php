@@ -33,7 +33,7 @@
 
             <nav class="nav-group nav-group--right" aria-label="Navegación principal derecha">
                 <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
-                <a href="<?php echo BASE_URL;?>reservas.php" class="link-fueguito">Reservas</a>
+                <a href="<?php echo BASE_URL;?>reservas/index.php" class="link-fueguito">Reservas</a>
                 <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
                 <a href="<?php echo BASE_URL;?>index.php#redes" class="link-fueguito">Redes</a>
             </nav>
@@ -51,7 +51,7 @@
                     <a href="<?php echo BASE_URL;?>index.php#galeria" class="link-fueguito">Galeria</a>
                     <a href="<?php echo BASE_URL;?>menu.php" class="link-fueguito">Menú</a>
                     <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
-                    <a href="<?php echo BASE_URL;?>reservas.php" class="link-fueguito">Reservas</a>
+                    <a href="<?php echo BASE_URL;?>reservas/index.php" class="link-fueguito">Reservas</a>
                     <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
                     <a href="<?php echo BASE_URL;?>index.php#redes" class="link-fueguito">Redes</a>
                 </nav>

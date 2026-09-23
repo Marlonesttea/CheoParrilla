@@ -6,7 +6,7 @@
    ($_SESSION['login']), asi no hay dos logins distintos.
    ============================================================ */
 
-require_once __DIR__ . '/../../includes/config/agenda_reservas.php';
+require_once __DIR__ . '/../../includes/agenda_reservas.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

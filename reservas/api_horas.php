@@ -10,11 +10,11 @@
    Es la pieza que hace que la disponibilidad se vea "en vivo".
    ============================================================ */
 
-require_once __DIR__ . '/config/agenda.php';
+require_once __DIR__ . '/../includes/agenda_reservas.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-$db = bd();
+$db = conectarDB();
 
 $fecha    = $_GET['fecha']    ?? '';
 $personas = (int)($_GET['personas'] ?? 0);

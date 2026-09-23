@@ -8,9 +8,9 @@
      y guarda dentro de una transaccion.
    ============================================================ */
 
-require_once __DIR__ . '/config/agenda.php';
+require_once __DIR__ . '/../includes/agenda_reservas.php';
 session_start();
-$db = bd();
+$db = conectarDB();
 
 $errores = [];
 
@@ -46,10 +46,10 @@ if ($problema === '' && !preg_match('/^\d{2}:\d{2}$/', $hora)) {
 
 if ($problema !== '') {
     $titulo = 'Reservar mesa'; $raiz = '..';
-    require __DIR__ . '/includes/cabecera.php';
+    require __DIR__ . '/../includes/templates/header_reservas.php';
     echo '<div class="rsv-aviso rsv-aviso-malo"><p>' . limpiar($problema) . '</p>'
        . '<a class="rsv-btn" href="index.php">Volver a empezar</a></div>';
-    require __DIR__ . '/includes/pie.php';
+    require __DIR__ . '/../includes/templates/footer_reservas.php';
     exit;
 }
 
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $titulo = 'Confirma tu reserva';
 $raiz   = '..';
-require __DIR__ . '/includes/cabecera.php';
+require __DIR__ . '/../includes/templates/header_reservas.php';
 ?>
 
 <section class="rsv-pasos">
@@ -194,5 +194,5 @@ require __DIR__ . '/includes/cabecera.php';
 
 </div>
 
-<?php require __DIR__ . '/includes/pie.php'; ?>
+<?php require __DIR__ . '/../includes/templates/footer_reservas.php'; ?>
 <script src="js/confirmar.js"></script>

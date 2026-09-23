@@ -4,8 +4,8 @@
    Los datos personales se piden en el paso 2, cuando ya escogio.
    ============================================================ */
 
-require_once __DIR__ . '/config/agenda.php';
-$db = bd();
+require_once __DIR__ . '/../includes/agenda_reservas.php';
+$db = conectarDB();
 
 $hoy       = date('Y-m-d');
 $minPer    = (int)cfg($db, 'min_personas', 1);
@@ -32,7 +32,7 @@ if ($mesSig > 12) { $mesSig = 1;  $anioSig++; }
 
 $titulo = 'Reservar mesa';
 $raiz   = '..';
-require __DIR__ . '/includes/cabecera.php';
+require __DIR__ . '/../includes/templates/header_reservas.php';
 ?>
 
 <section class="rsv-pasos">
@@ -160,5 +160,5 @@ require __DIR__ . '/includes/cabecera.php';
 
 </form>
 
-<?php require __DIR__ . '/includes/pie.php'; ?>
+<?php require __DIR__ . '/../includes/templates/footer_reservas.php'; ?>
 <script src="js/reservas.js"></script>

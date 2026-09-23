@@ -12,7 +12,7 @@
    en una franja de tiempo.
    ============================================================ */
 
-require_once __DIR__ . '/bd.php';
+require_once __DIR__ . '/config/database.php';
 
 /* ------------------------------------------------------------
    AYUDAS DE TIEMPO
