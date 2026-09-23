@@ -1,13 +1,10 @@
 <?php
 
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
-
-incluirTemplates('header');
-
 
 $scripts = ['app', 'crear']; // global + específico
 
@@ -29,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sanitizar (básico)
     $nombre = trim($_POST['nombre']);
     $descripcion = trim($_POST['descripcion']);
-    $precio = floatval($_POST['precio']);
-    $imagen = $_FILES['imagen'];
+    $precioIngresado = trim($_POST['precio'] ?? '');
+    $precio = is_numeric($precioIngresado) ? (float) $precioIngresado : 0;
+    $imagen = $_FILES['imagen'] ?? [];
 
     // VALIDACIONES BACKEND
     if (!$nombre) {
@@ -41,11 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errores['descripcion'] = "La descripción es obligatoria";
     }
 
-    if (!is_numeric($precio) || $precio < 0) {
+    if ($precioIngresado === '' || !is_numeric($precioIngresado) || $precio < 0) {
         $errores['precio'] = "Precio inválido";
     }
 
-    if (!$imagen['tmp_name']) {
+    if (empty($imagen['tmp_name']) || ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
         $errores['imagen'] = "La imagen es obligatoria";
     }
 
@@ -78,21 +76,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     VALUES (?, ?, ?, ?, 1, 0)");
 
                 $stmt->bind_param("ssds", $nombre, $descripcion, $precio, $rutaDB);
-                $stmt->execute();
+
+                if (!$stmt->execute()) {
+                    $errores['general'] = "No se pudo guardar el plato";
+                    @unlink($ruta);
+                }
 
                 // REDIRECT (evita duplicados)
-                header("Location: crear.php?ok=1");
-                exit;
+                if (empty($errores)) {
+                    header("Location: crear.php?ok=1");
+                    exit;
+                }
+            } else {
+                $errores['imagen'] = "No se pudo guardar la imagen";
             }
         }
     }
 }
-
-require_once __DIR__ . '/../includes/funciones.php';
-auth();
-
-require_once __DIR__ . '/../includes/config/database.php';
-$db = conectarDB();
 
 incluirTemplates('header'); 
 
@@ -117,6 +117,9 @@ include '../../includes/templates/header_crud.php';
 
         <?php if ($mensaje): ?>
             <p id="mensajeOk" class="mensajeOk"><?php echo $mensaje; ?></p>
+        <?php endif; ?>
+        <?php if (isset($errores['general'])): ?>
+            <p class="error"><?php echo $errores['general']; ?></p>
         <?php endif; ?>
 
         <form class="admin-form" method="POST" enctype="multipart/form-data" novalidate>

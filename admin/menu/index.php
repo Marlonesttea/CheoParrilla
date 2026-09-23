@@ -1,9 +1,9 @@
 <?php
 
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
 
 incluirTemplates('header'); 

@@ -1,11 +1,9 @@
 <?php
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
-
-incluirTemplates('header');
 
 $mensaje = '';
 $errores = [];
@@ -48,20 +46,25 @@ $rutaImagen = $plato['imagen'];
 // ---------------------------
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $nombre = trim($_POST['nombre']);
-    $descripcion = trim($_POST['descripcion']);
-    $precio = floatval($_POST['precio']);
+    $nombre = trim($_POST['nombre'] ?? '');
+    $descripcion = trim($_POST['descripcion'] ?? '');
+    $precioIngresado = trim($_POST['precio'] ?? '');
+    $precio = is_numeric($precioIngresado) ? (float) $precioIngresado : 0;
     $activo = isset($_POST['activo']) ? 1 : 0;
-    $orden = intval($_POST['orden']);
-    $imagen = $_FILES['imagen'];
+    $orden = intval($_POST['orden'] ?? 0);
+    $imagen = $_FILES['imagen'] ?? [];
 
     // VALIDACIONES
     if (!$nombre) $errores['nombre'] = "El nombre es obligatorio";
     if (!$descripcion) $errores['descripcion'] = "La descripción es obligatoria";
-    if (!is_numeric($precio) || $precio <= 0) $errores['precio'] = "Precio inválido";
+    if ($precioIngresado === '' || !is_numeric($precioIngresado) || $precio <= 0) {
+        $errores['precio'] = "Precio inválido";
+    }
 
     // Subir nueva imagen si se cargó
-    if (!empty($imagen['tmp_name'])) {
+    $imagenNueva = false;
+
+    if (!empty($imagen['tmp_name']) && ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_OK) {
         $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/CheoParrilla/assets/imagenes/platos/';
         if (!is_dir($carpeta)) mkdir($carpeta, 0755, true);
 
@@ -78,8 +81,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (move_uploaded_file($imagen['tmp_name'], $ruta)) {
                 $rutaImagen = 'assets/imagenes/platos/' . $nombreImagen;
+                $imagenNueva = true;
+            } else {
+                $errores['imagen'] = "No se pudo guardar la imagen";
             }
         }
+    } elseif (($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE) {
+        $errores['imagen'] = "No se pudo cargar la imagen";
     }
 
 
@@ -87,12 +95,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errores)) {
         $stmt = $db->prepare("UPDATE platos SET nombre=?, descripcion=?, valor=?, activo=?, orden=?, imagen=? WHERE id=?");
         $stmt->bind_param("ssdissi", $nombre, $descripcion, $precio, $activo, $orden, $rutaImagen, $id);
-        $stmt->execute();
 
-        header("Location: index.php?ok=1");
-        exit;
+        if ($stmt->execute()) {
+            header("Location: index.php?ok=1");
+            exit;
+        }
+
+        if ($imagenNueva) @unlink($ruta);
+        $errores['general'] = "No se pudo actualizar el plato";
     }
 }
+
+incluirTemplates('header');
 ?>
 
 <section class="admin-container admin-container-admin">
@@ -101,6 +115,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <?php if ($mensaje): ?>
             <p class="mensajeOk"><?= $mensaje ?></p>
+        <?php endif; ?>
+        <?php if (isset($errores['general'])): ?>
+            <p class="error"><?= $errores['general'] ?></p>
         <?php endif; ?>
 
         <form method="POST" enctype="multipart/form-data" class="admin-form">
