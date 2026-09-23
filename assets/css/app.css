@@ -8,6 +8,7 @@
 @import url('./componentes/loader.css');
 @import url('./componentes/cards.css');
 @import url('./componentes/pedirCards.css');
+@import url('./componentes/despliegue.css');
 
 /* ========= layout ======= */
 @import url('./layout/style.css');

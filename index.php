@@ -27,7 +27,7 @@ include 'includes/templates/loader.php';
     <section class="menu container" id="menu">
         <h2>Nuestros platos</h2>
         <hr class="divisor-linea" style="margin-top: 0px;">
-        <div class="cards">
+        <d class="cards">
 
         <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#asados">
@@ -71,7 +71,7 @@ include 'includes/templates/loader.php';
             <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#salchipapa">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/salchipapas-menu.png" alt="Salchipapa_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Salchipapas</h3>
                     <p>Clic para ir al menú.</p>
@@ -95,7 +95,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php">
+            <a class="card-link" href="menu.php#bebidas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
@@ -108,7 +108,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php">
+            <a class="card-link" href="menu.php#licores">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="" alt="">
                 <div class="card-body">
@@ -120,6 +120,18 @@ include 'includes/templates/loader.php';
             </a>
             <!-- termina tarjeta -->
         
+<!-- inicia tarjeta -->
+            <a class="card-link" href="menu.php#otros">
+            <div class="card" style="margin-bottom: 25px;">
+                <img src="" alt="">
+                <div class="card-body">
+                    <h3 class="carrusel-name" id="nombre-corto">Otros</h3>
+                    <p>Clic para ir al menú.</p>
+                    
+                </div>
+            </div>
+            </a>
+            <!-- termina tarjeta -->
 
 
         </div>

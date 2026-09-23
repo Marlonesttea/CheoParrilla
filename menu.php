@@ -24,6 +24,7 @@ include 'includes/templates/loader.php';
 		<a href="#combo-hamburguesas">Combo de Hamburguesas</a>
 		<a href="#salchipapa">Salchipapas</a>
 		<a href="#perros">Perros y Perras Artesanales</a>
+		<a href="#otros">Otros</a>
 		<a href="#bebidas">Bebidas</a>
 		<a href="#licores">Licores</a>
 	</nav>
@@ -40,4 +41,4 @@ include 'includes/templates/loader.php';
 
 
 
-<?php  include 'includes/templates/footer.php' ?>
+<?php include 'includes/templates/footer.php' ?>

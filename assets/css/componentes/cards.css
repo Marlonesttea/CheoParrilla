@@ -63,10 +63,12 @@
   font-family: 'Satisfy', cursive;
   font-size: clamp(3rem, 8vw, 5.5rem);
   line-height: 1;
+  text-shadow: 2px 2px 1px rgb(193 77 8)
 }
 
 .carta-hero__content > p:last-child{
   font-size: 1.05rem;
+  text-shadow: 2px 2px 1px rgb(75, 2, 2)
 }
 
 .carta-categorias{
@@ -474,7 +476,7 @@
 .imagenCards2{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images13.png);
+  background-image: url(../../../imgDelMenu/ChuzoDeCerdo.png);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -573,7 +575,7 @@
 .imagenCards11{
   width: 100%;
   height: 100%;
-  background-image: url(../../../ImgDelMenu/Churrasco.png);
+  background-image: url(../../../ImgDelMenu/Churrasco.jpg);
   background-size: cover;
   gap: 20px;
   display: flex;
@@ -973,7 +975,7 @@
 .imagenCards50{
   width: 100%;
   height: 100%;
-  background-image: url(../../../imgmenu/images41.png);
+  background-image: url(../../../imgDelMenu/Alitas.png);
   background-size: cover;
   gap: 20px;
   display: flex;

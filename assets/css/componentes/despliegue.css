@@ -1,0 +1,187 @@
+:root {
+    --gooey-menu-color: #ff4081;
+    --gooey-menu-size: 56px;
+    --gooey-menu-distance: 105px;
+}
+
+.gooey-menu {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1100;
+    width: var(--gooey-menu-size);
+    height: var(--gooey-menu-size);
+    text-align: center;
+}
+
+.gooey-menu__toggle {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: var(--gooey-menu-size);
+    height: var(--gooey-menu-size);
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(226, 94, 45);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 35%);
+}
+
+.gooey-menu__toggle:focus-visible,
+.gooey-menu__item:focus-visible,
+.gooey-menu__whatsapp:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.gooey-menu__bars,
+.gooey-menu__bars::before,
+.gooey-menu__bars::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 0;
+    border-radius: 3px;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: transform 200ms ease, opacity 200ms ease;
+    content: "";
+}
+
+.gooey-menu__bars::before,
+.gooey-menu__bars::after {
+    transform: translate(-50%, -50%);
+}
+
+.gooey-menu__bars::before {
+    transform: translate(-50%, calc(-50% - 8px));
+}
+
+.gooey-menu__bars::after {
+    transform: translate(-50%, calc(-50% + 8px));
+}
+
+.gooey-menu__toggle[aria-expanded="true"] .gooey-menu__bars {
+    background: transparent;
+}
+
+.gooey-menu__toggle[aria-expanded="true"] .gooey-menu__bars::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.gooey-menu__toggle[aria-expanded="true"] .gooey-menu__bars::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.gooey-menu__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    width: var(--gooey-menu-size);
+    height: var(--gooey-menu-size);
+    place-items: center;
+    border-radius: 50%;
+    background: orange;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0) scale(0.6);
+    transition: transform 220ms ease, opacity 180ms ease, background-color 180ms ease;
+}
+
+.gooey-menu__item:hover {
+    background: #fff;
+    color: orange;
+}
+
+.gooey-menu.is-open .gooey-menu__item {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate3d(var(--gooey-menu-x, 0px), var(--gooey-menu-y, 0px), 0) scale(1);
+}
+
+.gooey-menu__whatsapp {
+    position: fixed !important;
+    top: auto !important;
+    left: 24px !important;
+    right: auto !important;
+    bottom: 29.5px !important;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #00d757;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
+    color: #fff;
+    text-decoration: none;
+    transition: width 300ms ease, border-radius 300ms ease, transform 150ms ease;
+}
+
+.gooey-menu__whatsapp .icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: width 300ms ease, padding 300ms ease;
+}
+
+.gooey-menu__whatsapp .icono svg {
+    width: 25px;
+}
+
+.gooey-menu__whatsapp .icono svg path {
+    fill: #fff;
+}
+
+.gooey-menu__whatsapp .BotonW {
+    position: absolute;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: width 300ms ease, opacity 300ms ease, padding 300ms ease;
+}
+
+.gooey-menu__whatsapp:hover {
+    width: 150px;
+    border-radius: 40px;
+}
+
+.gooey-menu__whatsapp:hover .icono {
+    width: 30%;
+    padding-left: 10px;
+}
+
+.gooey-menu__whatsapp:hover .BotonW {
+    width: 70%;
+    padding-right: 10px;
+    opacity: 1;
+}
+
+.gooey-menu__whatsapp:active {
+    transform: translate(2px, 2px);
+}
+
+@media (max-width: 600px) {
+    .gooey-menu {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .gooey-menu__whatsapp {
+        left: 16px !important;
+        bottom: 21.5px !important;
+    }
+}

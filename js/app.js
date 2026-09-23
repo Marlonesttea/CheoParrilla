@@ -98,6 +98,30 @@
 const loader = document.querySelector('.loader-fondo');
 
 document.addEventListener('DOMContentLoaded', () => {
+    const quickMenu = document.querySelector('.gooey-menu');
+    const quickMenuToggle = quickMenu?.querySelector('.gooey-menu__toggle');
+    const quickMenuItems = quickMenu?.querySelectorAll('.gooey-menu__item');
+
+    if (quickMenu && quickMenuToggle && quickMenuItems?.length) {
+        const distance = parseFloat(getComputedStyle(quickMenu).getPropertyValue('--gooey-menu-distance'));
+        const itemCount = quickMenuItems.length;
+        const startAngle = -Math.PI / 2;
+        const endAngle = -Math.PI;
+        const angleStep = itemCount > 1 ? (endAngle - startAngle) / (itemCount - 1) : 0;
+
+        quickMenuItems.forEach((item, index) => {
+            const angle = startAngle + (angleStep * index);
+            item.style.setProperty('--gooey-menu-x', `${Math.cos(angle) * distance}px`);
+            item.style.setProperty('--gooey-menu-y', `${Math.sin(angle) * distance}px`);
+        });
+
+        quickMenuToggle.addEventListener('click', () => {
+            const isOpen = quickMenu.classList.toggle('is-open');
+            quickMenuToggle.setAttribute('aria-expanded', String(isOpen));
+            quickMenuToggle.setAttribute('aria-label', isOpen ? 'Cerrar acciones rápidas' : 'Abrir acciones rápidas');
+        });
+    }
+
     const navToggle = document.querySelector('.nav-toggle');
     const navPanel = document.getElementById('nav-panel');
 
