@@ -3,6 +3,7 @@
 <?php
 require '../includes/funciones.php';
 auth();
+$adminPage = true;
 
 require __DIR__ . '/../includes/config/database.php';
 $db = conectarDB();
@@ -51,6 +52,7 @@ $inactivos = mysqli_fetch_assoc($resultInactivos)['inactivos'];
         <div class="adm-buttons">
             <a href="menu/crear.php" class="btn-crear">➕ Crear Plato</a>
             <a href="menu/index.php" class="btn-editar">✏️ Editar Listado</a>
+            <a href="admiReserva/index.php" class="btn-editar">📅 Panel de Reservas</a>
             <a href="<?php echo BASE_URL; ?>index.php" class="btn-salir">🚪 Salir</a>
         </div>
 

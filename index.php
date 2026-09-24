@@ -27,7 +27,7 @@ include 'includes/templates/loader.php';
     <section class="menu container" id="menu">
         <h2>Nuestros platos</h2>
         <hr class="divisor-linea" style="margin-top: 0px;">
-        <d class="cards">
+        <div class="cards">
 
         <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#asados">

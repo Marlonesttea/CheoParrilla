@@ -1,0 +1,128 @@
+/* ============================================================
+   PANEL.CSS  -  Estilos de las pantallas de administración.
+   Se carga DESPUÉS de reservas.css y reusa sus variables.
+   ============================================================ */
+
+body.rsv-admin-page {
+    --admin-fondo: #fffdf8;
+    background: var(--admin-fondo);
+    color: var(--rsv-oscuro);
+}
+
+.rsv-admin-page .pnl-main {
+    background: var(--admin-fondo);
+}
+
+.pnl-menu {
+    background: #fff;
+    border-bottom: 1px solid var(--rsv-borde);
+    padding: 0 20px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.pnl-menu a {
+    padding: 13px 16px;
+    color: var(--rsv-gris);
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+}
+.pnl-menu a:hover { color: var(--rsv-oscuro); }
+.pnl-activo {
+    color: var(--rsv-brasa) !important;
+    border-bottom-color: var(--rsv-brasa);
+    font-weight: 700;
+}
+
+.pnl-main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+.pnl-main h1 { font-size: 24px; margin: 8px 0 18px; }
+
+/* ---------- Mensajes ---------- */
+.pnl-msg {
+    padding: 12px 14px; border-radius: 8px;
+    font-size: 14px; margin: 0 0 14px;
+}
+.pnl-bien { background: #e8f5ee; border: 1px solid #b9dfc9; color: #1e5e3c; }
+.pnl-malo { background: #fdecea; border: 1px solid #f5c6c0; color: #a03227; }
+
+.pnl-ayuda {
+    background: #fff8f0; border-left: 4px solid var(--rsv-brasa);
+    padding: 12px 14px; font-size: 14px; margin: 0 0 18px;
+}
+.pnl-ayuda code { background: #efe4d8; padding: 1px 5px; border-radius: 4px; }
+
+/* ---------- Filtro y formularios ---------- */
+.pnl-filtro {
+    display: flex; align-items: center; gap: 10px;
+    flex-wrap: wrap; margin-bottom: 18px;
+    background: #fff; border: 1px solid var(--rsv-borde);
+    border-radius: 10px; padding: 14px;
+}
+.pnl-filtro label { font-size: 14px; font-weight: 600; }
+.pnl-filtro input, .pnl-tabla input, .pnl-tabla select {
+    padding: 8px 10px; border: 1px solid var(--rsv-borde);
+    border-radius: 7px; font-size: 14px; font-family: inherit;
+}
+.pnl-filtro input[type="text"] { flex: 1; min-width: 180px; }
+
+.pnl-btn {
+    padding: 9px 16px; border: none; border-radius: 7px;
+    background: var(--rsv-brasa); color: #fff;
+    font-size: 14px; font-weight: 600; cursor: pointer;
+    text-decoration: none; display: inline-block;
+}
+.pnl-btn:hover { background: var(--rsv-brasa2); }
+.pnl-btn-mini { padding: 6px 11px; font-size: 13px; }
+.pnl-btn-claro { background: #efe4d8; color: var(--rsv-oscuro); }
+.pnl-btn-claro:hover { background: #e2d3c5; }
+
+.pnl-linea { display: flex; gap: 6px; align-items: center; }
+
+/* ---------- Contadores ---------- */
+.pnl-tarjetas {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 14px; margin-bottom: 20px;
+}
+.pnl-dato {
+    background: #fff; border: 1px solid var(--rsv-borde);
+    border-radius: 10px; padding: 16px; text-align: center;
+}
+.pnl-dato span { display: block; font-size: 13px; color: var(--rsv-gris); }
+.pnl-dato strong { font-size: 28px; color: var(--rsv-brasa); }
+.pnl-dato small { font-size: 15px; color: var(--rsv-gris); }
+
+/* ---------- Tabla ---------- */
+.pnl-tabla {
+    width: 100%; border-collapse: collapse; background: #fff;
+    border: 1px solid var(--rsv-borde); border-radius: 10px;
+    overflow: hidden; margin-bottom: 18px; font-size: 14px;
+}
+.pnl-tabla th {
+    background: #f3e9e0; text-align: left;
+    padding: 11px 12px; font-size: 13px;
+}
+.pnl-tabla td { padding: 10px 12px; border-top: 1px solid var(--rsv-borde); }
+.pnl-nota { color: var(--rsv-gris); font-size: 13px; max-width: 170px; }
+
+.pnl-etiqueta {
+    display: inline-block; padding: 3px 9px; border-radius: 20px;
+    font-size: 12px; background: #efe4d8; text-transform: capitalize;
+}
+.pnl-e-confirmada .pnl-etiqueta { background: #d9f0e2; color: #1e5e3c; }
+.pnl-e-pendiente  .pnl-etiqueta { background: #fdf0d5; color: #8a6116; }
+.pnl-e-cancelada  .pnl-etiqueta,
+.pnl-e-no_asistio .pnl-etiqueta { background: #f7dedb; color: #a03227; }
+/* Las que ya no ocupan mesa se ven apagadas */
+.pnl-e-cancelada, .pnl-e-no_asistio { opacity: .6; }
+
+.pnl-vacio {
+    background: #fff; border: 1px dashed var(--rsv-borde);
+    border-radius: 10px; padding: 30px; text-align: center;
+    color: var(--rsv-gris);
+}
+
+@media (max-width: 760px) {
+    .pnl-tarjetas { grid-template-columns: repeat(2, 1fr); }
+    .pnl-tabla { display: block; overflow-x: auto; }
+}

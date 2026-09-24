@@ -1,18 +1,24 @@
 <?php
 
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
+$adminPage = true;
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
-
-incluirTemplates('header');
-
 
 $scripts = ['app', 'crear']; // global + específico
 
 $errores = [];
 $mensaje = '';
+$categorias = [];
+
+$resultadoCategorias = $db->query("SELECT id, nombre FROM categorias ORDER BY orden, id");
+if ($resultadoCategorias) {
+    while ($categoria = $resultadoCategorias->fetch_assoc()) {
+        $categorias[] = $categoria;
+    }
+}
 
 // PRG (mensaje después de redirect)
 if (isset($_GET['ok'])) {
@@ -23,14 +29,17 @@ if (isset($_GET['ok'])) {
 $nombre = '';
 $descripcion = '';
 $precio = '';
+$categoriaId = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Sanitizar (básico)
     $nombre = trim($_POST['nombre']);
     $descripcion = trim($_POST['descripcion']);
-    $precio = floatval($_POST['precio']);
-    $imagen = $_FILES['imagen'];
+    $precioIngresado = trim($_POST['precio'] ?? '');
+    $precio = is_numeric($precioIngresado) ? (float) $precioIngresado : 0;
+    $categoriaId = (int) ($_POST['categoria_id'] ?? 0);
+    $imagen = $_FILES['imagen'] ?? [];
 
     // VALIDACIONES BACKEND
     if (!$nombre) {
@@ -41,11 +50,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errores['descripcion'] = "La descripción es obligatoria";
     }
 
-    if (!is_numeric($precio) || $precio < 0) {
+    if ($precioIngresado === '' || !is_numeric($precioIngresado) || $precio < 0) {
         $errores['precio'] = "Precio inválido";
     }
 
-    if (!$imagen['tmp_name']) {
+    $categoriaValida = false;
+    foreach ($categorias as $categoria) {
+        if ((int) $categoria['id'] === $categoriaId) {
+            $categoriaValida = true;
+            break;
+        }
+    }
+    if (!$categoriaValida) {
+        $errores['categoria'] = "Selecciona una categoría válida";
+    }
+
+    if (empty($imagen['tmp_name']) || ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
         $errores['imagen'] = "La imagen es obligatoria";
     }
 
@@ -74,27 +94,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $rutaDB = 'assets/imagenes/platos/' . $nombreImagen;
 
                 $stmt = $db->prepare("INSERT INTO platos 
-                    (nombre, descripcion, valor, imagen, activo, orden) 
-                    VALUES (?, ?, ?, ?, 1, 0)");
+                    (categoria_id, nombre, descripcion, valor, imagen, activo, orden) 
+                    VALUES (?, ?, ?, ?, ?, 1, 0)");
 
-                $stmt->bind_param("ssds", $nombre, $descripcion, $precio, $rutaDB);
-                $stmt->execute();
+                $stmt->bind_param("issds", $categoriaId, $nombre, $descripcion, $precio, $rutaDB);
+
+                if (!$stmt->execute()) {
+                    $errores['general'] = "No se pudo guardar el plato";
+                    @unlink($ruta);
+                }
 
                 // REDIRECT (evita duplicados)
-                header("Location: crear.php?ok=1");
-                exit;
+                if (empty($errores)) {
+                    header("Location: crear.php?ok=1");
+                    exit;
+                }
+            } else {
+                $errores['imagen'] = "No se pudo guardar la imagen";
             }
         }
     }
 }
 
-require_once __DIR__ . '/../includes/funciones.php';
-auth();
 
-require_once __DIR__ . '/../includes/config/database.php';
-$db = conectarDB();
-
-incluirTemplates('header'); 
 
 include '../../includes/templates/header_crud.php';
 
@@ -103,7 +125,7 @@ include '../../includes/templates/header_crud.php';
 
 <div class="admin-container">
     <div class="container nav-admin">
-        <a href="<?php echo BASE_URL; ?>admin/admin.php" class="btn">Regresa</a>
+        <a href="<?php echo BASE_URL; ?>admin/index.php" class="btn-admin">Regresar</a>
         
     </div>
 </div>
@@ -118,6 +140,9 @@ include '../../includes/templates/header_crud.php';
         <?php if ($mensaje): ?>
             <p id="mensajeOk" class="mensajeOk"><?php echo $mensaje; ?></p>
         <?php endif; ?>
+        <?php if (isset($errores['general'])): ?>
+            <p class="error"><?php echo $errores['general']; ?></p>
+        <?php endif; ?>
 
         <form class="admin-form" method="POST" enctype="multipart/form-data" novalidate>
 
@@ -126,6 +151,20 @@ include '../../includes/templates/header_crud.php';
             <input type="text" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>">
             <?php if (isset($errores['nombre'])): ?>
                 <p class="error"><?php echo $errores['nombre']; ?></p>
+            <?php endif; ?>
+
+            <!-- CATEGORÍA -->
+            <label for="categoria_id">Categoría</label>
+            <select name="categoria_id" id="categoria_id" required>
+                <option value="">Selecciona una categoría</option>
+                <?php foreach ($categorias as $categoria): ?>
+                    <option value="<?= (int) $categoria['id'] ?>" <?= $categoriaId === (int) $categoria['id'] ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($categoria['nombre']) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <?php if (isset($errores['categoria'])): ?>
+                <p class="error"><?= $errores['categoria'] ?></p>
             <?php endif; ?>
 
             <!-- DESCRIPCIÓN -->
@@ -137,7 +176,7 @@ include '../../includes/templates/header_crud.php';
 
             <!-- PRECIO -->
             <label>Precio</label>
-            <input type="number" name="precio" min="0" value="<?php echo $precio; ?>">
+            <input type="number" name="precio" min="0" value="<?php echo $precio; ?>" style="color: black;">
             <?php if (isset($errores['precio'])): ?>
                 <p class="error"><?php echo $errores['precio']; ?></p>
             <?php endif; ?>

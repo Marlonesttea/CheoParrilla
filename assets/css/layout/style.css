@@ -6,7 +6,6 @@ body {
         #000000 100%
     );
     background-attachment: fixed;
-   
 
 }
 
@@ -196,6 +195,8 @@ a{
     text-align: left;
     margin-left: 0;}
 
+    
+
 .btn{
     position: relative;
     display: inline-flex;
@@ -216,6 +217,8 @@ a{
     z-index: 1;
 }
 
+
+
 .btn::before {
     content: "";
     position: absolute;
@@ -234,6 +237,8 @@ a{
     border: 2px solid #b97003fa;
     border-radius: 4px;
 }
+
+
 
 @media (max-width: 992px) {
     .hero {
@@ -562,6 +567,7 @@ h3#nombre-corto {
     object-fit: contain;
     display: block;
     max-width: 100%;
+    box-shadow: 0 0px 10px brown;
 }
 
 .promocion-text{
@@ -1021,4 +1027,25 @@ input[type="number"] {
     display:flex;
     margin-bottom: 24px;
     justify-content: space-between;
+}
+
+.footer-panel-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: max-content;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-panel-link:hover {
+    color: #fff;
+    transform: translateY(-2px);
 }

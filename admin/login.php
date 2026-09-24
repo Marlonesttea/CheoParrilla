@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['login'] = true;
             $_SESSION['usuario'] = $usuario['username'];
 
-            header("Location: admin/index.php");
+            header("Location: index.php");
             exit;
 
         } else {
