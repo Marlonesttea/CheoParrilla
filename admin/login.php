@@ -42,24 +42,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
-<div class="menu-container login-container ">
-    <div class="login-card">
-
-        <h1> Administrador Login</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso administrativo</title>
+    <link rel="stylesheet" href="../assets/css/paginas/login.css">
+</head>
+<body>
+    <form method="POST" class="form">
+        <p class="heading">Acceso administrativo</p>
 
         <?php foreach ($errores as $error): ?>
-            <div class="login-error"><?= $error ?></div>
+            <div class="login-error"><?= htmlspecialchars($error) ?></div>
         <?php endforeach; ?>
 
-        <form method="POST" class="login-form">
-            <input type="text" name="username" placeholder="Usuario">
-            <input type="password" name="password" placeholder="Contraseña">
+        <label for="username">Usuario</label>
+        <input id="username" class="input" name="username" placeholder="Usuario" type="text" autocomplete="username" required>
 
-            <button type="submit" class="login-btn">
-                Ingresar
-            </button>
-        </form>
+        <label for="password">Contraseña</label>
+        <input id="password" class="input" name="password" placeholder="Contraseña" type="password" autocomplete="current-password" required>
 
-    </div>
-</div>
+        <button class="btn" type="submit">Ingresar</button>
+    </form>
+</body>
+</html>
