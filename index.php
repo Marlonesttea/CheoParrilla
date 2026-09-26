@@ -97,7 +97,7 @@ include 'includes/templates/loader.php';
             <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#bebidas">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/bebidas-menu.png" alt="bebidas_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Bebidas</h3>
                     <p>Clic para ir al menú.</p>
@@ -110,7 +110,7 @@ include 'includes/templates/loader.php';
             <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#licores">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/licores-menu.png" alt="Licores_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Licores</h3>
                     <p>Clic para ir al menú.</p>
@@ -123,7 +123,7 @@ include 'includes/templates/loader.php';
 <!-- inicia tarjeta -->
             <a class="card-link" href="menu.php#otros">
             <div class="card" style="margin-bottom: 25px;">
-                <img src="" alt="">
+                <img src="img/otros-menu.png" alt="Otros_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Otros</h3>
                     <p>Clic para ir al menú.</p>
