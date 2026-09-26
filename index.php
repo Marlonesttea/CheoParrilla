@@ -25,7 +25,7 @@ include 'includes/templates/loader.php';
 
 
     <section class="menu container" id="menu">
-        <h2>Nuestros platos</h2>
+        <h2>" Nuestros platos "</h2>
         <hr class="divisor-linea" style="margin-top: 0px;">
         <div class="cards">
 

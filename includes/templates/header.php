@@ -40,7 +40,14 @@
                 <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
                 <a href="<?php echo BASE_URL;?>reservas/index.php" class="link-fueguito">Reservas</a>
                 <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
-                <a href="<?php echo BASE_URL;?>index.php#redes" class="link-fueguito">Redes</a>
+                <div class="nav-social-dropdown">
+                    <button class="link-fueguito nav-social-dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-social-menu-desktop">
+                        Redes
+                    </button>
+                    <div class="nav-social-dropdown__menu" id="nav-social-menu-desktop" hidden>
+                        <?php include __DIR__ . '/redes.php'; ?>
+                    </div>
+                </div>
             </nav>
 
             <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
@@ -58,7 +65,14 @@
                     <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
                     <a href="<?php echo BASE_URL;?>reservas/index.php" class="link-fueguito">Reservas</a>
                     <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
-                    <a href="<?php echo BASE_URL;?>index.php#redes" class="link-fueguito">Redes</a>
+                    <div class="nav-social-dropdown nav-social-dropdown--mobile">
+                        <button class="nav-social-dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-social-menu-mobile">
+                            Redes
+                        </button>
+                        <div class="nav-social-dropdown__menu" id="nav-social-menu-mobile" hidden>
+                            <?php include __DIR__ . '/redes.php'; ?>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
