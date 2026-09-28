@@ -1,153 +1,85 @@
-/* From Uiverse.io by waleedlh10 */ 
-.pedirCard {
-  width: 100%;
-  height: 100%;
+.card-container-pedir  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.card-pedir {
   background: rgb(255, 255, 255);
   border-radius: 10px;
-  box-shadow: 0px 0px 14px -2px #bebebe;
   transition: 0.2s ease-in-out;
-  display: flex;
-  flex-direction: row;
-  justify-content:center;
-}
-.svg{
-  width: 5px;
-  height: 5px;
+  width: calc(40% - 20px);
+  height: 160px;
+  display: flex ;
+
 }
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.card-content-pedir {
+  padding: 10px;
 }
 
-.pedirCard:hover {
-  cursor: pointer;
-}
-
-.img {
+.card-content-pedir {
   width: 100%;
   height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: linear-gradient(#7980c5, #9198e5);
-  display: flex left;
-  align-items: top;
-  justify-content: right;
-}
-
-.save {
-  transition: 0.2s ease-in-out;
-  border-radius: 10px;
-  margin: 10px;
-  width: 30%;
-  height: 30px;
-  background-color: #ffffff;
-  display: flex ;
-  align-items: center;
-  justify-content: center;
-}
-
-.save .svg {
-  transition: 0.2s ease-in-out;
-  width: 15px;
-  height: 15px;
-}
-
-.save:hover .svg {
-  fill: #ced8de;
-}
-
-.text {
-  padding: 7px 20px;
+  color: black;
   display: flex;
   flex-direction: column;
-  align-items: space-around;
 }
 
-.text .h3 {
-  font-family: system-ui;
-  font-size: medium;
-  font-weight: 600;
-  color: black;
-  text-align: center;
+.card-text-pedir {
+  flex-grow: 1;
 }
 
-.text .p {
-  font-family: system-ui;
-  color: #999999;
-  font-size: 13px;
-  margin: 0px;
-  text-align: center;
-  padding: 5px;
-}
-
-.icon-box {
-  margin: 3px;
-  padding: 4px;
-  background-color: #7980c5;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.icon-box .span {
-  font-family: system-ui;
-  font-size: small;
-  font-weight: 700;
-  color: #fff;
-}
-.containerPedir{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-.containerPedir > br {
-  display: none;
-}
-.img{
-  width: 100%;
+.card-button-pedir {
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
   cursor: pointer;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+  width: 28px;
+  border-radius: 1000px;
 }
-.save{
-  cursor: pointer;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+
+.card-button-pedir:hover {
+  background-color: #ff6600;
 }
-.pedirCard{
-  box-shadow: 1px 2px 4px rgb(255, 255, 255);
-  border-radius: 8px;
+
+.card-image-pedir {
+  width: 75%;
+  height: auto;
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px; 
+  background-color: black;
 }
-.text p{
+.card-content-pedir h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card-content-pedir p {
   margin: 5px 0;
-  font-size: 15px;
+  font-size: 14px;
+
 }
-.text{
-  padding: 5px;
-}
-.icon-box{
-  width: 100%;
-  height: 40px;
-  cursor: pointer;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
+
+.card-price-pedir {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  .containerPedir {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .card-pedir {
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
-  .containerPedir {
-    grid-template-columns: 1fr;
+  .card-pedir {
+    width: 100%;
   }
 }
-
-
-
-
-
-/*# sourceMappingURL=index.css.map */
