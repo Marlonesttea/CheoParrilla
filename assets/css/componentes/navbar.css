@@ -60,6 +60,126 @@ nav a {
     justify-content: flex-end;
 }
 
+.nav-social-dropdown {
+    position: relative;
+}
+
+.nav-social-dropdown__toggle {
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.nav-group .nav-social-dropdown__toggle {
+    margin: 0 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.nav-social-dropdown__menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    z-index: 1001;
+    min-width: 220px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    background: rgba(14, 14, 14, 0.97);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    animation: nav-social-enter 0.18s ease-out;
+}
+
+.nav-social-dropdown__menu[hidden] {
+    display: none;
+}
+
+.nav-social-dropdown__menu .card-redes {
+    max-width: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.nav-social-dropdown__menu .card-redes ul {
+    flex-direction: row;
+    gap: 8px;
+    padding: 0;
+}
+
+.nav-social-dropdown__menu .iso-pro {
+    position: relative;
+}
+
+.nav-social-dropdown__menu a,
+.nav-panel-links .nav-social-dropdown__menu a {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.nav-social-dropdown__menu a:hover::after {
+    content: none;
+}
+
+.nav-social-dropdown__menu .svg {
+    box-sizing: border-box;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    color: #ffae00;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.nav-social-dropdown__menu .text {
+    top: calc(100% + 5px);
+    left: 50%;
+    white-space: nowrap;
+    color: #fff;
+    background: rgba(30, 30, 30, 0.96);
+    transform: translate(-50%, -3px);
+}
+
+.nav-social-dropdown__menu .iso-pro:hover .text {
+    transform: translate(-50%, 0);
+}
+
+.nav-social-dropdown__menu .iso-pro span {
+    width: 48px;
+    height: 48px;
+    pointer-events: none;
+}
+
+.nav-social-dropdown__menu .iso-pro:hover span:nth-child(2) {
+    transform: translate(4px, -4px);
+}
+
+.nav-social-dropdown__menu .iso-pro:hover span:nth-child(3) {
+    transform: translate(8px, -8px);
+}
+
+@keyframes nav-social-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .nav-toggle {
     display: none;
     width: 44px;
@@ -138,6 +258,30 @@ nav a {
     
 }
 
+.nav-social-dropdown--mobile .nav-social-dropdown__toggle {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.nav-social-dropdown--mobile .nav-social-dropdown__toggle:hover,
+.nav-social-dropdown--mobile .nav-social-dropdown__toggle[aria-expanded="true"] {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-social-dropdown--mobile .nav-social-dropdown__menu {
+    position: static;
+    min-width: 0;
+    margin: 4px 0 0;
+}
+
 @media (max-width: 900px) {
     .header {
         position: sticky;
@@ -152,6 +296,10 @@ nav a {
 
     .nav-group {
         display: none;
+    }
+
+    .nav-panel-links .nav-social-dropdown {
+        width: 100%;
     }
 
     .nav-toggle {

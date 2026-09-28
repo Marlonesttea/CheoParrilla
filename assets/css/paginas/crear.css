@@ -12,12 +12,13 @@
 
 /* Card */
 .admin-card {
-    background: #fff;
+    background: var(--admin-fondo, #fffdf8);
     padding: 2rem;
     width: 100%;
     max-width: 500px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+
 }
 
 /* Título */

@@ -1,0 +1,269 @@
+/* ============================================================
+   RESERVAS.CSS  -  Estilos propios del modulo.
+   Todas las clases empiezan por  rsv-  para que no choquen con
+   el CSS del resto del sitio.
+   Los colores estan en variables: cambiando estas 6 lineas se
+   cambia todo el modulo.
+   ============================================================ */
+
+:root {
+    --rsv-oscuro:  #2b1a12;
+    --rsv-brasa:   #b5361f;   /* rojo parrilla: el color de accion */
+    --rsv-brasa2:  #8f2917;
+    --rsv-crema:   #f7efe7;
+    --rsv-borde:   #e2d3c5;
+    --rsv-gris:    #8a7d73;
+    --rsv-malo:    #c0392b;
+    --rsv-bueno:   #2e7d4f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #030303 0%,
+        #181411 50%,
+        #000000 100% 
+        );
+    color: var(--rsv-oscuro);
+    line-height: 1.5;
+}
+
+/* ---------------- Encabezado ---------------- */
+.rsv-header {
+    background: var(--rsv-oscuro);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.rsv-marca {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+.rsv-volver { color: #e8d9c9; text-decoration: none; font-size: 14px; }
+.rsv-volver:hover { color: #fff; }
+
+.rsv-main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 60px; }
+
+/* ---------------- Barra de pasos ---------------- */
+.rsv-pasos {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin: 10px 0 4px; flex-wrap: wrap;
+}
+.rsv-paso { color: var(--rsv-gris); font-size: 14px; }
+.rsv-paso-activo { color: var(--rsv-brasa); font-weight: 700; }
+.rsv-linea { width: 70px; height: 1px; background: var(--rsv-borde); }
+
+.rsv-resumen {
+    text-align: center; color: var(--rsv-gris);
+    font-size: 14px; margin: 0 0 22px;
+}
+.rsv-resumen span { color: var(--rsv-oscuro); font-weight: 600; }
+
+/* ---------------- Las tres tarjetas ---------------- */
+.rsv-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.rsv-tarjeta {
+    background: #fff;
+    border: 1px solid var(--rsv-borde);
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(43,26,18,.06);
+}
+.rsv-tarjeta h2 {
+    margin: 0; font-size: 26px; font-weight: 400; font-style: italic;
+}
+.rsv-sub { margin: 2px 0 18px; color: var(--rsv-gris); font-size: 14px; font-style: italic; }
+
+/* ---------------- Personas ---------------- */
+.rsv-personas {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+}
+.rsv-bola {
+    width: 46px; height: 46px; border-radius: 50%;
+    border: 1px solid var(--rsv-borde); background: #fff;
+    color: var(--rsv-oscuro); font-size: 15px; cursor: pointer;
+    transition: .15s;
+}
+.rsv-bola:hover { border-color: var(--rsv-brasa); }
+.rsv-bola.rsv-activo {
+    background: var(--rsv-brasa); border-color: var(--rsv-brasa);
+    color: #fff; font-weight: 700;
+}
+
+/* ---------------- Calendario ---------------- */
+.rsv-mes {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin-bottom: 12px;
+}
+.rsv-flecha {
+    text-decoration: none; color: var(--rsv-brasa);
+    font-size: 22px; line-height: 1; padding: 0 6px;
+}
+.rsv-calendario { width: 100%; border-collapse: collapse; }
+.rsv-calendario th {
+    font-size: 11px; color: var(--rsv-gris); font-weight: 600;
+    padding-bottom: 8px; letter-spacing: .5px;
+}
+.rsv-calendario td { padding: 2px; text-align: center; }
+
+.rsv-dia {
+    display: block; width: 100%; padding: 8px 0;
+    border: 1px solid transparent; background: none;
+    border-radius: 8px; font-size: 14px; cursor: pointer;
+    color: var(--rsv-oscuro);
+}
+.rsv-dia:hover { border-color: var(--rsv-brasa); }
+.rsv-dia.rsv-activo {
+    background: var(--rsv-brasa); color: #fff; font-weight: 700;
+}
+/* Dia que no se puede reservar: se ve, pero apagado */
+.rsv-dia-no { color: #cdbfb3; cursor: not-allowed; }
+.rsv-dia-no:hover { border-color: transparent; }
+
+/* ---------------- Horas ---------------- */
+.rsv-dia-elegido {
+    color: var(--rsv-oscuro); font-weight: 600;
+    margin-bottom: 14px; font-size: 14px;
+}
+.rsv-horas {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; min-height: 90px;
+}
+.rsv-hora {
+    padding: 9px 4px; border: 1px solid var(--rsv-borde);
+    background: #fff; border-radius: 8px;
+    font-size: 14px; cursor: pointer; color: var(--rsv-oscuro);
+}
+.rsv-hora:hover { border-color: var(--rsv-brasa); }
+.rsv-hora.rsv-activo {
+    background: var(--rsv-brasa); border-color: var(--rsv-brasa);
+    color: #fff; font-weight: 700;
+}
+/* Hora ocupada: se muestra en gris en vez de esconderla, para que
+   el cliente entienda que si hay servicio pero no a esa hora. */
+.rsv-hora-no {
+    background: #efe7df; color: #b3a89f;
+    cursor: not-allowed; border-color: #e6dcd2;
+}
+.rsv-cargando { color: var(--rsv-gris); font-size: 13px; grid-column: 1 / -1; }
+
+.rsv-leyenda {
+    margin-top: 14px; font-size: 11px; color: var(--rsv-gris);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    flex-wrap: wrap;
+}
+.rsv-punto {
+    width: 10px; height: 10px; border-radius: 2px; display: inline-block;
+    border: 1px solid var(--rsv-borde);
+}
+.rsv-punto-libre { background: #fff; }
+.rsv-punto-no { background: #efe7df; }
+
+.rsv-nota { font-size: 13px; color: var(--rsv-gris); margin-top: 16px; }
+.rsv-nota a { color: var(--rsv-brasa); }
+
+/* ---------------- Boton grande ---------------- */
+.rsv-continuar {
+    display: block; width: 100%; margin-top: 22px;
+    padding: 16px; border: none; border-radius: 10px;
+    background: var(--rsv-brasa); color: #fff;
+    font-size: 16px; font-weight: 700; letter-spacing: 1px;
+    cursor: pointer;
+}
+.rsv-continuar:hover:not(:disabled) { background: var(--rsv-brasa2); }
+.rsv-continuar:disabled { background: #d6c8bc; cursor: not-allowed; }
+
+/* ---------------- Paso 2 ---------------- */
+.rsv-confirmar {
+    display: grid; grid-template-columns: 1fr 1.3fr; gap: 22px;
+    align-items: start; margin-top: 18px;
+}
+.rsv-resumen-caja, .rsv-form {
+    background: #fff; border: 1px solid var(--rsv-borde);
+    border-radius: 14px; padding: 24px;
+}
+.rsv-resumen-caja h2 { margin: 0 0 14px; font-size: 20px; }
+.rsv-resumen-caja ul, .rsv-detalle { list-style: none; padding: 0; margin: 0; }
+.rsv-resumen-caja li, .rsv-detalle li {
+    display: flex; justify-content: space-between;
+    padding: 9px 0; border-bottom: 1px solid var(--rsv-borde);
+}
+.rsv-resumen-caja li span, .rsv-detalle li span { color: var(--rsv-gris); }
+.rsv-cambiar {
+    display: inline-block; margin-top: 14px;
+    color: var(--rsv-brasa); font-size: 14px;
+}
+
+.rsv-form label { display: block; margin-top: 14px; font-size: 14px; font-weight: 600; }
+.rsv-form label span { color: var(--rsv-malo); }
+.rsv-form input, .rsv-form textarea {
+    width: 100%; padding: 11px; margin-top: 5px;
+    border: 1px solid var(--rsv-borde); border-radius: 8px;
+    font-size: 15px; font-family: inherit;
+}
+.rsv-form input:focus, .rsv-form textarea:focus {
+    outline: none; border-color: var(--rsv-brasa);
+}
+.rsv-campo-malo { border-color: var(--rsv-malo); }
+
+.rsv-error { color: var(--rsv-malo); font-size: 13px; margin: 5px 0 0; }
+.rsv-error-caja {
+    background: #fdecea; border: 1px solid #f5c6c0; color: var(--rsv-malo);
+    padding: 11px; border-radius: 8px; font-size: 14px; margin: 0 0 8px;
+}
+
+/* ---------------- Pantalla final ---------------- */
+.rsv-aviso {
+    max-width: 540px; margin: 30px auto; text-align: center;
+    background: #fff; border: 1px solid var(--rsv-borde);
+    border-radius: 14px; padding: 32px 26px;
+}
+.rsv-aviso-bien h1 { margin: 0 0 6px; color: var(--rsv-bueno); }
+.rsv-codigo {
+    font-size: 30px; font-weight: 800; letter-spacing: 2px;
+    color: var(--rsv-brasa); margin: 10px 0 4px;
+}
+.rsv-detalle { margin: 22px 0; text-align: left; }
+.rsv-btn {
+    display: inline-block; padding: 13px 26px; border-radius: 10px;
+    background: var(--rsv-brasa); color: #fff;
+    text-decoration: none; font-weight: 700;
+}
+.rsv-btn-wa { background: #25d366; }
+.rsv-aviso-malo p { color: var(--rsv-malo); margin-bottom: 18px; }
+
+/* ---------------- Pie ---------------- */
+.rsv-pie {
+    background: var(--rsv-oscuro); color: #e8d9c9;
+    text-align: center; padding: 22px; font-size: 14px;
+}
+.rsv-pie p { margin: 3px 0; }
+.rsv-pie-chico { font-size: 12px; color: #a8968a; }
+
+/* ============================================================
+   CELULAR
+   Las tres tarjetas se apilan una debajo de otra.
+   ============================================================ */
+@media (max-width: 900px) {
+    .rsv-tarjetas   { grid-template-columns: 1fr; }
+    .rsv-confirmar  { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+    .rsv-bola  { width: 42px; height: 42px; }
+    .rsv-horas { grid-template-columns: repeat(2, 1fr); }
+    .rsv-main  { padding: 14px 10px 40px; }
+}

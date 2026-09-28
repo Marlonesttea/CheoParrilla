@@ -6,7 +6,6 @@ body {
         #000000 100%
     );
     background-attachment: fixed;
-   
 
 }
 
@@ -78,7 +77,7 @@ a{
     color: #ffffff;
     border: 1px solid #ff0000;
     font-size: 17px;
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     padding: 2px 10px;
     transition: 1s;
     border-radius: 20px;
@@ -110,14 +109,14 @@ a{
     
 }
 
-
+  
 /* contenedor */
 .container{
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
-
+            
 /* HERO */
 
 .hero{
@@ -169,6 +168,7 @@ a{
     font-family: 'Satisfy', cursive;
     font-weight: 400;
     margin-top: 100px;
+    text-shadow: 2px 2px 1px rgb(193 77 8);
 
 
 }
@@ -195,6 +195,8 @@ a{
     text-align: left;
     margin-left: 0;}
 
+    
+
 .btn{
     position: relative;
     display: inline-flex;
@@ -215,6 +217,8 @@ a{
     z-index: 1;
 }
 
+
+
 .btn::before {
     content: "";
     position: absolute;
@@ -233,6 +237,8 @@ a{
     border: 2px solid #b97003fa;
     border-radius: 4px;
 }
+
+
 
 @media (max-width: 992px) {
     .hero {
@@ -410,12 +416,13 @@ h3#nombre-corto {
     background-color: rgb(0, 0, 0);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(122, 122, 122, 0.466);
+    box-shadow: 0 1px 14px rgb(105 81 52);
     transition:0.3s;
 
 } 
 .card:hover{
     transform: translateY(-10px);
+    box-shadow: 0 1px 20px rgb(241, 241, 239);
 }
 
 .card img{
@@ -522,6 +529,7 @@ h3#nombre-corto {
     margin-bottom: 30px;
     font-family: 'Satisfy', cursive;
     Color: #ffffff;
+    text-shadow: 2px 3px 1px #5cad0387;
     
 }
 
@@ -540,8 +548,10 @@ h3#nombre-corto {
     font-family: 'Satisfy', cursive;
     Color: #ffffff;
     border: 3px solid #2e2727;
-    background: url(../../../img/barra1.png);
+    background: url(../../../img/barra.png);
     background-size: cover;
+    box-shadow: 0 4px 10px white;
+    text-shadow: 2px 3px 1px #000000;
 }
 
 .promocion-content{
@@ -558,6 +568,7 @@ h3#nombre-corto {
     object-fit: contain;
     display: block;
     max-width: 100%;
+    box-shadow: 0 0px 10px brown;
 }
 
 .promocion-text{
@@ -598,8 +609,10 @@ h3#nombre-corto {
     font-family: 'Satisfy', cursive;
     Color: #ffffff;
     border: 3px solid #2e2727;
-    background: url(../../../img/barra1.png);
+    background: url(../../../img/barra.png);
     background-size: cover;
+    box-shadow: 0 4px 10px white;
+    text-shadow: 2px 3px 1px #000000;
 
 }
 
@@ -851,72 +864,6 @@ textarea{
     }
 }
 
-/* Botón de WhatsApp */
-
-.whatsapp {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition-duration: 0.3s;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: #00d757;
-}
-
-.icono {
-  width: 100%;
-  transition-duration: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icono svg {
-  width: 25px;
-}
-
-.icono svg path {
-  fill: white;
-}
-.BotonW {
-  position: absolute;
-  right: 0%;
-  width: 0%;
-  opacity: 0;
-  color: white;
-  font-size: 1.2em;
-  font-weight: 600;
-  transition-duration: 0.3s;
-}
-
-.whatsapp:hover {
-  width: 150px;
-  border-radius: 40px;
-  transition-duration: 0.3s;
-}
-
-.whatsapp:hover .icono {
-  width: 30%;
-  transition-duration: 0.3s;
-  padding-left: 10px;
-}
-
-.whatsapp:hover .BotonW {
-  opacity: 1;
-  width: 70%;
-  transition-duration: 0.3s;
-  padding-right: 10px;
-}
-.whatsapp:active {
-  transform: translate(2px, 2px);
-}
-
 /* parte de nosotros */
 
 .Nosotros-texto {
@@ -1081,4 +1028,25 @@ input[type="number"] {
     display:flex;
     margin-bottom: 24px;
     justify-content: space-between;
+}
+
+.footer-panel-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: max-content;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-panel-link:hover {
+    color: #fff;
+    transform: translateY(-2px);
 }

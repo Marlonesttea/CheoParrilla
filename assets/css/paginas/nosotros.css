@@ -66,7 +66,7 @@
 
 .nosotros-presentacion {
 
-    max-width: 750px;
+    max-width: 700px;
 
     color: white;
 
@@ -76,15 +76,12 @@
 }
 
 
-.nosotros-presentacion h1 {
-
-    font-size: 35px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 25px;
-
-    text-shadow: 2px 2px 5px black;
+.nosotros-presentacion h1{
+    font-size: 50px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 
