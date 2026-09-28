@@ -9,6 +9,11 @@
 .menu-card {
     width: 100%;
     max-width: 1200px;
+    background: var(--admin-fondo, #fffdf8);
+    color: #2b1a12;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
 .menu-card h1 {

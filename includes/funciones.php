@@ -5,14 +5,17 @@ function incluirTemplates($nombre): void {
 }
 
 
-define('BASE_URL', '/CheoParrilla/');
-
+define('BASE_URL', '/CheoParrilla/'); //windows estudiantes 
+// define('BASE_URL', '/upb/blanquizal/CheoParrilla/'); //windows estudiantes 
+// define('BASE_URL', '/'); //mac
 
 function auth() {
-    session_start();
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+    }
 
-    if (!isset($_SESSION['login'])) {
-        header("Location: /admin/login.php");
+    if (($_SESSION['login'] ?? false) !== true) {
+        header('Location: ' . BASE_URL . 'admin/login.php');
         exit;
     }
 }

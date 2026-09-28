@@ -35,16 +35,17 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div><a href="<?php echo BASE_URL; ?>admin/index.php" class="footer-panel-link" title="Abrir panel administrativo">⚙ Panel</a>
         <div class="footer-bottom">
             
-            <p><?php echo  date('Y')?> CheoParrilla - Todos los derechos reservados </p>
+            <p><?php echo date('Y') ?> CheoParrilla - Todos los derechos reservados</p>
+            
         </div>
     </footer>
 
 <?php if(isset($scripts) && is_array($scripts)): ?>
 <?php foreach($scripts as $script): ?>
-<script src="<?php echo BASE_URL . "/js/$script.js"; ?>"></script>
+<script src="<?php echo BASE_URL . "js/$script.js"; ?>"></script>
 <?php endforeach; ?>
 <?php endif; ?>
 </body>

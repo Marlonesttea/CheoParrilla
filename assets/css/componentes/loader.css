@@ -63,6 +63,7 @@
     opacity: 1;
     visibility: visible;
     transition: opacity 0.6s ease, visibility 0.6s ease;
+    
 }
 
 .loader-fondo.hidden {

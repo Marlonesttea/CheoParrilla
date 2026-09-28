@@ -1,16 +1,20 @@
 <?php
 
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
+$adminPage = true;
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
 
 incluirTemplates('header'); 
 
 
 // CONSULTA
-$query = "SELECT * FROM platos ORDER BY id ASC";
+$query = "SELECT p.*, c.nombre AS categoria_nombre
+          FROM platos p
+          LEFT JOIN categorias c ON c.id = p.categoria_id
+          ORDER BY p.orden ASC, p.id ASC";
 $resultado = mysqli_query($db, $query);
 
 ?>
@@ -31,6 +35,7 @@ $resultado = mysqli_query($db, $query);
                     <th></th>
                     <th>ID</th>
                     <th>Nombre</th>
+                    <th>Categoría</th>
                     <th>Precio</th>
                     <th>Imagen</th>
                     <th>Orden</th>
@@ -45,6 +50,7 @@ $resultado = mysqli_query($db, $query);
                         <td></td>
                         <td><?= $plato['id']; ?></td>
                         <td><?= htmlspecialchars($plato['nombre']); ?></td>
+                        <td><?= htmlspecialchars($plato['categoria_nombre'] ?? 'Sin categoría'); ?></td>
                         <td>$<?= number_format($plato['valor'], 0); ?></td>
                         <td>
                             <img src="<?= BASE_URL . $plato['imagen']; ?>" class="menu-img">
