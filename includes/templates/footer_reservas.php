@@ -1,8 +1,10 @@
 </main>
 
 <footer class="rsv-pie">
-    <p>Cheo Parrilla &middot; Barrio Blanquizal, Medellín</p>
-    <p class="rsv-pie-chico">Módulo de reservas &middot; Proyecto de Media Técnica</p>
+    <p>Cheo Parrilla BBQ &middot; Barrio Blanquizal, Medellín</p>
+    <p class="rsv-pie-chico">  Calle 58 #92A - 126 <br>
+</p>
+    <p> Los días Lunes no hay servicio.</p>
 </footer>
 
 </body>

@@ -764,6 +764,8 @@ textarea{
     margin: 20px auto;
     transition: 0.3s;
     gap: 10px;
+    float: inline-end;
+   
 
 }
 
@@ -792,24 +794,7 @@ textarea{
     margin: auto;
     border-radius: 10px;
 }
-
-.btn-enviar1{
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px 0;
-    transition: 0.3s;
-    gap: 10px;
-    margin-left: auto;
-    float: inline-end;
-    transition:0.5s;
-
-}
-    .btn-enviar1:hover{
+.btn-enviar1:hover{
     box-shadow: 0 0 10px rgb(248, 248, 248);
     transform: translateY(-5px);
     box-shadow: #ccc 0 1 5px;
@@ -954,82 +939,6 @@ textarea{
     margin-left: 0;
     
 }
-
-
-
-/* Reservas */
-.reservas-container
-input[type="text"],
-input[type="date"],
-input[type="time"],
-input[type="number"] {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    color: white;
-    padding: 8px 0;
-    width: 40%;
-}
-#preReservas {
-    color: white;
-    text-align: center;
-}
-
-#descripcionReservas {
-    color: white;
-    text-align: center;
-}
-.botonRes{
-    background-color: white;
-    width: 470px;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px auto;
-    transition: 0.3s;
-}
-
-.botonRes:hover{
-    background-color: #b97003fa;
-}
-.hora{
-    border-bottom: 0.5px solid white;
-    background-color: transparent;
-    display:flex;
-    margin-bottom: 24px;
-    justify-content: space-between;
-}
-.datos-adicionales{
-    border-bottom: 0.5px solid white;
-    background-color: transparent;
-    display:flex;
-    margin-bottom: 24px;
-    justify-content: space-between;
-}
-.nombre1{
-    border-bottom: 0.5px solid white;
-    background-color: transparent;
-    display:flex;
-    margin-bottom: 24px;
-    justify-content: space-between;
-}
-.personas{
-    border-bottom: 0.5px solid white;
-    background-color: transparent;
-    display:flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-}
-.personas,.nombre1,.datos-adicionales,.hora{
-    border-bottom: 0.5px solid white;
-    background-color: transparent;
-    display:flex;
-    margin-bottom: 24px;
-    justify-content: space-between;
-}
-
 .footer-panel-link {
     display: flex;
     align-items: center;

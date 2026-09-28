@@ -59,7 +59,7 @@ include 'includes/templates/loader.php';
             </div>
 
             <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            <a href="reservas.php" class="btn-enviar1"> ReservarMesa</a>
+          
 
             
         </form>
