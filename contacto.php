@@ -59,9 +59,7 @@ include 'includes/templates/loader.php';
             </div>
 
             <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-          
-
-            
         </form>
     </section>
-        <?php  include 'includes/templates/footer.php' ?>
+    
+     <?php  include 'includes/templates/footer.php' ?>

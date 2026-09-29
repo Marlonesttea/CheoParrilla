@@ -54,7 +54,7 @@ body {
     display: flex; align-items: center; justify-content: center;
     gap: 14px; margin: 10px 0 4px; flex-wrap: wrap;
 }
-.rsv-paso { color: var(--rsv-gris); font-size: 14px; }
+.rsv-paso { color:black; font-size: 14px; }
 .rsv-paso-activo { color: black; font-weight: 700; }
 .rsv-linea { width: 70px; height: 1px; background: var(--rsv-borde); }
 
