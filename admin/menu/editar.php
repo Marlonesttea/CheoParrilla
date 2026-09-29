@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
 
 incluirTemplates('header');
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Subir nueva imagen si se cargó
     if (!empty($imagen['tmp_name'])) {
-        $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/CheoParrilla/assets/imagenes/platos/';
+        $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
         if (!is_dir($carpeta)) mkdir($carpeta, 0755, true);
 
         $extension = strtolower(pathinfo($imagen['name'], PATHINFO_EXTENSION));

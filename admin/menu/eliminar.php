@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 
-require_once __DIR__ . '/../includes/config/database.php';
+require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
 
 incluirTemplates('header');
@@ -30,7 +30,7 @@ incluirTemplates('header');
 
         // ELIMINAR IMAGEN DEL SERVIDOR 
         if (!empty($plato['imagen'])) {
-            $rutaImagen = $_SERVER['DOCUMENT_ROOT'] . '/CheoParrilla/' . $plato['imagen'];
+            $rutaImagen = __DIR__ . '/../../' . $plato['imagen'];
 
             if (file_exists($rutaImagen)) {
                 unlink($rutaImagen);
