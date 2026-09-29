@@ -13,7 +13,7 @@ incluirTemplates('header');
 
     <div class="container nav-admin">
             <a href="<?php echo BASE_URL; ?>admin/menu/crear.php" class="btn">Crear nuevo plato</a>
-            <a href="<?php echo BASE_URL; ?>admin/admin.php" class="btn">Editar plato</a>
+            <a href="<?php echo BASE_URL; ?>admin/menu/editar.php" class="btn">Editar plato</a>
     </div>
 
 </section>
