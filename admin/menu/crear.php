@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/../../includes/funciones.php';
 auth();
-$adminPage = true;
 
 require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
@@ -11,14 +10,6 @@ $scripts = ['app', 'crear']; // global + específico
 
 $errores = [];
 $mensaje = '';
-$categorias = [];
-
-$resultadoCategorias = $db->query("SELECT id, nombre FROM categorias ORDER BY orden, id");
-if ($resultadoCategorias) {
-    while ($categoria = $resultadoCategorias->fetch_assoc()) {
-        $categorias[] = $categoria;
-    }
-}
 
 // PRG (mensaje después de redirect)
 if (isset($_GET['ok'])) {
@@ -29,7 +20,6 @@ if (isset($_GET['ok'])) {
 $nombre = '';
 $descripcion = '';
 $precio = '';
-$categoriaId = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -38,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $descripcion = trim($_POST['descripcion']);
     $precioIngresado = trim($_POST['precio'] ?? '');
     $precio = is_numeric($precioIngresado) ? (float) $precioIngresado : 0;
-    $categoriaId = (int) ($_POST['categoria_id'] ?? 0);
     $imagen = $_FILES['imagen'] ?? [];
 
     // VALIDACIONES BACKEND
@@ -54,17 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errores['precio'] = "Precio inválido";
     }
 
-    $categoriaValida = false;
-    foreach ($categorias as $categoria) {
-        if ((int) $categoria['id'] === $categoriaId) {
-            $categoriaValida = true;
-            break;
-        }
-    }
-    if (!$categoriaValida) {
-        $errores['categoria'] = "Selecciona una categoría válida";
-    }
-
     if (empty($imagen['tmp_name']) || ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
         $errores['imagen'] = "La imagen es obligatoria";
     }
@@ -72,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Si no hay errores
     if (empty($errores)) {
 
-        $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/CheoParrilla/assets/imagenes/platos/';
+        $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
         if (!is_dir($carpeta)) {
             mkdir($carpeta, 0755, true);
         }
@@ -94,10 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $rutaDB = 'assets/imagenes/platos/' . $nombreImagen;
 
                 $stmt = $db->prepare("INSERT INTO platos 
-                    (categoria_id, nombre, descripcion, valor, imagen, activo, orden) 
-                    VALUES (?, ?, ?, ?, ?, 1, 0)");
+                    (nombre, descripcion, valor, imagen, activo, orden) 
+                    VALUES (?, ?, ?, ?, 1, 0)");
 
-                $stmt->bind_param("issds", $categoriaId, $nombre, $descripcion, $precio, $rutaDB);
+                $stmt->bind_param("ssds", $nombre, $descripcion, $precio, $rutaDB);
 
                 if (!$stmt->execute()) {
                     $errores['general'] = "No se pudo guardar el plato";
@@ -116,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-
+incluirTemplates('header');
 
 include '../../includes/templates/header_crud.php';
 
@@ -125,7 +103,7 @@ include '../../includes/templates/header_crud.php';
 
 <div class="admin-container">
     <div class="container nav-admin">
-        <a href="<?php echo BASE_URL; ?>admin/index.php" class="btn-admin">Regresar</a>
+        <a href="<?php echo BASE_URL; ?>admin/admin.php" class="btn">Regresa</a>
         
     </div>
 </div>
@@ -153,20 +131,6 @@ include '../../includes/templates/header_crud.php';
                 <p class="error"><?php echo $errores['nombre']; ?></p>
             <?php endif; ?>
 
-            <!-- CATEGORÍA -->
-            <label for="categoria_id">Categoría</label>
-            <select name="categoria_id" id="categoria_id" required>
-                <option value="">Selecciona una categoría</option>
-                <?php foreach ($categorias as $categoria): ?>
-                    <option value="<?= (int) $categoria['id'] ?>" <?= $categoriaId === (int) $categoria['id'] ? 'selected' : '' ?>>
-                        <?= htmlspecialchars($categoria['nombre']) ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-            <?php if (isset($errores['categoria'])): ?>
-                <p class="error"><?= $errores['categoria'] ?></p>
-            <?php endif; ?>
-
             <!-- DESCRIPCIÓN -->
             <label>Descripción</label>
             <textarea name="descripcion"><?php echo htmlspecialchars($descripcion); ?></textarea>
@@ -176,7 +140,7 @@ include '../../includes/templates/header_crud.php';
 
             <!-- PRECIO -->
             <label>Precio</label>
-            <input type="number" name="precio" min="0" value="<?php echo $precio; ?>" style="color: black;">
+            <input type="number" name="precio" min="0" value="<?php echo $precio; ?>">
             <?php if (isset($errores['precio'])): ?>
                 <p class="error"><?php echo $errores['precio']; ?></p>
             <?php endif; ?>

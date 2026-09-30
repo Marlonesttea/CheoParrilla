@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $imagenNueva = false;
 
     if (!empty($imagen['tmp_name']) && ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_OK) {
-        $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/CheoParrilla/assets/imagenes/platos/';
+        $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
         if (!is_dir($carpeta)) mkdir($carpeta, 0755, true);
 
         $extension = strtolower(pathinfo($imagen['name'], PATHINFO_EXTENSION));
