@@ -72,6 +72,34 @@
     background: #0056b3;
 }
 
+/* Acciones del formulario (Guardar / Cancelar) */
+.admin-form-acciones {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.admin-form-acciones .admin-btn {
+    flex: 1;
+}
+
+.btn-cancelar {
+    display: inline-block;
+    text-align: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+    background: #f1f1f1;
+    border-color: #999;
+}
+
 /* Imagen preview */
 .admin-preview {
     width: 100%;

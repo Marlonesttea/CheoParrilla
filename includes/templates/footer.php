@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div>
-                <img src="img/logoc2.png" class="footer-logo" alt="logo3">
+                <img src="<?php echo BASE_URL; ?>img/logoc2.png" class="footer-logo" alt="logo3">
                 <p>Hamburguesas artesanales y algo más...</p>
             </div>
             

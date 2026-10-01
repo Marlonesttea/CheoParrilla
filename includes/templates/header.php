@@ -13,12 +13,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700;900&family=Montserrat:wght@700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/app.css">
+    <?php $cssVersion = @filemtime(__DIR__ . '/../../assets/css/app.css') ?: time(); ?>
+    <link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/app.css?v=<?php echo $cssVersion; ?>">
 <link rel="preconnect" href="https://googleapis.com">
 <link rel="preconnect" href="https://gstatic.com" crossorigin>
 <link href="https://googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700;900&family=Montserrat:wght@700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/app.css">
-<link rel="icon" type="image/x-icon" href="img/logoc.ico">
+<link rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/app.css?v=<?php echo $cssVersion; ?>">
+<link rel="icon" type="image/x-icon" href="<?php echo BASE_URL;?>img/logoc.ico">
 </head>
 
 <body class="<?= !empty($adminPage) ? 'admin-page' : '' ?>">
@@ -32,8 +33,8 @@
                 <a href="<?php echo BASE_URL;?>menu.php" class="link-fueguito">Menú</a>
             </nav>
 
-            <a href="index.php" class="logo-link">
-                <div><img src="img/logoc2.png" class="logo" alt="logo"></div>
+            <a href="<?php echo BASE_URL;?>index.php" class="logo-link">
+                <div><img src="<?php echo BASE_URL;?>img/logoc2.png" class="logo" alt="logo"></div>
             </a>
 
             <nav class="nav-group nav-group--right" aria-label="Navegación principal derecha">

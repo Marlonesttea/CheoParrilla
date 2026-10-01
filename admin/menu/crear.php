@@ -103,8 +103,7 @@ include '../../includes/templates/header_crud.php';
 
 <div class="admin-container">
     <div class="container nav-admin">
-        <a href="<?php echo BASE_URL; ?>admin/admin.php" class="btn">Regresa</a>
-        
+        <a href="index.php" class="btn">⬅ Volver al listado</a>
     </div>
 </div>
 
@@ -154,7 +153,10 @@ include '../../includes/templates/header_crud.php';
 
             <img id="preview" style="max-width:200px; display:none;">
 
-            <input type="submit" value="Crear Plato" class="admin-btn">
+            <div class="admin-form-acciones">
+                <input type="submit" value="Crear Plato" class="admin-btn">
+                <a href="index.php" class="btn-cancelar">Cancelar</a>
+            </div>
         </form>
     </main>
 </section>

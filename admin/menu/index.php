@@ -24,6 +24,12 @@ $resultado = mysqli_query($db, $query);
     <main class="menu-card">
         <h1>Listado de Platos</h1>
 
+        <?php if (isset($_GET['ok'])): ?>
+            <p class="mensajeOk" id="mensajeOk">✅ Plato guardado con éxito</p>
+        <?php elseif (isset($_GET['eliminado'])): ?>
+            <p class="mensajeOk" id="mensajeOk">🗑️ Plato eliminado</p>
+        <?php endif; ?>
+
         <div class="menu-nav">
             <a href="<?= BASE_URL ?>admin/menu/crear.php" class="menu-btn">➕ Crear Plato</a>
         </div>
