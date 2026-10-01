@@ -48,5 +48,6 @@
 <script src="<?php echo BASE_URL . "js/$script.js"; ?>"></script>
 <?php endforeach; ?>
 <?php endif; ?>
+<script src="<?php echo BASE_URL; ?>js/pedir.js"></script>
 </body>
 </html>

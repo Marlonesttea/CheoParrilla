@@ -1,0 +1,313 @@
+:root {
+    --carrito-pedir-accent: #ff8800;
+    --carrito-pedir-accent-dark: #b86200;
+    --carrito-pedir-ink: #241b18;
+    --carrito-pedir-muted: #766b66;
+    --carrito-pedir-line: #e8e0da;
+    --carrito-pedir-paper: #fffdf9;
+}
+
+body.carrito-pedir-open {
+    overflow: hidden;
+}
+
+.carrito-pedir-launcher {
+    position: fixed;
+    z-index: 1200;
+    right: clamp(16px, 3vw, 30px);
+    bottom: clamp(16px, 3vw, 28px);
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 54px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--carrito-pedir-accent);
+    color: #fff;
+    box-shadow: 0 8px 24px rgb(45 17 12 / 24%);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.carrito-pedir-launcher:hover,
+.carrito-pedir-checkout:hover:not(:disabled) {
+    background: var(--carrito-pedir-accent-dark);
+}
+
+.carrito-pedir-launcher>i {
+    font-size: 17px;
+}
+
+.nav-cart-trigger[aria-expanded="true"] {
+    border-color: #ff8800;
+    background: rgba(255, 136, 0, 0.24);
+}
+
+.carrito-pedir-count {
+    display: grid;
+    min-width: 24px;
+    height: 24px;
+    place-items: center;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--carrito-pedir-accent);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.carrito-pedir-backdrop[hidden] {
+    display: none;
+}
+
+.carrito-pedir-backdrop {
+    position: fixed;
+    z-index: 1400;
+    inset: 0;
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(20 13 11 / 62%);
+    opacity: 0;
+    transition: opacity 180ms ease;
+}
+
+.carrito-pedir-backdrop.is-visible {
+    opacity: 1;
+}
+
+.carrito-pedir-panel {
+    display: flex;
+    flex-direction: column;
+    width: min(440px, 100%);
+    height: 100%;
+    padding: 26px 24px 22px;
+    background: var(--carrito-pedir-paper);
+    color: var(--carrito-pedir-ink);
+    box-shadow: -12px 0 36px rgb(0 0 0 / 16%);
+    transform: translateX(100%);
+    transition: transform 220ms ease;
+}
+
+.carrito-pedir-backdrop.is-visible .carrito-pedir-panel {
+    transform: translateX(0);
+}
+
+.carrito-pedir-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--carrito-pedir-line);
+}
+
+.carrito-pedir-eyebrow {
+    margin: 0 0 6px;
+    color: var(--carrito-pedir-accent);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.carrito-pedir-header h2 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.15;
+}
+
+.carrito-pedir-total-items {
+    color: var(--carrito-pedir-muted);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.carrito-pedir-close,
+.carrito-pedir-icon-button {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid var(--carrito-pedir-line);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--carrito-pedir-ink);
+    cursor: pointer;
+}
+
+.carrito-pedir-close:hover,
+.carrito-pedir-icon-button:hover {
+    border-color: var(--carrito-pedir-accent);
+    color: var(--carrito-pedir-accent);
+}
+
+.carrito-pedir-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px 0;
+}
+
+.carrito-pedir-empty {
+    display: grid;
+    min-height: 220px;
+    place-content: center;
+    gap: 12px;
+    color: var(--carrito-pedir-muted);
+    text-align: center;
+}
+
+.carrito-pedir-empty i {
+    color: var(--carrito-pedir-accent);
+    font-size: 30px;
+}
+
+.carrito-pedir-empty p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.carrito-pedir-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--carrito-pedir-line);
+}
+
+.carrito-pedir-item__details {
+    min-width: 0;
+}
+
+.carrito-pedir-item__details h3 {
+    margin: 0 0 5px;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.carrito-pedir-item__details p {
+    margin: 0;
+    color: var(--carrito-pedir-muted);
+    font-size: 13px;
+}
+
+.carrito-pedir-item__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carrito-pedir-item__quantity {
+    min-width: 18px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.carrito-pedir-item__total {
+    grid-column: 1 / -1;
+    justify-self: end;
+    font-size: 14px;
+}
+
+.carrito-pedir-footer {
+    padding-top: 18px;
+    border-top: 1px solid var(--carrito-pedir-line);
+}
+
+.carrito-pedir-subtotal {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 16px;
+}
+
+.carrito-pedir-note {
+    margin: 10px 0 16px;
+    color: var(--carrito-pedir-muted);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.carrito-pedir-checkout {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--carrito-pedir-accent);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.carrito-pedir-checkout:disabled {
+    background: #c8c0bb;
+    cursor: not-allowed;
+}
+
+.pedir-controles {
+    display: inline-flex;
+    min-height: 34px;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 5px;
+    border-radius: 999px;
+    background: var(--carrito-pedir-accent);
+    color: #fff;
+}
+
+.pedir-control {
+    display: grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 19px;
+    line-height: 1;
+}
+
+.pedir-control:hover {
+    background: rgb(255 255 255 / 18%);
+}
+
+.pedir-control--remove {
+    font-size: 13px;
+}
+
+.pedir-control__quantity {
+    min-width: 16px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    .carrito-pedir-panel {
+        padding: 20px 18px 16px;
+    }
+
+    .carrito-pedir-launcher {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .carrito-pedir-backdrop,
+    .carrito-pedir-panel {
+        transition: none;
+    }
+}

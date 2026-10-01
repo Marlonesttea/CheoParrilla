@@ -1,6 +1,6 @@
 <?php 
 
-$scripts = ['app', 'contacto']; // global + específico
+$scripts = ['app']; // JavaScript global
 require 'includes/funciones.php';
 incluirTemplates('header');
 include 'includes/templates/loader.php';

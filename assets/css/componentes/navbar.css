@@ -22,6 +22,7 @@
 @media (min-width: 901px) {
     .nav {
         display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 48px;
     }
 }
 
@@ -58,6 +59,54 @@ nav a {
 
 .nav-group--right {
     justify-content: flex-end;
+}
+
+.nav-cart-trigger {
+    position: relative;
+    display: inline-grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    place-items: center;
+    margin: 0 8px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-cart-trigger:hover {
+    border-color: #ff8800;
+    background: rgba(255, 136, 0, 0.2);
+}
+
+.nav-cart-trigger > i {
+    font-size: 15px;
+}
+
+.nav-cart-trigger__count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: grid;
+    min-width: 18px;
+    height: 18px;
+    place-items: center;
+    padding: 0 4px;
+    border: 2px solid #17110f;
+    border-radius: 999px;
+    background: #ff8800;
+    color: #211711;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.nav-cart-trigger--mobile {
+    display: none;
 }
 
 .nav-social-dropdown {
@@ -298,8 +347,36 @@ nav a {
         display: none;
     }
 
+    .nav-cart-trigger--desktop {
+        display: none;
+    }
+
     .nav-panel-links .nav-social-dropdown {
         width: 100%;
+    }
+
+    .nav-cart-trigger--mobile {
+        display: inline-flex;
+        width: 100%;
+        height: auto;
+        min-height: 42px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        margin: 0;
+        padding: 10px 12px;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .nav-cart-trigger--mobile .nav-cart-trigger__count {
+        position: static;
+        min-width: 20px;
+        height: 20px;
+        margin-left: auto;
+        border: 0;
+        background: #ff8800;
+        color: #211711;
     }
 
     .nav-toggle {

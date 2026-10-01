@@ -14,12 +14,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Chuzo de Pollo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$20.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -35,12 +35,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Chuzo de cerdo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$20.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -56,12 +56,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Carne de Cerdo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$21.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -77,12 +77,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Carne de Res</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$22.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -98,12 +98,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Chuleta</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$22.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -119,12 +119,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Costichic</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$22.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -140,12 +140,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Pechuga</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$22.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -161,12 +161,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Carne de Res envinada</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$25.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -182,12 +182,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Pechuga Gratinada</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$26.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -203,12 +203,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Punta de Anca</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$29.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -224,12 +224,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Churrasco</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$29.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -245,12 +245,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Picada para 2 personas</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$32.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -270,12 +270,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Sencilla</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$9.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -291,12 +291,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Especial</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$12.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -312,12 +312,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Doble Carne</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -333,12 +333,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Ropa Vieja</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -354,12 +354,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Pollo con Champiñones</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -375,12 +375,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Hawaiana</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -396,12 +396,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Pollo Maicito</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -417,12 +417,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Quesuda</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -438,12 +438,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Mexicana</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$16.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -459,12 +459,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Mixta</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$16.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -480,12 +480,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Jumbo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -501,12 +501,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>ChuzoBurguer</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -522,12 +522,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Paisa</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -543,12 +543,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Carnaval</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -569,12 +569,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Combo Hamburguesas</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -590,12 +590,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Combo Alitas: Combo 1</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -611,12 +611,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Combo Alitas: Combo 2</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$31.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -632,12 +632,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Combo Alitas: Combo 3</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$42.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -658,12 +658,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Sencilla</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$9.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -679,12 +679,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Especial</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$12.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -700,12 +700,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Desgranada</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -721,12 +721,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Con pollo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$16.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -742,12 +742,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Con carne</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$16.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -763,12 +763,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Paisa</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$19.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -789,12 +789,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro Sencillo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$9.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -810,12 +810,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro Especial</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$12.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -831,12 +831,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro Doble Cañon</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$14.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -852,12 +852,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro Hawaiano</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -873,12 +873,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro con carne</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -894,12 +894,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro pollo y maicitos</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -913,12 +913,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro mexicano</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -934,12 +934,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro quesudo</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -955,12 +955,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro pollo con champiñones</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -976,12 +976,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Chuzoperro</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$17.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -997,12 +997,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perro Jumbo de 40cm</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$26.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1018,12 +1018,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra Especial</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$11.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1039,12 +1039,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra Fufa</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$11.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1060,12 +1060,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra pollo y maicitos</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$11.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1081,12 +1081,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra Quesuda</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$14.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1102,12 +1102,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra pollo con champiñones</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$14.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1123,12 +1123,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra grilla</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1144,12 +1144,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Perra grilla</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$15.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1170,12 +1170,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Arepa Burguer</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$13.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1191,12 +1191,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Burrito</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$13.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1212,12 +1212,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Patacón</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$16.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1233,12 +1233,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Ceviche de Chicharrón</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$21.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1259,12 +1259,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Coca-Cola</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$3.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1280,12 +1280,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Coca-Cola Zero</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$2.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1301,12 +1301,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Agua</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$2.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1322,12 +1322,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Premio</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$4.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1343,12 +1343,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Quatro</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$4.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1364,12 +1364,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Sprite</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$4.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1385,12 +1385,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Sprite</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$5.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1406,12 +1406,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Jugo en leche</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$6.500</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1427,12 +1427,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Limonada natural</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$5.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1448,12 +1448,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Limonada Hierbabuena</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$7.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1469,12 +1469,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Fresa</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$7.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1490,12 +1490,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Cereza</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$7.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1511,12 +1511,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Mango</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$7.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1532,12 +1532,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Maracuyá</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$7.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1553,12 +1553,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Sandia</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$7.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1579,12 +1579,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Copa de Vino</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$10.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1600,12 +1600,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Botella de Vino</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$55.000</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1621,12 +1621,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Ron 8 años</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1642,12 +1642,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Guaro Tapa roja</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1663,12 +1663,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Buchanans</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1684,12 +1684,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Old Parr</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1705,12 +1705,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Tequila 1800</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1726,12 +1726,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Corona</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1747,12 +1747,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>3 Cordilleras</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1768,12 +1768,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Heineken</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1789,12 +1789,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Club Colombia</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1810,12 +1810,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Aguila</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1831,12 +1831,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Aguila Light</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
@@ -1852,12 +1852,12 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Nombre</h2>
+          <h2>Pilsen</h2>
         <p>Descripción...</p>
         </div>
 
         <div class="card-price-pedir">
-          <p>$precio</p>
+          <p>$0</p>
           <button class="card-button-pedir">+</button>
         </div>
         </div>
