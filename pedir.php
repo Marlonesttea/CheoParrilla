@@ -24,5 +24,8 @@ include 'includes/templates/loader.php';
 
 
 
+</div>
+</div>
 
-<?php  include 'includes/templates/footer.php' ?>
+<?php  include 'includes/templates/footer.php' ?>   
+
