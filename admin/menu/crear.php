@@ -1,163 +1,200 @@
 <?php
-
 require_once __DIR__ . '/../../includes/funciones.php';
 auth();
+$adminPage = true;
+$scripts = ['app', 'editar'];
 
 require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
 
-$scripts = ['app', 'crear']; // global + específico
-
-$errores = [];
 $mensaje = '';
+$errores = [];
+$categorias = [];
 
-// PRG (mensaje después de redirect)
-if (isset($_GET['ok'])) {
-    $mensaje = "✅ Plato creado con éxito";
+$resultadoCategorias = $db->query("SELECT id, nombre FROM categorias ORDER BY orden, id");
+if ($resultadoCategorias) {
+    while ($categoria = $resultadoCategorias->fetch_assoc()) {
+        $categorias[] = $categoria;
+    }
 }
 
-// Valores por defecto
-$nombre = '';
-$descripcion = '';
-$precio = '';
+// ---------------------------
+// Obtener ID del plato
+// ---------------------------
+if (!isset($_GET['id'])) {
+    header("Location: index.php");
+    exit;
+}
+$id = intval($_GET['id']);
 
+// ---------------------------
+// Traer datos del plato
+// ---------------------------
+$stmt = $db->prepare("SELECT * FROM platos WHERE id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$resultado = $stmt->get_result();
+$plato = $resultado->fetch_assoc();
+
+if (!$plato) {
+    echo "Plato no encontrado";
+    exit;
+}
+
+// ---------------------------
+// Valores por defecto
+// ---------------------------
+$nombre = $plato['nombre'];
+$descripcion = $plato['descripcion'];
+$categoriaId = (int) $plato['categoria_id'];
+$precio = $plato['valor'];
+$activo = $plato['activo'];
+$orden = $plato['orden'];
+$rutaImagen = $plato['imagen'];
+
+// ---------------------------
+// Procesar formulario POST
+// ---------------------------
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Sanitizar (básico)
-    $nombre = trim($_POST['nombre']);
-    $descripcion = trim($_POST['descripcion']);
+    $nombre = trim($_POST['nombre'] ?? '');
+    $descripcion = trim($_POST['descripcion'] ?? '');
+    $categoriaId = (int) ($_POST['categoria_id'] ?? 0);
     $precioIngresado = trim($_POST['precio'] ?? '');
     $precio = is_numeric($precioIngresado) ? (float) $precioIngresado : 0;
+    $activo = isset($_POST['activo']) ? 1 : 0;
+    $orden = intval($_POST['orden'] ?? 0);
     $imagen = $_FILES['imagen'] ?? [];
 
-    // VALIDACIONES BACKEND
-    if (!$nombre) {
-        $errores['nombre'] = "El nombre es obligatorio";
+    // VALIDACIONES
+    if (!$nombre) $errores['nombre'] = "El nombre es obligatorio";
+    if (!$descripcion) $errores['descripcion'] = "La descripción es obligatoria";
+    $categoriaValida = false;
+    foreach ($categorias as $categoria) {
+        if ((int) $categoria['id'] === $categoriaId) {
+            $categoriaValida = true;
+            break;
+        }
     }
-
-    if (!$descripcion) {
-        $errores['descripcion'] = "La descripción es obligatoria";
-    }
-
-    if ($precioIngresado === '' || !is_numeric($precioIngresado) || $precio < 0) {
+    if (!$categoriaValida) $errores['categoria'] = "Selecciona una categoría válida";
+    if ($precioIngresado === '' || !is_numeric($precioIngresado) || $precio <= 0) {
         $errores['precio'] = "Precio inválido";
     }
 
-    if (empty($imagen['tmp_name']) || ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
-        $errores['imagen'] = "La imagen es obligatoria";
-    }
+    // Subir nueva imagen si se cargó
+    $imagenNueva = false;
 
-    // Si no hay errores
-    if (empty($errores)) {
-
+    if (!empty($imagen['tmp_name']) && ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_OK) {
         $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
-        if (!is_dir($carpeta)) {
-            mkdir($carpeta, 0755, true);
-        }
+        if (!is_dir($carpeta)) mkdir($carpeta, 0755, true);
 
         $extension = strtolower(pathinfo($imagen['name'], PATHINFO_EXTENSION));
-        $permitidos = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
+        $permitidos = ['jpg','jpeg','png','webp','avif'];
 
         if (!in_array($extension, $permitidos)) {
             $errores['imagen'] = "Formato no válido";
         } elseif ($imagen['size'] > 2000000) {
             $errores['imagen'] = "Máximo 2MB";
         } else {
-
             $nombreImagen = md5(uniqid(rand(), true)) . "." . $extension;
             $ruta = $carpeta . $nombreImagen;
 
             if (move_uploaded_file($imagen['tmp_name'], $ruta)) {
-
-                $rutaDB = 'assets/imagenes/platos/' . $nombreImagen;
-
-                $stmt = $db->prepare("INSERT INTO platos 
-                    (nombre, descripcion, valor, imagen, activo, orden) 
-                    VALUES (?, ?, ?, ?, 1, 0)");
-
-                $stmt->bind_param("ssds", $nombre, $descripcion, $precio, $rutaDB);
-
-                if (!$stmt->execute()) {
-                    $errores['general'] = "No se pudo guardar el plato";
-                    @unlink($ruta);
-                }
-
-                // REDIRECT (evita duplicados)
-                if (empty($errores)) {
-                    header("Location: crear.php?ok=1");
-                    exit;
-                }
+                $rutaImagen = 'assets/imagenes/platos/' . $nombreImagen;
+                $imagenNueva = true;
             } else {
                 $errores['imagen'] = "No se pudo guardar la imagen";
             }
         }
+    } elseif (($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE) {
+        $errores['imagen'] = "No se pudo cargar la imagen";
+    }
+
+
+    // Actualizar BD si no hay errores
+    if (empty($errores)) {
+        $stmt = $db->prepare("UPDATE platos SET categoria_id=?, nombre=?, descripcion=?, valor=?, activo=?, orden=?, imagen=? WHERE id=?");
+        $stmt->bind_param("issdiisi", $categoriaId, $nombre, $descripcion, $precio, $activo, $orden, $rutaImagen, $id);
+
+        if ($stmt->execute()) {
+            header("Location: index.php?ok=1");
+            exit;
+        }
+
+        if ($imagenNueva) @unlink($ruta);
+        $errores['general'] = "No se pudo actualizar el plato";
     }
 }
 
 incluirTemplates('header');
-
-include '../../includes/templates/header_crud.php';
-
 ?>
 
-
-<div class="admin-container">
-    <div class="container nav-admin">
-        <a href="index.php" class="btn">⬅ Volver al listado</a>
-    </div>
-</div>
-
-
-
 <section class="admin-container admin-container-admin">
-
     <main class="admin-card">
-        <h1>Crear Plato</h1>
+        <h1>Editar Plato</h1>
 
         <?php if ($mensaje): ?>
-            <p id="mensajeOk" class="mensajeOk"><?php echo $mensaje; ?></p>
+            <p class="mensajeOk"><?= $mensaje ?></p>
         <?php endif; ?>
         <?php if (isset($errores['general'])): ?>
-            <p class="error"><?php echo $errores['general']; ?></p>
+            <p class="error"><?= $errores['general'] ?></p>
         <?php endif; ?>
 
-        <form class="admin-form" method="POST" enctype="multipart/form-data" novalidate>
+        <form method="POST" enctype="multipart/form-data" class="admin-form">
 
-            <!-- NOMBRE -->
             <label>Nombre</label>
-            <input type="text" name="nombre" value="<?php echo htmlspecialchars($nombre); ?>">
+            <input type="text" name="nombre" value="<?= htmlspecialchars($nombre) ?>">
             <?php if (isset($errores['nombre'])): ?>
-                <p class="error"><?php echo $errores['nombre']; ?></p>
+                <p class="error"><?= $errores['nombre'] ?></p>
             <?php endif; ?>
 
-            <!-- DESCRIPCIÓN -->
             <label>Descripción</label>
-            <textarea name="descripcion"><?php echo htmlspecialchars($descripcion); ?></textarea>
+            <textarea name="descripcion"><?= htmlspecialchars($descripcion) ?></textarea>
             <?php if (isset($errores['descripcion'])): ?>
-                <p class="error"><?php echo $errores['descripcion']; ?></p>
+                <p class="error"><?= $errores['descripcion'] ?></p>
             <?php endif; ?>
 
-            <!-- PRECIO -->
+            <label for="categoria_id">Categoría</label>
+            <select name="categoria_id" id="categoria_id" required>
+                <?php foreach ($categorias as $categoria): ?>
+                    <option value="<?= (int) $categoria['id'] ?>" <?= $categoriaId === (int) $categoria['id'] ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($categoria['nombre']) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <?php if (isset($errores['categoria'])): ?>
+                <p class="error"><?= $errores['categoria'] ?></p>
+            <?php endif; ?>
+
             <label>Precio</label>
-            <input type="number" name="precio" min="0" value="<?php echo $precio; ?>">
+            <input type="number" name="precio" min="0" value="<?= $precio ?>" style="color: black;">
             <?php if (isset($errores['precio'])): ?>
-                <p class="error"><?php echo $errores['precio']; ?></p>
+                <p class="error"><?= $errores['precio'] ?></p>
             <?php endif; ?>
 
-            <!-- IMAGEN -->
+            <label>Orden</label>
+            <input type="number" name="orden" value="<?= $orden ?>" style="color: black;">
+
+            <label>
+                <input type="checkbox" name="activo" <?= $activo ? 'checked' : '' ?>> Activo
+            </label>
+
             <label>Imagen</label>
-            <input type="file" name="imagen" accept="image/jpeg, image/png, image/webp, image/avif">
+            <input type="file" name="imagen" accept="image/*" id="inputImagen">
+            <p class="imagen-ayuda">Deja este campo vacío para conservar la imagen actual. Formatos: jpg, jpeg, png, webp, avif. Máximo 2MB.</p>
             <?php if (isset($errores['imagen'])): ?>
-                <p class="error"><?php echo $errores['imagen']; ?></p>
+                <p class="error"><?= $errores['imagen'] ?></p>
             <?php endif; ?>
-
-            <img id="preview" style="max-width:200px; display:none;">
+            <img id="previewImagen" src="<?= BASE_URL . ltrim($rutaImagen,'/') ?>?t=<?= time() ?>" width="120" style="margin-top:5px;">
 
             <div class="admin-form-acciones">
-                <input type="submit" value="Crear Plato" class="admin-btn">
+                <input type="submit" value="Actualizar Plato" class="admin-btn">
                 <a href="index.php" class="btn-cancelar">Cancelar</a>
             </div>
         </form>
+
+        <a href="index.php" class="menu-btn-volver">⬅ Volver al listado</a>
+        <a href="<?php echo BASE_URL; ?>admin/index.php" class="menu-btn-volver">⬅ Volver al panel</a>
     </main>
 </section>
 

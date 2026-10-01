@@ -194,9 +194,8 @@ incluirTemplates('header');
         </form>
 
         <a href="index.php" class="menu-btn-volver">⬅ Volver al listado</a>
+        <a href="<?php echo BASE_URL; ?>admin/admin.php" class="menu-btn-volver">⬅ Volver al panel</a>
     </main>
 </section>
 
 <?php include '../../includes/templates/footer.php'; ?>
-
-
