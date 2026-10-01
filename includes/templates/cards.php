@@ -31,7 +31,7 @@ if ($consulta) {
 foreach ($categorias as $categoria):
     $slug = preg_replace('/[^a-z0-9-]/', '', strtolower($categoria['slug']));
 ?>
-<section class="barra container" id="<?= htmlspecialchars($slug) ?>" style="margin: 50px;">
+<section class="barra" id="<?= htmlspecialchars($slug) ?>" style="margin: 50px;">
     <h2><?= htmlspecialchars($categoria['nombre']) ?></h2>
 </section>
 
