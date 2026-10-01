@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 $adminPage = true;
+$scripts = ['app', 'editar'];
 
 require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
@@ -84,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $imagenNueva = false;
 
     if (!empty($imagen['tmp_name']) && ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_OK) {
-        $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/CheoParrilla/assets/imagenes/platos/';
+        $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
         if (!is_dir($carpeta)) mkdir($carpeta, 0755, true);
 
         $extension = strtolower(pathinfo($imagen['name'], PATHINFO_EXTENSION));
@@ -180,10 +181,19 @@ incluirTemplates('header');
 
             <label>Imagen</label>
             <input type="file" name="imagen" accept="image/*" id="inputImagen">
+            <p class="imagen-ayuda">Deja este campo vacío para conservar la imagen actual. Formatos: jpg, jpeg, png, webp, avif. Máximo 2MB.</p>
+            <?php if (isset($errores['imagen'])): ?>
+                <p class="error"><?= $errores['imagen'] ?></p>
+            <?php endif; ?>
             <img id="previewImagen" src="<?= BASE_URL . ltrim($rutaImagen,'/') ?>?t=<?= time() ?>" width="120" style="margin-top:5px;">
 
-            <input type="submit" value="Actualizar Plato" class="admin-btn">
+            <div class="admin-form-acciones">
+                <input type="submit" value="Actualizar Plato" class="admin-btn">
+                <a href="index.php" class="btn-cancelar">Cancelar</a>
+            </div>
         </form>
+
+        <a href="index.php" class="menu-btn-volver">⬅ Volver al listado</a>
     </main>
 </section>
 
