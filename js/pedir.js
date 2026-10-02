@@ -54,7 +54,7 @@
 
     document.body.insertAdjacentHTML('beforeend', `
         ${container ? `<button class="carrito-pedir-launcher" type="button" aria-expanded="false" aria-label="Abrir carrito, 0 productos">
-            <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
             <span>Tu carrito</span>
             <span class="carrito-pedir-count" aria-live="polite">0</span>
         </button>` : ''}

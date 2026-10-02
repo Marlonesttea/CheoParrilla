@@ -32,10 +32,14 @@ include 'includes/templates/loader.php';
 <div class="uiv-cards-container">
 <?php  include 'includes/templates/cards.php' ?>
 
-
     
 </div>
 
+<button class="carrito-pedir-launcher" type="button" aria-expanded="false" aria-label="Abrir carrito, 0 productos">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span>Tu carrito</span>
+            <span class="carrito-pedir-count" aria-live="polite">0</span>
+        </button>
 </main>
 
 

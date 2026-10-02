@@ -158,6 +158,10 @@ include 'includes/templates/loader.php';
         </div>  
     </section>
 
+<button class="carrito-pedir-launcher" type="button" aria-expanded="false" aria-label="Abrir carrito, 0 productos">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="carrito-pedir-count" aria-live="polite">0</span>
+        </button>
 
 
 <?php  include 'includes/templates/mouse.php' ?>
