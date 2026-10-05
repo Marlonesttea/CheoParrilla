@@ -2,6 +2,13 @@
 
 <div class="card-container-pedir">
 
+  <template class="categoria-pedir-panel-heading-template">
+    <header class="categoria-pedir-panel-heading">
+      <h2></h2>
+      <p>Cartas</p>
+    </header>
+  </template>
+
   <div class="categoria-pedir" id="asadoPedir">
   <div class="barra-pedir"> <h2>Asados y Carnes</h2></div>
   </div>
@@ -1134,29 +1141,6 @@
         </div>
 
     </div>
-     <!-- Termina Carta -->
-
-     <!-- Empieza Carta -->
-    <div class="card-pedir">
-      <div class="card-image-pedir">
-        <div class ="imagen-cartica">
-        </div>
-      </div>
-      <div class="card-content-pedir">
-        <div class="card-text-pedir">
-          <h2>Perra grilla</h2>
-        <p>Descripción...</p>
-        </div>
-
-        <div class="card-price-pedir">
-          <p>$15.500</p>
-          <button class="card-button-pedir">+</button>
-        </div>
-        </div>
-
-    </div>
-     <!-- Termina Carta -->
-
 
   <div class="categoria-pedir" id="otrosPedir">
   <div class="barra-pedir"> <h2>Otros</h2></div>

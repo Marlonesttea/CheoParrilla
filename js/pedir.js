@@ -2,6 +2,85 @@
     'use strict';
 
     const container = document.querySelector('.card-container-pedir');
+    if (container) {
+        const categories = [...container.querySelectorAll('.categoria-pedir')];
+        const panelHeadingTemplate = container.querySelector('.categoria-pedir-panel-heading-template');
+        const categoryImages = {
+            asadoPedir: 'carnes-menu.png',
+            hamburPedir: 'hamburguesa-menu.png',
+            combohambPedir: 'combos-menu.png',
+            salchiPedir: 'salchipapas-menu.png',
+            perrosperrasPedir: 'perros-menu.png',
+            otrosPedir: 'otros-menu.png',
+            bebidasPedir: 'bebidas-menu.png',
+            licoresPedir: 'licores-menu.png'
+        };
+        const categoryNav = document.createElement('div');
+        categoryNav.className = 'categorias-pedir-nav';
+        categoryNav.setAttribute('aria-label', 'Categorías del menú');
+        const categoryPanels = document.createElement('div');
+        categoryPanels.className = 'categorias-pedir-paneles';
+
+        categories.forEach((category) => {
+            const bar = category.querySelector('.barra-pedir');
+            if (!bar) return;
+
+            const categoryCards = [];
+            let sibling = category.nextElementSibling;
+            while (sibling && !sibling.classList.contains('categoria-pedir')) {
+                const nextSibling = sibling.nextElementSibling;
+                if (sibling.classList.contains('card-pedir')) categoryCards.push(sibling);
+                sibling = nextSibling;
+            }
+
+            const panel = document.createElement('div');
+            panel.className = 'categoria-pedir-panel';
+            panel.id = `${category.id}-productos`;
+            panel.hidden = true;
+
+            if (panelHeadingTemplate) {
+                const panelHeading = panelHeadingTemplate.content.cloneNode(true);
+                panelHeading.querySelector('h2').textContent = bar.querySelector('h2')?.textContent.trim() || '';
+                panel.append(panelHeading);
+            }
+
+            categoryCards.forEach((card) => panel.append(card));
+
+            const imageName = categoryImages[category.id];
+            if (imageName) {
+                const image = document.createElement('img');
+                image.className = 'barra-pedir-imagen';
+                image.src = new URL(`../img/${imageName}`, document.currentScript.src).href;
+                image.alt = '';
+                image.loading = 'lazy';
+                bar.prepend(image);
+            }
+
+            bar.setAttribute('role', 'button');
+            bar.setAttribute('tabindex', '0');
+            bar.setAttribute('aria-expanded', 'false');
+            bar.setAttribute('aria-controls', panel.id);
+
+            const toggleCards = () => {
+                const expanded = bar.getAttribute('aria-expanded') !== 'true';
+                bar.setAttribute('aria-expanded', String(expanded));
+                panel.hidden = !expanded;
+            };
+
+            bar.addEventListener('click', toggleCards);
+            bar.addEventListener('keydown', (event) => {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                toggleCards();
+            });
+
+            categoryNav.append(category);
+            categoryPanels.append(panel);
+        });
+
+        container.replaceChildren(categoryNav, categoryPanels);
+    }
+
     const storageKey = 'cheoparrilla-carrito-v1';
     const cards = [...(container?.querySelectorAll('.card-pedir') || [])].map((element, index) => {
         const title = element.querySelector('.card-text-pedir h2');

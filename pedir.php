@@ -9,18 +9,24 @@ include 'includes/templates/loader.php';
 ?>
 
 <section class="pedir-hero">
-        <div class="overlay"></div>
-        <div class="pedir-hero-content">
-            <h1 class="cheoTransicion">¡Pide ahora!</h1>
-            <p>Pide lo que desees desde la comodidad de tu hogar, vía WhatsApp</p>
-            <a href="https://wa.me/573234382813?text=Hola,%20quiero%20hacer%20un%20pedidos" class="btn">Realizar Pedido</a>
-        </div>
-        
-    </section>
+    <div class="pedir-hero-content">
+        <p class="pedir-hero-eyebrow">CHEO PARRILLA <span>·</span> SABOR CASERO</p>
+        <h1>¡Pide tu <strong>antojo!</strong></h1>
+        <p class="pedir-hero-description">Hamburguesas, parrilla y mucho sabor, preparados al momento.</p>
+        <a href="#categorias-pedir" class="pedir-hero-action">Explorar categorías <span aria-hidden="true">↓</span></a>
+    </div>
+    <p class="pedir-hero-note"><span>HECHO A LA PARRILLA</span> Sabor que se disfruta</p>
+</section>
 
-<div class="pedir container">
-    <?php  include 'includes/templates/PedirCards.php' ?>
-</div>
+<section class="pedir-menu" id="categorias-pedir">
+    <div class="pedir-menu-heading">
+        <p>¡PIDE AHORA MISMO!</p>
+        <h2>¿Qué se te antoja?</h2>
+    </div>
+    <div class="pedir container">
+        <?php include 'includes/templates/pedirCards.php' ?>
+    </div>
+</section>
 
 
 

@@ -895,60 +895,135 @@ textarea{
 
 
 .pedir-hero{
-    height: 100vh;
-    background: url(../../../img/114093.png) center center / cover no-repeat;
+    min-height: min(76svh, 700px);
+    background:
+        linear-gradient(90deg, rgba(10, 10, 10, 0.94) 0%, rgba(10, 10, 10, 0.78) 34%, rgba(10, 10, 10, 0.12) 74%),
+        url(../../../img/heroimg2.jpeg) center 48% / cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 100px;
-    background-attachment: scroll;
-}
-
-
-.pedir-hero-content h1{
-    font-size: 100px;
-    font-family: 'Satisfy', cursive;
-    font-weight: 400;
-    margin-top: 100px;
-    color: white;
-
-
+    justify-content: flex-start;
+    padding: 120px max(24px, calc((100vw - 1120px) / 2)) 64px;
+    overflow: hidden;
 }
 
 .pedir-hero-content {
+    width: min(100%, 1120px);
+    margin: 0 auto;
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.pedir-hero-content h4{
-    max-width: 500px;
-    margin: 12px auto 18px;
-    font-size: 16px;
-    font-family: '', cursive;
+.pedir-hero-eyebrow {
+    margin: 0 0 14px;
+    color: #f8b54a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.pedir-hero-eyebrow span {
+    color: #fff;
+}
+
+.pedir-hero-content h1 {
+    max-width: 600px;
+    margin: 0;
+    color: #fff;
+    font-family: 'Satisfy', cursive;
+    font-size: clamp(58px, 7vw, 96px);
     font-weight: 400;
-    line-height: 1.35;
-    text-align: justify;
+    line-height: 0.98;
 }
 
-.pedir-hero-content p{
-    font-size: 24px;
-    margin: 20px 0;
-    justify-content: start;
+.pedir-hero-content h1 strong {
+    display: block;
+    color: #f8a52b;
+    font-weight: 400;
 }
 
-.pedir-hero-content p,
-.pedir-hero-content h4 {
-    color: white;
-    width: 100%;
-    text-align: left;
-    margin-left: 0;
-    
+.pedir-hero-description {
+    max-width: 400px;
+    margin: 18px 0 24px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 17px;
+    line-height: 1.5;
 }
 
+.pedir-hero-action {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    gap: 18px;
+    padding: 0 20px;
+    border-radius: 3px;
+    background: #fff;
+    color: #171310;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.pedir-hero-action:hover {
+    background: #f8b54a;
+    color: #171310;
+    transform: translateY(-2px);
+}
+
+.pedir-hero-action span {
+    font-size: 18px;
+}
+
+.pedir-hero-note {
+    position: absolute;
+    right: max(24px, calc((100vw - 1120px) / 2));
+    bottom: 34px;
+    z-index: 1;
+    margin: 0;
+    color: #fff;
+    font-family: 'Satisfy', cursive;
+    font-size: 22px;
+    text-align: right;
+    text-shadow: 0 2px 8px #000;
+}
+
+.pedir-hero-note span {
+    display: block;
+    margin-bottom: 3px;
+    color: #f8b54a;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .pedir-hero {
+        min-height: 590px;
+        align-items: flex-end;
+        padding: 120px 24px 106px;
+        background-image:
+            linear-gradient(0deg, rgba(10, 10, 10, 0.94) 0%, rgba(10, 10, 10, 0.66) 50%, rgba(10, 10, 10, 0.08) 100%),
+            url(../../../img/heroimg2.jpeg);
+        background-position: center, 61% center;
+    }
+
+    .pedir-hero-content h1 {
+        font-size: 64px;
+    }
+
+    .pedir-hero-description {
+        max-width: 320px;
+        font-size: 16px;
+    }
+
+    .pedir-hero-note {
+        right: 24px;
+        bottom: 22px;
+        font-size: 18px;
+    }
+}
 
 
 /* Reservas */
