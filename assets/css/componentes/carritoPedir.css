@@ -311,3 +311,29 @@ body.carrito-pedir-open {
         transition: none;
     }
 }
+
+
+.carrito-pedir-launcher-otros {
+    position: fixed;
+    z-index: 1200;
+    right: clamp(16px, 3vw, 30px);
+    bottom: clamp(16px, 3vw, 28px);
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 54px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--carrito-pedir-accent);
+    color: #fff;
+    box-shadow: 0 8px 24px rgb(45 17 12 / 24%);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.carrito-pedir-launcher-otros:hover,
+.carrito-pedir-checkout:hover:not(:disabled) {
+    background: var(--carrito-pedir-accent-dark);
+}
