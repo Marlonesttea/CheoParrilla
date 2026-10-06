@@ -29,3 +29,35 @@ function auth() {
         exit;
     }
 }
+
+function obtenerCategoriasConPlatos(mysqli $db): array {
+    $consulta = $db->query(
+        "SELECT c.id AS categoria_id, c.nombre AS categoria, c.slug,
+                p.id, p.nombre, p.descripcion, p.valor, p.imagen
+         FROM categorias c
+         LEFT JOIN platos p ON p.categoria_id = c.id AND p.activo = 1
+         ORDER BY c.orden, c.id, p.orden, p.id"
+    );
+
+    if (!$consulta) {
+        return [];
+    }
+
+    $categorias = [];
+    while ($fila = $consulta->fetch_assoc()) {
+        $categoriaId = (int) $fila['categoria_id'];
+        if (!isset($categorias[$categoriaId])) {
+            $categorias[$categoriaId] = [
+                'nombre' => $fila['categoria'],
+                'slug' => $fila['slug'],
+                'platos' => [],
+            ];
+        }
+
+        if ($fila['id'] !== null) {
+            $categorias[$categoriaId]['platos'][] = $fila;
+        }
+    }
+
+    return array_values($categorias);
+}

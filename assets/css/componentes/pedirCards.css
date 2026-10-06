@@ -125,6 +125,7 @@
   grid-column: 1 / -1;
   margin-bottom: 4px;
   margin-top: 35px;
+  scroll-margin-top: 100px;
 }
 
 .categoria-pedir-panel-heading h2 {

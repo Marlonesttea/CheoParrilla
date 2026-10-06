@@ -69,7 +69,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#salchipapa">
+            <a class="card-link" href="menu.php#salchipapas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/salchipapas-menu.png" alt="Salchipapa_Menu">
                 <div class="card-body">
