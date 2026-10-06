@@ -767,6 +767,8 @@ textarea{
     margin: 20px auto;
     transition: 0.3s;
     gap: 10px;
+    float: inline-end;
+   
 
 }
 
@@ -795,24 +797,7 @@ textarea{
     margin: auto;
     border-radius: 10px;
 }
-
-.btn-enviar1{
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px 0;
-    transition: 0.3s;
-    gap: 10px;
-    margin-left: auto;
-    float: inline-end;
-    transition:0.5s;
-
-}
-    .btn-enviar1:hover{
+.btn-enviar1:hover{
     box-shadow: 0 0 10px rgb(248, 248, 248);
     transform: translateY(-5px);
     box-shadow: #ccc 0 1 5px;

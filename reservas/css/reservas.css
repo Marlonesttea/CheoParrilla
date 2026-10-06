@@ -29,7 +29,7 @@ body {
 
 /* ---------------- Encabezado ---------------- */
 .rsv-header {
-    background: var(--rsv-oscuro);
+    background: rgba(0, 0, 0, 0.815);
     color: #fff;
     padding: 14px 24px;
     display: flex;
@@ -54,8 +54,8 @@ body {
     display: flex; align-items: center; justify-content: center;
     gap: 14px; margin: 10px 0 4px; flex-wrap: wrap;
 }
-.rsv-paso { color: var(--rsv-gris); font-size: 14px; }
-.rsv-paso-activo { color: var(--rsv-brasa); font-weight: 700; }
+.rsv-paso { color:black; font-size: 14px; }
+.rsv-paso-activo { color: black; font-weight: 700; }
 .rsv-linea { width: 70px; height: 1px; background: var(--rsv-borde); }
 
 .rsv-resumen {
@@ -95,7 +95,7 @@ body {
 }
 .rsv-bola:hover { border-color: var(--rsv-brasa); }
 .rsv-bola.rsv-activo {
-    background: var(--rsv-brasa); border-color: var(--rsv-brasa);
+    background: #ff8300; border-color:#ff8300;
     color: #fff; font-weight: 700;
 }
 
@@ -105,7 +105,7 @@ body {
     gap: 14px; margin-bottom: 12px;
 }
 .rsv-flecha {
-    text-decoration: none; color: var(--rsv-brasa);
+    text-decoration: none; color:#ff8300;
     font-size: 22px; line-height: 1; padding: 0 6px;
 }
 .rsv-calendario { width: 100%; border-collapse: collapse; }
@@ -123,7 +123,7 @@ body {
 }
 .rsv-dia:hover { border-color: var(--rsv-brasa); }
 .rsv-dia.rsv-activo {
-    background: var(--rsv-brasa); color: #fff; font-weight: 700;
+    background:#ff8300; color: #fff; font-weight: 700;
 }
 /* Dia que no se puede reservar: se ve, pero apagado */
 .rsv-dia-no { color: #cdbfb3; cursor: not-allowed; }
@@ -145,7 +145,7 @@ body {
 }
 .rsv-hora:hover { border-color: var(--rsv-brasa); }
 .rsv-hora.rsv-activo {
-    background: var(--rsv-brasa); border-color: var(--rsv-brasa);
+    background:#ff8300; border-color: #ff8300;
     color: #fff; font-weight: 700;
 }
 /* Hora ocupada: se muestra en gris en vez de esconderla, para que
@@ -169,17 +169,17 @@ body {
 .rsv-punto-no { background: #efe7df; }
 
 .rsv-nota { font-size: 13px; color: var(--rsv-gris); margin-top: 16px; }
-.rsv-nota a { color: var(--rsv-brasa); }
+.rsv-nota a { color:#ff8300; }
 
 /* ---------------- Boton grande ---------------- */
 .rsv-continuar {
     display: block; width: 100%; margin-top: 22px;
     padding: 16px; border: none; border-radius: 10px;
-    background: var(--rsv-brasa); color: #fff;
+    background:#ff8300; color: #fff;
     font-size: 16px; font-weight: 700; letter-spacing: 1px;
     cursor: pointer;
 }
-.rsv-continuar:hover:not(:disabled) { background: var(--rsv-brasa2); }
+.rsv-continuar:hover:not(:disabled) { background:#ff8300; }
 .rsv-continuar:disabled { background: #d6c8bc; cursor: not-allowed; }
 
 /* ---------------- Paso 2 ---------------- */
@@ -200,7 +200,7 @@ body {
 .rsv-resumen-caja li span, .rsv-detalle li span { color: var(--rsv-gris); }
 .rsv-cambiar {
     display: inline-block; margin-top: 14px;
-    color: var(--rsv-brasa); font-size: 14px;
+    color: #ff8300; font-size: 14px;
 }
 
 .rsv-form label { display: block; margin-top: 14px; font-size: 14px; font-weight: 600; }
@@ -243,7 +243,7 @@ body {
 
 /* ---------------- Pie ---------------- */
 .rsv-pie {
-    background: var(--rsv-oscuro); color: #e8d9c9;
+    background: rgba(0, 0, 0, 0.815); color: #e8d9c9;
     text-align: center; padding: 22px; font-size: 14px;
 }
 .rsv-pie p { margin: 3px 0; }
