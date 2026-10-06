@@ -898,13 +898,16 @@ textarea{
     min-height: min(76svh, 700px);
     background:
         linear-gradient(90deg, rgba(10, 10, 10, 0.94) 0%, rgba(10, 10, 10, 0.78) 34%, rgba(10, 10, 10, 0.12) 74%),
-        url(../../../img/heroimg2.jpeg) center 48% / cover no-repeat;
+        url(../../../img/hamburguer_new.jpeg) center 48% / cover no-repeat;
+    background-size: cover, cover;
+    background-position: center, 75% 48%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 120px max(24px, calc((100vw - 1120px) / 2)) 64px;
     overflow: hidden;
+    
 }
 
 .pedir-hero-content {
@@ -991,11 +994,12 @@ textarea{
 .pedir-hero-note span {
     display: block;
     margin-bottom: 3px;
-    color: #f8b54a;
+    color: #f39703;
     font-family: inherit;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
+    text-shadow: 0 2px 8px #000;
 }
 
 @media (max-width: 600px) {
@@ -1005,7 +1009,8 @@ textarea{
         padding: 120px 24px 106px;
         background-image:
             linear-gradient(0deg, rgba(10, 10, 10, 0.94) 0%, rgba(10, 10, 10, 0.66) 50%, rgba(10, 10, 10, 0.08) 100%),
-            url(../../../img/heroimg2.jpeg);
+            url(../../../img/hamburguer_new.jpeg);
+        background-size: cover, auto 100%;
         background-position: center, 61% center;
     }
 

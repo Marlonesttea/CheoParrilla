@@ -1390,6 +1390,28 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
+          <h2>Jugo en agua</h2>
+        <p>Descripción...</p>
+        </div>
+
+        <div class="card-price-pedir">
+          <p>$6.500</p>
+          <button class="card-button-pedir">+</button>
+        </div>
+        </div>
+
+    </div>
+     <!-- Termina Carta -->
+
+
+     <!-- Empieza Carta -->
+    <div class="card-pedir">
+      <div class="card-image-pedir">
+        <div class ="imagen-cartica">
+        </div>
+      </div>
+      <div class="card-content-pedir">
+        <div class="card-text-pedir">
           <h2>Jugo en leche</h2>
         <p>Descripción...</p>
         </div>
@@ -1453,7 +1475,7 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Fresa</h2>
+          <h2>Soda de Fresa</h2>
         <p>Descripción...</p>
         </div>
 
@@ -1474,7 +1496,7 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Cereza</h2>
+          <h2>Soda de Cereza</h2>
         <p>Descripción...</p>
         </div>
 
@@ -1495,7 +1517,7 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Mango</h2>
+          <h2>Soda de Mango</h2>
         <p>Descripción...</p>
         </div>
 
@@ -1516,7 +1538,7 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Maracuyá</h2>
+          <h2>Soda de Maracuyá</h2>
         <p>Descripción...</p>
         </div>
 
@@ -1537,7 +1559,7 @@
       </div>
       <div class="card-content-pedir">
         <div class="card-text-pedir">
-          <h2>Sandia</h2>
+          <h2>Soda de Sandía</h2>
         <p>Descripción...</p>
         </div>
 

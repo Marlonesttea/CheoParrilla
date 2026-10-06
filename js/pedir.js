@@ -15,6 +15,131 @@
             bebidasPedir: 'bebidas-menu.png',
             licoresPedir: 'licores-menu.png'
         };
+        const productImages = {
+            'Coca-Cola': 'CocaCola.jpeg',
+            'Coca-Cola Zero': 'Zero.jpeg',
+            Premio: 'Premio.png',
+            Quatro: 'Quatro.png',
+            Sprite: 'Sprite.png',
+            'Jugo en leche': 'JugoLeche.jpeg',
+            'Limonada natural': 'Limonada.png',
+            'Limonada Hierbabuena': 'Hierbabuena.jpeg',
+            'Ron 8 años': 'Ron8años.png',
+            'Guaro Tapa roja': 'TapaRoja.png',
+            Buchanans: 'Buchanans.png',
+            'Old Parr': 'OldParr.png',
+            Corona: 'Corona.jpeg',
+            '3 Cordilleras': '3Cordilleras.png',
+            Heineken: 'Heineken.jpeg',
+            'Club Colombia': 'ClubColombia.png',
+            Aguila: 'Aguila.png',
+            'Aguila Light': 'Light.png',
+            Pilsen: 'Pilsen.png'
+        };
+        const productDescriptions = {
+            asadoPedir: {
+                'Chuzo de Pollo': 'Pollo asado, papas a la francesa, arepa con queso y ensalada.',
+                'Chuzo de cerdo': 'Cerdo asado, papas a la francesa, arepa con queso y ensalada.',
+                'Carne de Cerdo': 'Carne de cerdo asada, papas a la francesa, arepa con queso y ensalada.',
+                'Carne de Res': 'Carne de res asada, papas a la francesa, arepa con queso y ensalada.',
+                Chuleta: 'Chuleta de cerdo, papas a la francesa, arepa con queso y ensalada.',
+                Costichic: 'Costilla, papas a la francesa, arepa con queso y ensalada.',
+                Pechuga: 'Pechuga de pollo, papas a la francesa, arepa con queso y ensalada.',
+                'Carne de Res envinada': 'Carne de res con vino, papas a la francesa, arepa con queso y ensalada.',
+                'Pechuga Gratinada': 'Pechuga de pollo con queso gratinado, papas a la francesa, arepa y ensalada.',
+                'Punta de Anca': 'Punta de anca asada, papas a la francesa, arepa con queso y ensalada.',
+                Churrasco: 'Churrasco de res, papas a la francesa, arepa con queso y ensalada.',
+                'Picada para 2 personas': 'Papas, chorizo, salchicha, carnes, queso y variedad de acompañamientos.'
+            },
+            hamburPedir: {
+                Sencilla: 'Carne, queso, lechuga, ensalada y salsas.',
+                Especial: 'Carne, queso, tocineta, vegetales y salsas.',
+                'Doble Carne': 'Carne, doble porción de carne, queso, vegetales y salsas.',
+                'Ropa Vieja': 'Hamburguesa de excelente calidad, preparada con ingredientes seleccionados.',
+                'Pollo con Champiñones': 'Carne, pollo, champiñones, queso y salsas.',
+                Hawaiana: 'Carne, queso, piña, tocineta y salsas.',
+                'Pollo Maicito': 'Carne, queso, pollo, maicitos y salsas.',
+                Quesuda: 'Carne, queso, vegetales, salsas y extra de queso.',
+                Mexicana: 'Carne, queso, pico de gallo, guacamole y salsas.',
+                Mixta: 'Carne, pollo, queso, vegetales y salsas.',
+                Jumbo: 'Hamburguesa grande con carne y variedad de ingredientes.',
+                ChuzoBurguer: 'Hamburguesa con carne asada, queso, vegetales y salsas.',
+                Paisa: 'Carne, huevo, papa ripio, chicharrón, queso y salsas.',
+                Carnaval: 'Carne, queso, vegetales, salsas y variedad de ingredientes.'
+            },
+            combohambPedir: {
+                'Combo Hamburguesas': 'Hamburguesa sencilla, papas a la francesa y bebida.',
+                'Combo Alitas: Combo 1': 'Alitas de pollo con acompañamientos.',
+                'Combo Alitas: Combo 2': 'Alitas de pollo con acompañamientos.',
+                'Combo Alitas: Combo 3': 'Alitas de pollo con acompañamientos.'
+            },
+            salchiPedir: {
+                Sencilla: 'Papas, salchicha, queso y salsas.',
+                Especial: 'Papas, salchicha, queso, ingredientes especiales y salsas.',
+                Desgranada: 'Papas, salchicha, mucho queso y maicitos.',
+                'Con pollo': 'Papas, salchicha, pollo, queso y salsas.',
+                'Con carne': 'Papas, salchicha, carne, queso y salsas.',
+                Paisa: 'Papas, salchicha, huevo, arepa, papa ripio y chorizo.'
+            },
+            perrosperrasPedir: {
+                'Perro Sencillo': 'Salchicha, ensalada, queso, papa ripio y salsas.',
+                'Perro Especial': 'Salchicha, queso, tocineta, papa ripio y salsas.',
+                'Perro Doble Cañon': 'Doble salchicha, queso, ensalada, papa ripio y salsas.',
+                'Perro Hawaiano': 'Salchicha, piña, queso, ensalada y papa ripio.',
+                'Perro con carne': 'Salchicha, carne, queso, ensalada y papa ripio.',
+                'Perro pollo y maicitos': 'Salchicha, pollo, maicitos, queso y papa ripio.',
+                'Perro mexicano': 'Salchicha, pico de gallo, guacamole, queso y papa ripio.',
+                'Perro quesudo': 'Salchicha, mucho queso, ensalada, papa ripio y salsas.',
+                'Perro pollo con champiñones': 'Salchicha, pollo, champiñones, queso y papa ripio.',
+                Chuzoperro: 'Salchicha, carne asada, queso, ensalada y papa ripio.',
+                'Perro Jumbo de 40cm': 'Perro caliente de 40 cm con salchicha y variedad de ingredientes.',
+                'Perra Especial': 'Tocineta, queso, ensalada, papa ripio y salsas.',
+                'Perra Fufa': 'Tocineta y variedad de ingredientes, queso, papa ripio y salsas.',
+                'Perra pollo y maicitos': 'Tocineta, pollo, maicitos, queso y papa ripio.',
+                'Perra Quesuda': 'Tocineta, mucho queso, papa ripio, ensalada y salsas.',
+                'Perra pollo con champiñones': 'Tocineta, pollo, champiñones, queso y papa ripio.',
+                'Perra grilla': 'Tocineta, mucha papa ripio, queso, ensalada y salsas.'
+            },
+            otrosPedir: {
+                'Arepa Burguer': 'Hamburguesa con carne y arepas en lugar de pan.',
+                Burrito: 'Arroz, pollo, carne, fríjoles, maicitos, lechuga y queso.',
+                Patacón: 'Patacón con carne desmechada, queso y variedad de ingredientes.',
+                'Ceviche de Chicharrón': 'Ceviche preparado con chicharrón y acompañamientos.'
+            },
+            bebidasPedir: {
+                'Coca-Cola': 'Gaseosa de sabor clásico y refrescante.',
+                'Coca-Cola Zero': 'Gaseosa Coca-Cola sin azúcar.',
+                Agua: 'Agua refrescante.',
+                Premio: 'Gaseosa colombiana dulce y refrescante.',
+                Quatro: 'Gaseosa de sabor cítrico.',
+                Sprite: 'Gaseosa de sabor cítrico y refrescante.',
+                'Jugo en agua': 'Naranja natural preparada en agua. Maracuyá natural preparada en agua. Mango natural preparado en agua. Fresa natural preparada en agua. Sandía natural preparada en agua.',
+                'Jugo en leche': 'Jugos de naranja, maracuyá, mango, fresa o sandía preparados en leche.',
+                'Limonada natural': 'Limonada refrescante preparada con limón y agua.',
+                'Limonada Hierbabuena': 'Limonada con limón y hierbabuena.',
+                'Soda de Fresa': 'Agua carbonatada con sabor a fresa y vaso michelado.',
+                'Soda de Cereza': 'Agua carbonatada con sabor a cereza.',
+                'Soda de Mango': 'Agua carbonatada con sabor a mango.',
+                'Soda de Maracuyá': 'Agua carbonatada con sabor a maracuyá.',
+                'Soda de Sandía': 'Agua carbonatada con sabor a sandía.'
+            },
+            licoresPedir: {
+                'Copa de Vino': 'Copa de vino para acompañar tus comidas.',
+                'Botella de Vino': 'Vino ideal para compartir.',
+                'Ron 8 años': 'Ron añejado de sabor suave.',
+                'Guaro Tapa roja': 'Aguardiente colombiano de sabor tradicional.',
+                Buchanans: 'Whisky suave y elegante.',
+                'Old Parr': 'Whisky de sabor equilibrado.',
+                'Tequila 1800': 'Tequila mexicano de sabor característico.',
+                Corona: 'Cerveza mexicana refrescante.',
+                '3 Cordilleras': 'Cerveza colombiana artesanal.',
+                Heineken: 'Cerveza refrescante de sabor equilibrado.',
+                'Club Colombia': 'Cerveza colombiana de sabor equilibrado.',
+                Aguila: 'Cerveza colombiana refrescante.',
+                'Aguila Light': 'Cerveza colombiana ligera y refrescante.',
+                Pilsen: 'Cerveza colombiana de sabor tradicional.'
+            }
+        };
         const categoryNav = document.createElement('div');
         categoryNav.className = 'categorias-pedir-nav';
         categoryNav.setAttribute('aria-label', 'Categorías del menú');
@@ -44,7 +169,26 @@
                 panel.append(panelHeading);
             }
 
-            categoryCards.forEach((card) => panel.append(card));
+            categoryCards.forEach((card) => {
+                const productName = card.querySelector('.card-text-pedir h2')?.textContent.trim();
+                const productDescription = productDescriptions[category.id]?.[productName];
+                const descriptionElement = card.querySelector('.card-text-pedir p');
+                if (productDescription && descriptionElement) descriptionElement.textContent = productDescription;
+
+                const productImage = productImages[productName];
+                const imageContainer = card.querySelector('.imagen-cartica');
+
+                if (productImage && imageContainer) {
+                    const image = document.createElement('img');
+                    image.className = 'imagen-cartica-img';
+                    image.src = new URL(`../imgFinal/${productImage}`, document.currentScript.src).href;
+                    image.alt = productName;
+                    image.loading = 'lazy';
+                    imageContainer.replaceChildren(image);
+                }
+
+                panel.append(card);
+            });
 
             const imageName = categoryImages[category.id];
             if (imageName) {

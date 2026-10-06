@@ -15,7 +15,7 @@ include 'includes/templates/loader.php';
         <p class="pedir-hero-description">Hamburguesas, parrilla y mucho sabor, preparados al momento.</p>
         <a href="#categorias-pedir" class="pedir-hero-action">Explorar categorías <span aria-hidden="true">↓</span></a>
     </div>
-    <p class="pedir-hero-note"><span>HECHO A LA PARRILLA</span> Sabor que se disfruta</p>
+    <p class="pedir-hero-note"><span></span> </p>
 </section>
 
 <section class="pedir-menu" id="categorias-pedir">
