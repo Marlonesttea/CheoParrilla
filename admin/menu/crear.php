@@ -103,6 +103,7 @@ include '../../includes/templates/header_crud.php';
 
 <div class="admin-container">
     <div class="container nav-admin">
+        <a href="<?php echo BASE_URL; ?>admin/index.php" class="btn">⬅ Volver al panel</a>
         <a href="index.php" class="btn">⬅ Volver al listado</a>
     </div>
 </div>

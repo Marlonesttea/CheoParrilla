@@ -31,6 +31,7 @@ $resultado = mysqli_query($db, $query);
         <?php endif; ?>
 
         <div class="menu-nav">
+            <a href="<?= BASE_URL ?>admin/index.php" class="menu-btn-volver">⬅ Volver al panel</a>
             <a href="<?= BASE_URL ?>admin/menu/crear.php" class="menu-btn">➕ Crear Plato</a>
         </div>
 
