@@ -51,6 +51,11 @@
                 </div>
             </nav>
 
+            <button class="nav-cart-trigger nav-cart-trigger--desktop" type="button" aria-label="Abrir carrito, 0 productos" aria-expanded="false" title="Abrir carrito">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span class="nav-cart-trigger__count" aria-live="polite">0</span>
+            </button>
+
             <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -66,6 +71,11 @@
                     <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
                     <a href="<?php echo BASE_URL;?>reservas/index.php" class="link-fueguito">Reservas</a>
                     <a href="<?php echo BASE_URL;?>contacto.php" class="link-fueguito">Contacto</a>
+                    <button class="nav-cart-trigger nav-cart-trigger--mobile" type="button" aria-label="Abrir carrito, 0 productos" aria-expanded="false">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <span>Mi carrito</span>
+                        <span class="nav-cart-trigger__count" aria-live="polite">0</span>
+                    </button>
                     <div class="nav-social-dropdown nav-social-dropdown--mobile">
                         <button class="nav-social-dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-social-menu-mobile">
                             Redes

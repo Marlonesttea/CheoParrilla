@@ -290,3 +290,30 @@ window.addEventListener('load', () => {
         }, 500);
     }
 });
+
+
+
+// Mantener activo el enlace correspondiente a la página actual.
+const normalizarRuta = (ruta) => ruta.replace(/index\.php$/, '').replace(/\/+$/, '') || '/';
+const urlActual = new URL(window.location.href);
+const enlacesNav = [...document.querySelectorAll('.header .link-fueguito[href]')];
+const coincideHash = enlacesNav.some((enlace) => {
+        const destino = new URL(enlace.href, window.location.href);
+        return normalizarRuta(destino.pathname) === normalizarRuta(urlActual.pathname)
+                && destino.hash
+                && destino.hash === urlActual.hash;
+});
+
+enlacesNav.forEach((enlace) => {
+        const destino = new URL(enlace.href, window.location.href);
+        const mismaRuta = normalizarRuta(destino.pathname) === normalizarRuta(urlActual.pathname);
+        const mismoHash = destino.hash && destino.hash === urlActual.hash;
+        const esActivo = mismaRuta && (coincideHash ? mismoHash : !destino.hash);
+
+        enlace.classList.toggle('actual', esActivo);
+        if (esActivo) {
+                enlace.setAttribute('aria-current', 'page');
+        } else {
+                enlace.removeAttribute('aria-current');
+        }
+});

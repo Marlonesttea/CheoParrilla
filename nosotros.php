@@ -75,7 +75,7 @@ PRIMERA CARA - PRESENTACIÓN
 
             <div class="nosotros-imagen">
                 <img 
-                    src="img/caballoHomosexual.jfif" 
+                    src="img/fogataCheo.jpeg" 
 
                 >
             </div>

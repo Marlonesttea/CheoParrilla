@@ -6,22 +6,4 @@
     </span>
     <span class="BotonW">Whatsapp</span>
 </a>
-<nav class="gooey-menu" aria-label="Acciones rápidas">
-    <button class="gooey-menu__toggle" type="button" aria-expanded="false" aria-controls="gooey-menu-items" aria-label="Abrir acciones rápidas">
-        <span class="gooey-menu__bars" aria-hidden="true"></span>
-    </button>
-    <div id="gooey-menu-items">
-        <a class="gooey-menu__item" href="<?= BASE_URL ?>pedir.php" aria-label="Pedir ahora" title="Pedir ahora">
-            <i class="fa-solid fa-burger" aria-hidden="true"></i>
-        </a>
-        <a class="gooey-menu__item" href="<?= BASE_URL ?>reservas.php" aria-label="Reservar mesa" title="Reservar mesa">
-            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-        </a>
-        <a class="gooey-menu__item" href="<?= BASE_URL ?>menu.php" aria-label="Ver menú" title="Ver menú">
-            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-        </a>
-        <a class="gooey-menu__item" href="<?= BASE_URL ?>contacto.php" aria-label="Contacto" title="Contacto">
-            <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        </a>
-    </div>
-</nav>
+    

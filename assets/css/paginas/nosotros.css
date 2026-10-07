@@ -82,6 +82,7 @@
     font-weight: 400;
     margin-top: 100px;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 1px rgb(2, 44, 2);
 }
 
 
@@ -146,23 +147,24 @@
 .nosotros-tarjeta {
 
     width: 33.333%;
-
+    height: 100%;
     text-align: center;
-
     color: white;
+    border: #d38b0625 2px solid;
+    border-radius: 15px;
+    background-color: #db651617;
+    box-shadow: 1px 4px 100px rgba(92, 92, 92, 0.5);
 }
 
 
 .nosotros-tarjeta h2 {
-
-
     font-size: 30px;
-
     letter-spacing: 2px;
-
     margin: 0 0 20px 0;
-
     color: white;
+    font-family: 'Satisfy', cursive;
+    margin-top: 20px;
+    text-shadow: #ffc400 2px 2px 4px;
 }
 
 
@@ -201,16 +203,13 @@
        ================================================ */
 
 .nosotros-tarjeta p {
-
     font-size: 14px;
-
     line-height: 1.5;
-
     color: white;
-
     margin: 0 auto;
-
     max-width: 330px;
+    height: 190px;
+    
 }
 
 

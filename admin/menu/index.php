@@ -84,4 +84,3 @@ $resultado = mysqli_query($db, $query);
 </section>
 
 <?php include '../../includes/templates/footer.php'; ?>
-

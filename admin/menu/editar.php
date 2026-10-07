@@ -194,10 +194,12 @@ incluirTemplates('header');
         </form>
 
         <a href="index.php" class="menu-btn-volver">⬅ Volver al listado</a>
+<<<<<<< HEAD
         <a href="<?php echo BASE_URL; ?>admin/index.php" class="menu-btn-volver">⬅ Volver al panel</a>
+=======
+        <a href="<?php echo BASE_URL; ?>admin/admin.php" class="menu-btn-volver">⬅ Volver al panel</a>
+>>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
     </main>
 </section>
 
 <?php include '../../includes/templates/footer.php'; ?>
-
-

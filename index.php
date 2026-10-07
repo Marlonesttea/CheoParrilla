@@ -16,8 +16,8 @@ include 'includes/templates/loader.php';
             <p>Hamburguesas artesanales y algo más...</p>
             <h4>Cheo Parrilla es el lugar ideal para disfrutar del auténtico sabor de la parrilla. Ubicado en el Barrio Blanquizal, ofrece una amplia variedad de hamburguesas, carnes, picadas y más, preparados con ingredientes de alta calidad y el mejor sabor. Un espacio pensado para compartir en familia o con amigos, donde cada plato se convierte en una experiencia deliciosa. </h4>
             <a href="menu.php" class="btn">Menú</a>
-            <a href="#menu" class="btn">Pedir a domicilio</a>
-            <a href="#menu" class="btn">Reservar mesa</a>
+            <a href="pedir.php" class="btn">Pedir a domicilio</a>
+            <a href="reservas/index.php" class="btn">Reservar mesa</a>
             
         </div>
     </section>
@@ -69,7 +69,7 @@ include 'includes/templates/loader.php';
             <!-- termina tarjeta -->
 
             <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#salchipapa">
+            <a class="card-link" href="menu.php#salchipapas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/salchipapas-menu.png" alt="Salchipapa_Menu">
                 <div class="card-body">
@@ -158,7 +158,11 @@ include 'includes/templates/loader.php';
         </div>  
     </section>
 
-
+<a href="pedir.php">
+    <button class="carrito-pedir-launcher-otros" type="button" >
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </button>
+</a>
 
 <?php  include 'includes/templates/mouse.php' ?>
 

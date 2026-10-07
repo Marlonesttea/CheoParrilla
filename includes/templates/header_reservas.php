@@ -16,7 +16,9 @@ $raiz   = $raiz   ?? '..';      // ruta para volver al sitio principal
 <body class="rsv-page">
 
 <header class="rsv-header">
-    <a href="<?= $raiz ?>/index.php" class="rsv-marca">Cheo Parrilla</a>
+<a href="<?= $raiz ?>/index.php" class="logo-link">
+                <div><img src="/CheoParrilla/img/logoc2.png" class="logo" alt="logo"></div>
+            </a>
     <a href="<?= $raiz ?>/index.php" class="rsv-volver">&lsaquo; Volver al sitio</a>
 </header>
 
