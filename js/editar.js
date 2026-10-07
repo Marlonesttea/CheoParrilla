@@ -15,10 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const file = e.target.files[0];
             if (file) {
                 preview.src = URL.createObjectURL(file);
-<<<<<<< HEAD
-=======
                 preview.hidden = false;
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
             }
         });
     }

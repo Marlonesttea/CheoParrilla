@@ -1,18 +1,13 @@
 <?php
 require_once __DIR__ . '/../../includes/funciones.php';
 auth();
-<<<<<<< HEAD
-=======
 $adminPage = true;
 $scripts = ['app', 'editar'];
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
 
 require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
 
 $mensaje = '';
-<<<<<<< HEAD
-=======
 $errores = [];
 $categorias = [];
 
@@ -22,18 +17,14 @@ if ($resultadoCategorias) {
         $categorias[] = $categoria;
     }
 }
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
 
 $nombre = '';
 $descripcion = '';
 $categoriaId = 0;
 $precio = '';
-<<<<<<< HEAD
-=======
 $activo = 1;
 $orden = 0;
 $rutaImagen = '';
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = trim($_POST['nombre'] ?? '');
@@ -41,37 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categoriaId = (int) ($_POST['categoria_id'] ?? 0);
     $precioIngresado = trim($_POST['precio'] ?? '');
     $precio = is_numeric($precioIngresado) ? (float) $precioIngresado : 0;
-<<<<<<< HEAD
-=======
     $activo = isset($_POST['activo']) ? 1 : 0;
     $orden = (int) ($_POST['orden'] ?? 0);
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
     $imagen = $_FILES['imagen'] ?? [];
 
     if ($nombre === '') $errores['nombre'] = 'El nombre es obligatorio';
     if ($descripcion === '') $errores['descripcion'] = 'La descripción es obligatoria';
 
-<<<<<<< HEAD
-    if (empty($imagen['tmp_name']) || ($imagen['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
-        $errores['imagen'] = "La imagen es obligatoria";
-    }
-
-    // Si no hay errores
-    if (empty($errores)) {
-
-        $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
-        if (!is_dir($carpeta)) {
-            mkdir($carpeta, 0755, true);
-        }
-
-        $extension = strtolower(pathinfo($imagen['name'], PATHINFO_EXTENSION));
-        $permitidos = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
-
-        if (!in_array($extension, $permitidos)) {
-            $errores['imagen'] = "Formato no válido";
-        } elseif ($imagen['size'] > 2000000) {
-            $errores['imagen'] = "Máximo 2MB";
-=======
     $categoriaValida = false;
     foreach ($categorias as $categoria) {
         if ((int) $categoria['id'] === $categoriaId) {
@@ -89,41 +56,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errores) && $errorImagen !== UPLOAD_ERR_NO_FILE) {
         if ($errorImagen !== UPLOAD_ERR_OK) {
             $errores['imagen'] = 'No se pudo cargar la imagen';
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
         } else {
             $extension = strtolower(pathinfo($imagen['name'] ?? '', PATHINFO_EXTENSION));
             $permitidos = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
 
-<<<<<<< HEAD
-            $nombreImagen = md5(uniqid(rand(), true)) . "." . $extension;
-            $ruta = $carpeta . $nombreImagen;
-
-            if (move_uploaded_file($imagen['tmp_name'], $ruta)) {
-
-                $rutaDB = 'assets/imagenes/platos/' . $nombreImagen;
-
-                $stmt = $db->prepare("INSERT INTO platos 
-                    (nombre, descripcion, valor, imagen, activo, orden) 
-                    VALUES (?, ?, ?, ?, 1, 0)");
-
-                $stmt->bind_param("ssds", $nombre, $descripcion, $precio, $rutaDB);
-
-                if (!$stmt->execute()) {
-                    $errores['general'] = "No se pudo guardar el plato";
-                    @unlink($ruta);
-                }
-
-                // REDIRECT (evita duplicados)
-                if (empty($errores)) {
-                    header("Location: crear.php?ok=1");
-                    exit;
-                }
-=======
             if (!in_array($extension, $permitidos, true)) {
                 $errores['imagen'] = 'Formato no válido';
             } elseif (($imagen['size'] ?? 0) > 2000000) {
                 $errores['imagen'] = 'Máximo 2MB';
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
             } else {
                 $carpeta = __DIR__ . '/../../assets/imagenes/platos/';
                 if (!is_dir($carpeta) && !mkdir($carpeta, 0755, true) && !is_dir($carpeta)) {
@@ -160,26 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 incluirTemplates('header');
-<<<<<<< HEAD
-
-include '../../includes/templates/header_crud.php';
-
 ?>
-
-
-<div class="admin-container">
-    <div class="container nav-admin">
-        <a href="<?php echo BASE_URL; ?>admin/index.php" class="btn">⬅ Volver al panel</a>
-        <a href="index.php" class="btn">⬅ Volver al listado</a>
-    </div>
-</div>
-
-
-
-=======
-?>
-
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
 <section class="admin-container admin-container-admin">
     <main class="admin-card">
         <h1>Crear Plato</h1>
@@ -205,18 +126,6 @@ include '../../includes/templates/header_crud.php';
                 <p class="error"><?= $errores['descripcion'] ?></p>
             <?php endif; ?>
 
-<<<<<<< HEAD
-            <!-- DESCRIPCIÓN -->
-            <label>Descripción</label>
-            <textarea name="descripcion"><?php echo htmlspecialchars($descripcion); ?></textarea>
-            <?php if (isset($errores['descripcion'])): ?>
-                <p class="error"><?php echo $errores['descripcion']; ?></p>
-            <?php endif; ?>
-
-            <!-- PRECIO -->
-            <label>Precio</label>
-            <input type="number" name="precio" min="0" value="<?php echo $precio; ?>">
-=======
             <label for="categoria_id">Categoría</label>
             <select name="categoria_id" id="categoria_id" required>
                 <?php foreach ($categorias as $categoria): ?>
@@ -231,7 +140,6 @@ include '../../includes/templates/header_crud.php';
 
             <label>Precio</label>
             <input type="number" name="precio" min="0" value="<?= $precio ?>" style="color: black;">
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
             <?php if (isset($errores['precio'])): ?>
                 <p class="error"><?= $errores['precio'] ?></p>
             <?php endif; ?>
@@ -251,15 +159,8 @@ include '../../includes/templates/header_crud.php';
             <?php endif; ?>
             <img id="previewImagen" <?php if ($rutaImagen !== ''): ?>src="<?= BASE_URL . ltrim($rutaImagen, '/') ?>?t=<?= time() ?>"<?php else: ?>hidden<?php endif; ?> width="120" style="margin-top:5px;">
 
-<<<<<<< HEAD
-            <img id="preview" style="max-width:200px; display:none;">
-
-            <div class="admin-form-acciones">
-                <input type="submit" value="Crear Plato" class="admin-btn">
-=======
             <div class="admin-form-acciones">
                 <input type="submit" value="Guardar Plato" class="admin-btn">
->>>>>>> 04bf73ac39f786c61039f184599fbe3086205be0
                 <a href="index.php" class="btn-cancelar">Cancelar</a>
             </div>
         </form>
