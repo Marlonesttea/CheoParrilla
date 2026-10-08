@@ -14,17 +14,17 @@ include 'includes/templates/loader.php';
     <section class="container contacto-layout">
         <div class="contacto-panel">
             <div class="contacto-info">
-                <p class="subtitulo">ESTAMOS PARA ESCUCHARTE</p>
+                <p class="subtitulo">ESTAMOS AQUÍ PARA ESCUCHARTE</p>
                 <h2>Contáctanos</h2>
                 <p class="intro">Déjanos un mensaje sobre cualquier inquietud o experiencia que quieras compartir.</p>
 
                 <div class="contact-list">
                     <div class="contact-item">
-                        <span class="icon">📍</span>
+                        <i class="icon fa-solid fa-map-location-dot" aria-hidden="true" style="color: #ff8300;"></i>
                         <p>Calle 58 #92A - 126 <br> Medellin, Colombia</p>
                     </div>
                     <div class="contact-item">
-                        <span class="icon">🕒</span>
+                        <i class="icon fa-solid fa-clock" aria-hidden="true" style="color: #ff8300;"></i>
                         <p>Abrimos a las 4:00 pm <br> Cerramos a las 12:00 am</p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ include 'includes/templates/loader.php';
                     <div class="fila">
                         <div class="campo">
                             <label for="nombre">Nombre y Apellido<span>*</span></label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Carlos Medina" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
                         </div>
 
                         <div class="campo">

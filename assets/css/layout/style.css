@@ -759,6 +759,7 @@ h3#nombre-corto {
     margin: 0 0 18px;
     color: #fff;
     font-size: clamp(2.2rem, 3vw, 3.2rem);
+    font-family: 'Satisfy', cursive;
     line-height: 1.05;
 }
 
@@ -833,32 +834,6 @@ h3#nombre-corto {
 
 .horario-descanso strong {
     color: #fff;
-}
-
-.social-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 14px;
-}
-
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 0.8rem;
-    text-decoration: none;
-    transition: all 0.25s ease;
-}
-
-.social-links a:hover {
-    color: #e5ba67;
-    border-color: rgba(229, 186, 103, 0.9);
-    transform: translateY(-2px);
 }
 
 .contacto-form-wrapper {
