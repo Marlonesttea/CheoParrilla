@@ -130,11 +130,21 @@ a{
     height: 100vh;
     background: url(../../../img/heroimg2.jpeg) center center / cover no-repeat;
     position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: start;
     padding: 0 100px;
     background-attachment: scroll;
+}
+
+.hero-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .overlay{
@@ -145,11 +155,13 @@ a{
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 
 .hero-content{
     position: relative;
+    z-index: 2;
     color: white;
     text-align: left;
     
@@ -162,6 +174,7 @@ a{
 
 .hero-logo{
     position: absolute;
+    z-index: 2;
     top: 100px;
     right: 40px;
     width: 100px;

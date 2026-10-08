@@ -35,11 +35,11 @@ include 'includes/templates/loader.php';
     
 </div>
 
-<button class="carrito-pedir-launcher" type="button" aria-expanded="false" aria-label="Abrir carrito, 0 productos">
+<a href="pedir.php">
+    <button class="carrito-pedir-launcher-otros" type="button" >
             <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-            <span>Tu carrito</span>
-            <span class="carrito-pedir-count" aria-live="polite">0</span>
         </button>
+</a>
 </main>
 
 
