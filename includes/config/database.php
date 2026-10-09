@@ -7,3 +7,5 @@ exit;
 }
 return $db;
 }
+
+?>

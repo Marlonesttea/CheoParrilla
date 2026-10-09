@@ -1,96 +1,44 @@
-// EVENTOS SUBMIT
-const formulario  = document.querySelector(".formulario")
-formulario.addEventListener('submit',function (e) {
-   // console.log(e);
-   e.preventDefault();
+const formulario = document.querySelector(".contacto-form");
 
-   // VALIDAR INFORMACION
-   const {nombre, email, mensaje } = datos;
+if (formulario) {
+    formulario.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-   if (nombre === "" || email === "" || mensaje === "" ) {
-      mostrarMensaje("Existen campos obligatorios(*) vacios")
-      return // corta la ejecucion de l codigo
-      } 
-      mostrarMensaje2("Mensaje enviado con exito")
+        const datos = new FormData(formulario);
+        const telefono = formulario.dataset.whatsapp;
+        const situacion = formulario.querySelector("#situacion");
 
+        if (!telefono || !/^\d+$/.test(telefono)) {
+            mostrarMensaje("No se pudo obtener el número de WhatsApp del restaurante.", "error");
+            return;
+        }
 
+        const mensaje = [
+            "Hola CheoParrilla, quiero comunicarme con ustedes.",
+            `Nombre: ${datos.get("nombre")}`,
+            `Teléfono: ${datos.get("celular")}`,
+            `Situación: ${situacion.options[situacion.selectedIndex].text}`,
+            `Mensaje: ${datos.get("mensaje")}`
+        ].join("\n");
 
+        const enlace = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        const ventana = window.open(enlace, "_blank");
+        if (!ventana) {
+            window.location.assign(enlace);
+            return;
+        }
 
-
-   // Mostrar mensaje en pantalla}
-   function mostrarMensaje (mensaje) {
-      const error = document.createElement('P');
-      error.classList.add('error')
-      error.textContent = mensaje
-
-      formulario.appendChild(error)
-
-      // desaparecer mensaje
-   setTimeout(()=> {
-      error.remove();
-   }, 5000)
-   }
-
-   function mostrarMensaje2 (mensaje) {
-      const mensajeOK = document.createElement('P');
-      mensajeOK.classList.add('mensajeOK')
-      mensajeOK.textContent = mensaje
-
-      formulario.appendChild(mensajeOK)
-
-      // desaparecer mensaje
-   setTimeout(()=> {
-      mensajeOK.remove();
-   }, 5000)
-   }
-
-
-
-
-
-
-
-   // ENVIAR LA INFORMACION
-
-
-   console.log("ENVIANDO FORMULARIO...")
-})
-
-
-
-
-// EVENTOS EN LOS INPUT Y TEXTAREA
-
-const datos = {
-    nombre : '',
-    apellido : '',
-    celular : '',
-    email : '',
-    mensaje : ''
+        ventana.opener = null;
+        mostrarMensaje("WhatsApp se abrió con tu mensaje listo. Presiona Enviar allí para compartirlo.", "mensajeOK");
+    });
 }
 
+function mostrarMensaje(texto, clase) {
+    const mensaje = document.createElement("p");
+    mensaje.classList.add(clase);
+    mensaje.setAttribute("role", clase === "error" ? "alert" : "status");
+    mensaje.textContent = texto;
+    formulario.appendChild(mensaje);
 
-
-const nombre = document.querySelector("#nombre");
-const apellido = document.querySelector('#apellido');
-const celular = document.querySelector('#celular');
-const email = document.querySelector('#email');
-const mensaje = document.querySelector('#mensaje');
-
-nombre.addEventListener('input', leerDatos)
-apellido.addEventListener('input', leerDatos)
-celular.addEventListener('input', leerDatos)
-email.addEventListener('input', leerDatos)
-mensaje.addEventListener('input', leerDatos)
-
-
-function leerDatos (e) {
-    // console.log(e.target.value);
-
-    datos[e.target.id] = e.target.value
-    console.log(datos);
+    window.setTimeout(() => mensaje.remove(), 5000);
 }
-
-
-
-

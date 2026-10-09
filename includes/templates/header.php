@@ -28,8 +28,8 @@
         <div class="container nav">
             <nav class="nav-group nav-group--left" aria-label="Navegación principal izquierda">
                 <a href="<?php echo BASE_URL;?>index.php" class="link-fueguito">Inicio</a>
-                <a href="<?php echo BASE_URL;?>nosotros.php" class="link-fueguito">Nosotros</a>
                 <a href="<?php echo BASE_URL;?>index.php#galeria" class="link-fueguito">Galeria</a>
+                <a href="<?php echo BASE_URL;?>nosotros.php" class="link-fueguito">Nosotros</a>
                 <a href="<?php echo BASE_URL;?>menu.php" class="link-fueguito">Menú</a>
             </nav>
 
