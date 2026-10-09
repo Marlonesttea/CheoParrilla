@@ -10,7 +10,7 @@ include 'includes/templates/loader.php';
     <!-- hero    -->
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
-            <source src="video/videoHero.mp4" type="video/mp4">
+            <source src="video/videoHero2.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <img src="img/logoc.png" class="hero-logo" alt="logo">
