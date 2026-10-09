@@ -77,12 +77,12 @@
 
 
 .nosotros-presentacion h1{
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Satisfy', cursive;
     font-weight: 400;
     margin-top: 100px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 1px rgb(2, 44, 2);
+    text-shadow: 2px 2px 6px rgb(255 165 0);
 }
 
 
@@ -226,12 +226,12 @@
 
 
     .nosotros-presentacion h1 {
-        font-size: 22px;
+        font-size: 70px;
     }
 
 
     .nosotros-presentacion p {
-        font-size: 14px;
+        font-size: 20px;
     }
 
 
