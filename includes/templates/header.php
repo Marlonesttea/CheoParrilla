@@ -65,8 +65,8 @@
             <div class="nav-panel" id="nav-panel" aria-hidden="true">
                 <nav class="nav-panel-links" aria-label="Menú móvil">
                     <a href="<?php echo BASE_URL;?>index.php" class="link-fueguito">Inicio</a>
+                    <a href="<?php echo BASE_URL;?>index.php#galeria" class="link-fueguito">Galeria</a> 
                     <a href="<?php echo BASE_URL;?>nosotros.php" class="link-fueguito">Nosotros</a>
-                    <a href="<?php echo BASE_URL;?>index.php#galeria" class="link-fueguito">Galeria</a>
                     <a href="<?php echo BASE_URL;?>menu.php" class="link-fueguito">Menú</a>
                     <a href="<?php echo BASE_URL;?>pedir.php" class="link-fueguito">Pedir Ahora</a>
                     <a href="<?php echo BASE_URL;?>reservas/index.php" class="link-fueguito">Reservas</a>
