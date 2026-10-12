@@ -101,7 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 incluirTemplates('header');
 ?>
-
 <section class="admin-container admin-container-admin">
     <main class="admin-card">
         <h1>Crear Plato</h1>

@@ -17,7 +17,7 @@ PRIMERA CARA - PRESENTACIÓN
 
     <div class="nosotros-presentacion">
 
-        <h1>PASIÓN POR LA PARRILLA Y LA SAZÓN</h1>
+        <h1>Pasión por la parrilla y la sazón.</h1>
 
         <p>
             Cheo Parrilla, donde cada bocado tiene su propia historia
