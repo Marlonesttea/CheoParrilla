@@ -225,7 +225,7 @@ INSERT INTO `reservas_config` (`clave`, `valor`, `descripcion`) VALUES
 ('max_personas', '10', 'Maximo de personas por reserva (mas que esto es un evento)'),
 ('min_personas', '1', 'Minimo de personas por reserva'),
 ('nombre_negocio', 'CheoParrilla', 'Nombre que sale en el mensaje de WhatsApp'),
-('whatsapp', '573116667082', 'WhatsApp del restaurante, con 57 y sin signos');
+('whatsapp', '573234382813', 'WhatsApp del restaurante, con 57 y sin signos');
 
 -- --------------------------------------------------------
 
