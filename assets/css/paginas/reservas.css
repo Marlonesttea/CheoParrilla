@@ -28,6 +28,7 @@ body {
         #181411 50%,
         #000000 100% 
         );
+    background-attachment: fixed;
 } 
 
 /* ---------------- Encabezado ---------------- */

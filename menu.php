@@ -12,9 +12,12 @@ include 'includes/templates/loader.php';
 	<section class="carta-hero" aria-labelledby="carta-title">
 		<div class="carta-hero__overlay"></div>
 		<div class="carta-hero__content">
-			<p class="carta-hero__eyebrow">Sabor hecho en casa</p>
+			<p class="carta-hero__eyebrow" style="margin-top: 70px;">Sabor hecho en casa</p>
 			<h1 class ="cheoTransicion" id="carta-title">Nuestra Carta</h1>
-			<p>Explora nuestras especialidades y encuentra tu próximo plato favorito.</p>
+			<p class="carta-hero_descripcion">EXPLORA NUESTRAS ESPECIALIDADES Y DESCRUBRE TU PRÓXIMO PLATO FAVORITO.</p>
+			<p class="avisoPedir" style="margin-top: 30px;">Este apartado es un menú visual, si quieres pedir ahora dale click al boton de abajo</p>
+			<a href="pedir.php" class="btn btn-negro">Pedir Ahora</a>
+			
 		</div>
 	</section>
 

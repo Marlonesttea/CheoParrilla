@@ -89,6 +89,23 @@
         });
 
         container.replaceChildren(categoryNav, categoryPanels);
+
+        const requestedCategoryId = window.location.hash.slice(1);
+        const requestedCategory = categories.find((category) => category.id === requestedCategoryId);
+        const requestedBar = requestedCategory?.querySelector('.barra-pedir');
+        const requestedPanelId = requestedBar?.getAttribute('aria-controls');
+        const requestedPanel = requestedPanelId ? document.getElementById(requestedPanelId) : null;
+
+        if (requestedBar && requestedPanel) {
+            requestedBar.setAttribute('aria-expanded', 'true');
+            requestedPanel.hidden = false;
+            requestAnimationFrame(() => {
+                requestedPanel.querySelector('.categoria-pedir-panel-heading')?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        }
     }
 
     const storageKey = 'cheoparrilla-carrito-v1';
@@ -98,11 +115,12 @@
         const priceValue = Number(price?.textContent.replace(/[^\d]/g, ''));
 
         if (!title || !price || !Number.isFinite(priceValue)) return null;
-
         return {
             id: String(index),
             element,
             name: title.textContent.trim(),
+            description: element.querySelector('.card-text-pedir p')?.textContent.trim() || '',
+            image: element.querySelector('.imagen-cartica-img')?.src || '',
             price: priceValue,
             actions: element.querySelector('.card-price-pedir')
         };
@@ -114,25 +132,35 @@
     try {
         const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
         Object.entries(saved).forEach(([id, savedProduct]) => {
-            const currentProduct = productsById.get(id);
-            const quantity = Number(typeof savedProduct === 'object' ? savedProduct.quantity : savedProduct);
+            const savedObject = savedProduct && typeof savedProduct === 'object' ? savedProduct : null;
+            const productId = String(savedObject?.productId || id);
+            const currentProduct = productsById.get(productId);
+            const quantity = Number(savedObject ? savedObject.quantity : savedProduct);
             if (!Number.isInteger(quantity) || quantity <= 0) return;
 
             if (currentProduct) {
-                cart.set(id, { ...currentProduct, quantity });
+                const lineId = String(savedObject?.lineId || id);
+                cart.set(lineId, {
+                    ...currentProduct,
+                    lineId,
+                    instructions: String(savedObject?.instructions || ''),
+                    quantity
+                });
                 return;
             }
 
-            if (typeof savedProduct !== 'object') {
+            if (!savedObject) {
                 legacyCart.set(id, quantity);
                 return;
             }
 
-            if (savedProduct && typeof savedProduct === 'object' && savedProduct.name) {
+            if (savedObject.name) {
                 cart.set(id, {
-                    id,
-                    name: String(savedProduct.name),
-                    price: Math.max(0, Number(savedProduct.price) || 0),
+                    id: productId,
+                    lineId: id,
+                    name: String(savedObject.name),
+                    price: Math.max(0, Number(savedObject.price) || 0),
+                    instructions: String(savedObject.instructions || ''),
                     quantity
                 });
             }
@@ -142,11 +170,46 @@
     }
 
     document.body.insertAdjacentHTML('beforeend', `
-        ${container ? `<button class="carrito-pedir-launcher" type="button" aria-expanded="false" aria-label="Abrir carrito, 0 productos">
-            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-            <span>Tu carrito</span>
-            <span class="carrito-pedir-count" aria-live="polite">0</span>
-        </button>` : ''}
+        ${container ? `<div class="carrito-pedir-widget">
+            <div class="carrito-pedir-launcher-subtotal" aria-live="polite">
+                <span>Subtotal</span>
+                <strong>$0</strong>
+            </div>
+            <button class="carrito-pedir-launcher" type="button" aria-expanded="false" aria-label="Abrir carrito, 0 productos">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span>Tu carrito</span>
+                <span class="carrito-pedir-count" aria-live="polite">0</span>
+            </button>
+        </div>` : ''}
+        ${container ? `<div class="pedido-producto-backdrop" hidden aria-hidden="true">
+            <section class="pedido-producto-panel" role="dialog" aria-modal="true" aria-labelledby="pedido-producto-title">
+                <button class="pedido-producto-close" type="button" aria-label="Cerrar detalles del producto">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+                <div class="pedido-producto-image-wrap">
+                    <img class="pedido-producto-image" alt="" hidden>
+                </div>
+                <div class="pedido-producto-content">
+                    <div class="pedido-producto-details">
+                        <h2 id="pedido-producto-title"></h2>
+                        <p class="pedido-producto-description"></p>
+                        <label for="pedido-producto-instrucciones">Instrucciones especiales</label>
+                        <textarea id="pedido-producto-instrucciones" maxlength="300" placeholder="Incluye una nota"></textarea>
+                    </div>
+                    <footer class="pedido-producto-footer">
+                        <div class="pedido-producto-quantity" role="group" aria-label="Cantidad">
+                            <button type="button" data-modal-quantity="decrease" aria-label="Disminuir cantidad">−</button>
+                            <input class="pedido-producto-quantity-input" type="number" min="1" max="99" value="1" inputmode="numeric" aria-label="Cantidad">
+                            <button type="button" data-modal-quantity="increase" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <button class="pedido-producto-add" type="button">
+                            <span>Agregar</span>
+                            <strong></strong>
+                        </button>
+                    </footer>
+                </div>
+            </section>
+        </div>` : ''}
         <div class="carrito-pedir-backdrop" hidden>
             <aside class="carrito-pedir-panel" role="dialog" aria-modal="true" aria-labelledby="carrito-pedir-title">
                 <header class="carrito-pedir-header">
@@ -182,8 +245,21 @@
     const countBadge = document.querySelector('.carrito-pedir-count');
     const itemCount = document.querySelector('.carrito-pedir-total-items');
     const subtotalElement = document.querySelector('.carrito-pedir-subtotal strong');
+    const launcherSubtotal = document.querySelector('.carrito-pedir-launcher-subtotal strong');
     const checkoutButton = document.querySelector('.carrito-pedir-checkout');
-    const getQuantity = (productId) => cart.get(productId)?.quantity || 0;
+    const productBackdrop = document.querySelector('.pedido-producto-backdrop');
+    const productModalTitle = document.querySelector('#pedido-producto-title');
+    const productModalDescription = document.querySelector('.pedido-producto-description');
+    const productModalImage = document.querySelector('.pedido-producto-image');
+    const productModalInstructions = document.querySelector('#pedido-producto-instrucciones');
+    const productModalQuantity = document.querySelector('.pedido-producto-quantity-input');
+    const productModalAdd = document.querySelector('.pedido-producto-add');
+    const productModalClose = document.querySelector('.pedido-producto-close');
+    let selectedProduct = null;
+    let productModalTrigger = null;
+    const getQuantity = (productId) => [...cart.values()]
+        .filter((product) => product.id === productId)
+        .reduce((total, product) => total + product.quantity, 0);
 
     const formatMoney = (amount) => '$' + new Intl.NumberFormat('es-CO', {
         maximumFractionDigits: 0
@@ -208,6 +284,72 @@
 
         return button;
     };
+
+    function openProductModal(product, trigger) {
+        if (!productBackdrop) return;
+        selectedProduct = product;
+        productModalTrigger = trigger;
+        productModalTitle.textContent = product.name;
+        productModalDescription.textContent = product.description;
+        productModalDescription.hidden = !product.description;
+        productModalInstructions.value = '';
+        productModalQuantity.value = '1';
+        updateProductModalPrice();
+        productModalImage.src = product.image;
+        productModalImage.alt = product.name;
+        productModalImage.hidden = !product.image;
+        productBackdrop.hidden = false;
+        productBackdrop.setAttribute('aria-hidden', 'false');
+        requestAnimationFrame(() => productBackdrop.classList.add('is-visible'));
+        document.body.classList.add('pedido-producto-open');
+        productModalInstructions.focus();
+    }
+
+    function updateProductModalPrice() {
+        if (!selectedProduct) return;
+        const quantity = Math.min(99, Math.max(1, Number.parseInt(productModalQuantity.value, 10) || 1));
+        productModalAdd.querySelector('strong').textContent = formatMoney(selectedProduct.price * quantity);
+    }
+
+    function closeProductModal() {
+        if (!productBackdrop || productBackdrop.hidden) return;
+        productBackdrop.classList.remove('is-visible');
+        productBackdrop.hidden = true;
+        productBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('pedido-producto-open');
+        productModalTrigger?.focus();
+        productModalTrigger = null;
+        selectedProduct = null;
+    }
+
+    function addProductLine(product, quantity, instructions = '') {
+        const existing = [...cart.entries()].find(([, cartProduct]) =>
+            cartProduct.id === product.id && cartProduct.instructions === instructions
+        );
+
+        if (existing) {
+            const [lineId, cartProduct] = existing;
+            cart.set(lineId, { ...cartProduct, quantity: cartProduct.quantity + quantity });
+        } else {
+            const lineId = `${product.id}::${Date.now()}::${Math.random().toString(36).slice(2, 8)}`;
+            cart.set(lineId, {
+                ...product,
+                lineId,
+                quantity,
+                instructions
+            });
+        }
+
+        renderCart();
+    }
+
+    function addProductToCart() {
+        if (!selectedProduct) return;
+        const quantity = Math.min(99, Math.max(1, Number.parseInt(productModalQuantity.value, 10) || 1));
+        const instructions = productModalInstructions.value.trim();
+        addProductLine(selectedProduct, quantity, instructions);
+        closeProductModal();
+    }
 
     function renderCardActions() {
         cards.forEach((product) => {
@@ -256,6 +398,7 @@
         itemCount.textContent = `(${totalQuantity})`;
         if (launcher) launcher.setAttribute('aria-label', `Abrir carrito, ${totalQuantity} productos`);
         subtotalElement.textContent = formatMoney(subtotal);
+        if (launcherSubtotal) launcherSubtotal.textContent = formatMoney(subtotal);
         checkoutButton.disabled = totalQuantity === 0;
         list.replaceChildren();
 
@@ -282,13 +425,19 @@
                 const unitPrice = document.createElement('p');
                 unitPrice.textContent = product.price > 0 ? `${formatMoney(product.price)} c/u` : 'Precio por confirmar';
                 details.append(name, unitPrice);
+                if (product.instructions) {
+                    const instruction = document.createElement('p');
+                    instruction.className = 'carrito-pedir-item__instruction';
+                    instruction.textContent = `Nota: ${product.instructions}`;
+                    details.append(instruction);
+                }
 
                 const controls = document.createElement('div');
                 controls.className = 'carrito-pedir-item__controls';
                 controls.append(
-                    makeButton(`Quitar ${product.name} del carrito`, 'remove', product.id, 'carrito-pedir-icon-button', 'fa-solid fa-trash'),
+                    makeButton(`Quitar ${product.name} del carrito`, 'remove-line', product.lineId, 'carrito-pedir-icon-button', 'fa-solid fa-trash'),
                     Object.assign(document.createElement('span'), { className: 'carrito-pedir-item__quantity', textContent: String(quantity) }),
-                    makeButton(`Agregar otro ${product.name}`, 'increment', product.id, 'carrito-pedir-icon-button', 'fa-solid fa-plus')
+                    makeButton(`Agregar otro ${product.name}`, 'increment-line', product.lineId, 'carrito-pedir-icon-button', 'fa-solid fa-plus')
                 );
 
                 const lineTotal = document.createElement('strong');
@@ -301,10 +450,12 @@
 
         renderCardActions();
         try {
-            const saved = Object.fromEntries([...cart].map(([id, product]) => [id, {
+            const saved = Object.fromEntries([...cart].map(([lineId, product]) => [lineId, {
+                productId: product.id,
                 name: product.name,
                 price: product.price,
-                quantity: product.quantity
+                quantity: product.quantity,
+                instructions: product.instructions || ''
             }]));
             if (legacyCart.size === 0) localStorage.setItem(storageKey, JSON.stringify(saved));
         } catch {
@@ -335,18 +486,25 @@
             const button = event.target.closest('[data-cart-action]');
             if (!button) return;
 
-            const { cartAction, productId } = button.dataset;
-            const product = productsById.get(productId);
+            const card = button.closest('.card-pedir');
+            const product = productsById.get(button.dataset.productId)
+                || cards.find((item) => item.element === card);
             if (!product) return;
-            const current = getQuantity(productId);
 
-            if (cartAction === 'add' || cartAction === 'increment') {
-                cart.set(productId, { ...product, quantity: current + 1 });
+            if (button.dataset.cartAction === 'note') {
+                openProductModal(product, button);
+                return;
             }
-            if (cartAction === 'remove') cart.delete(productId);
-
-            renderCart();
-            if (cartAction === 'add') openCart();
+            if (button.dataset.cartAction === 'add' || button.dataset.cartAction === 'increment') {
+                addProductLine(product, 1);
+                return;
+            }
+            if (button.dataset.cartAction === 'remove') {
+                [...cart.entries()].forEach(([lineId, item]) => {
+                    if (item.id === product.id) cart.delete(lineId);
+                });
+                renderCart();
+            }
         });
     }
 
@@ -357,11 +515,27 @@
         const { cartAction, productId } = button.dataset;
         const product = cart.get(productId);
         if (!product) return;
-        const current = product.quantity;
-        if (cartAction === 'increment') cart.set(productId, { ...product, quantity: current + 1 });
-        if (cartAction === 'remove') cart.delete(productId);
+        if (cartAction === 'increment-line') cart.set(productId, { ...product, quantity: product.quantity + 1 });
+        if (cartAction === 'remove-line') cart.delete(productId);
         renderCart();
     });
+
+    productBackdrop?.addEventListener('click', (event) => {
+        if (event.target === productBackdrop) closeProductModal();
+        const quantityButton = event.target.closest('[data-modal-quantity]');
+        if (!quantityButton) return;
+        const current = Number.parseInt(productModalQuantity.value, 10) || 1;
+        const adjustment = quantityButton.dataset.modalQuantity === 'increase' ? 1 : -1;
+        productModalQuantity.value = String(Math.min(99, Math.max(1, current + adjustment)));
+        updateProductModalPrice();
+    });
+    productModalQuantity?.addEventListener('change', () => {
+        const quantity = Number.parseInt(productModalQuantity.value, 10) || 1;
+        productModalQuantity.value = String(Math.min(99, Math.max(1, quantity)));
+        updateProductModalPrice();
+    });
+    productModalAdd?.addEventListener('click', addProductToCart);
+    productModalClose?.addEventListener('click', closeProductModal);
 
     triggers.forEach((trigger) => trigger.addEventListener('click', openCart));
     launcher?.addEventListener('click', openCart);
@@ -370,6 +544,7 @@
         if (event.target === backdrop) closeCart();
     });
     document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && productBackdrop && !productBackdrop.hidden) closeProductModal();
         if (event.key === 'Escape' && !backdrop.hidden) closeCart();
     });
 
@@ -383,7 +558,8 @@
                 const priceDetails = product.price > 0
                     ? formatMoney(product.price * product.quantity)
                     : 'precio por confirmar';
-                return `- ${product.quantity} x ${product.name}: ${priceDetails}`;
+                const instruction = product.instructions ? `\n  Instrucción especial: ${product.instructions}` : '';
+                return `- ${product.quantity} x ${product.name}: ${priceDetails}${instruction}`;
             });
         const subtotal = selectedProducts.reduce((sum, product) => sum + product.price * product.quantity, 0);
         const totalLabel = hasUnpricedItems

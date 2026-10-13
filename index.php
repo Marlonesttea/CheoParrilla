@@ -32,110 +32,101 @@ include 'includes/templates/loader.php';
         <hr class="divisor-linea" style="margin-top: 0px;">
         <div class="cards">
 
-        <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#asados">
-            <div class="card" style="margin-bottom: 25px;"> 
+            <div class="card" style="margin-bottom: 25px;">
                 <img src="img/carnes-menu.png" alt="Carne-menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Asados y Carnes</h3>
-                    <p>Clic para ir al menú. </p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#asados">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#asadoPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
 
-            <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#hamburguesas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/hamburguesa-menu.png" alt="Hamburguesa_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name">Hamburguesas Artesanales</h3>
-                    <p>Clic para ir al menú.</p>
-            
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#hamburguesas">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#hamburPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
 
-            <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#combo-hamburguesas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/combos-menu.png" alt="Combo_Hamburguesas">
                 <div class="card-body">
                     <h3 class="carrusel-name">Combo de Hamburguesas</h3>
-                    <p>Clic para ir al menú.</p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#combo-hamburguesas">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#combohambPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
 
-            <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#salchipapas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/salchipapas-menu.png" alt="Salchipapa_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Salchipapas</h3>
-                    <p>Clic para ir al menú.</p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#salchipapas">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#salchiPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
 
-            <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#perros">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/perros-menu.png" alt="Perros_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name">Perros y Perras Artesanales</h3>
-                    <p>Clic para ir al menú.</p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#perros">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#perrosperrasPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
 
-            <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#bebidas">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/bebidas-menu.png" alt="bebidas_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Bebidas</h3>
-                    <p>Clic para ir al menú.</p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#bebidas">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#bebidasPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
 
-            <!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#licores">
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/licores-menu.png" alt="Licores_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Licores</h3>
-                    <p>Clic para ir al menú.</p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#licores">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#licoresPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
-        
-<!-- inicia tarjeta -->
-            <a class="card-link" href="menu.php#otros">
+
             <div class="card" style="margin-bottom: 25px;">
                 <img src="img/otros-menu.png" alt="Otros_Menu">
                 <div class="card-body">
                     <h3 class="carrusel-name" id="nombre-corto">Otros</h3>
-                    <p>Clic para ir al menú.</p>
-                    
+                    <p>Explora o pide esta categoría.</p>
+                    <div class="acciones-tarjeta">
+                        <a class="enlace-tarjeta" href="menu.php#otros">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#otrosPedir">Pedir</a>
+                    </div>
                 </div>
             </div>
-            </a>
-            <!-- termina tarjeta -->
-
 
         </div>
 

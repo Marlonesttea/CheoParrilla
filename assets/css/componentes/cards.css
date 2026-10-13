@@ -39,7 +39,7 @@
 .carta-hero__overlay{
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .carta-hero__content{
@@ -58,6 +58,12 @@
   text-transform: uppercase;
 }
 
+.carta-hero_descripcion{
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 1px rgb(75, 2, 2);
+}
 .carta-hero h1{
   margin-bottom: 12px;
   font-family: 'Satisfy', cursive;
@@ -81,24 +87,81 @@
   padding: 24px 20px 8px;
 }
 
+
+
 .carta-categorias a{
+  position: relative;
+  isolation: isolate;
   display: inline-flex;
   min-height: 42px;
   width: 300px;
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  border: 1px solid rgba(252, 150, 55, 0.65);
+  border-bottom: 1px solid rgba(253, 252, 251, 0.65);
   border-radius: 9px;
   color: #fff;
   font-size: 0.95rem;
   text-align: center;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  background-color: rgba(12, 12, 11, 0.2);
+}
+
+.carta-categorias a::before{
+  position: absolute;
+  z-index: 1;
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--carta-fire-angle),
+    #ff2a00,
+    #ff8800,
+    #ffe66d,
+    #ff8800,
+    #c52200,
+    #ff2a00
+  );
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  transition: opacity 0.2s ease;
 }
 
 .carta-categorias a:hover{
-  background-color: #fc9637;
-  color: #17120e;
+  color: #f8b12d;
+}
+
+.carta-categorias a:hover,
+.carta-categorias a:focus-visible{
+  box-shadow: 0 0 14px rgb(255 92 0 / 45%);
+}
+
+.carta-categorias a:hover::before,
+.carta-categorias a:focus-visible::before{
+  opacity: 1;
+  animation: carta-borde-fuego 1.0s linear infinite;
+}
+
+@property --carta-fire-angle{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes carta-borde-fuego{
+  to { --carta-fire-angle: 360deg; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .carta-categorias a:hover::before,
+  .carta-categorias a:focus-visible::before{
+    animation-duration: 4s;
+  }
 }
 
 .carta-pendiente{

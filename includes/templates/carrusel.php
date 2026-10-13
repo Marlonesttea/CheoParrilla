@@ -10,6 +10,10 @@
                     
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
+                        
+                    </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
                     </a>
                 </div>
             </div>
@@ -24,6 +28,9 @@
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
                     </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
+                    </a>
                 </div>
             </div>
 
@@ -36,6 +43,9 @@
                     
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
+                    </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
                     </a>
                 </div>
             </div>
@@ -50,6 +60,9 @@
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
                     </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
+                    </a>
                 </div>
             </div>
 
@@ -62,6 +75,9 @@
                     
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
+                    </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
                     </a>
                 </div>
             </div>
@@ -76,6 +92,9 @@
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
                     </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
+                    </a>
                 </div>
             </div>
 
@@ -88,6 +107,9 @@
                     
                     <a class="carrusel-see-more" target="_blank" href="menu.php">
                         <button>Menú</button>
+                    </a>
+                    <a class="carrusel-see-more" target="_blank" href="pedir.php">
+                        <button>Pedir</button>
                     </a>
                 </div>
             </div>

@@ -56,6 +56,10 @@ $idsCategoria = [
       </div>
       <div class="card-price-pedir">
         <p>$<?= number_format((float) $plato['valor'], 0, ',', '.') ?></p>
+        <button class="card-note-pedir" type="button" data-cart-action="note" aria-label="Agregar nota o especificación">
+          <span>Nota /</span>
+          <span>especificación</span>
+        </button>
         <button class="card-button-pedir" type="button" aria-label="Agregar <?= htmlspecialchars($plato['nombre'], ENT_QUOTES, 'UTF-8') ?> al carrito">+</button>
       </div>
     </div>
