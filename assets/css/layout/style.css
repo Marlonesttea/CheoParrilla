@@ -1083,6 +1083,7 @@ textarea {
 
     .mouse {
         position: fixed;
+        z-index: 200;
         bottom: 1rem;
         left: 50%;
         translate: -50% 0;

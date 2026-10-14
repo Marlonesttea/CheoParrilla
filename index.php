@@ -158,8 +158,7 @@ include 'includes/templates/loader.php';
         </button>
 </a>
 
-<?php  include 'includes/templates/mouse.php' ?>
-
+<?php include 'includes/templates/mouse.php' ?>
 
 <?php  include 'includes/templates/footer.php' ?>
 

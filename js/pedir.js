@@ -228,6 +228,23 @@
                         <strong>$0</strong>
                     </div>
                     <p class="carrito-pedir-note">El envío y la disponibilidad se confirman por WhatsApp.</p>
+                    <fieldset class="carrito-pedir-delivery">
+                        <legend>¿Dónde recibirás el pedido?</legend>
+                        <label>
+                            <input type="radio" name="carrito-modalidad" value="recoger" required>
+                            <span>Pasaré a recogerlo al punto físico</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="carrito-modalidad" value="domicilio" required>
+                            <span>A domicilio</span>
+                        </label>
+                    </fieldset>
+                    <div class="carrito-pedir-delivery-address" hidden>
+                        <label for="carrito-pedir-direccion">Dirección</label>
+                        <input id="carrito-pedir-direccion" name="direccion" type="text" maxlength="200" autocomplete="street-address" placeholder="Calle, carrera, número..." disabled required>
+                        <label for="carrito-pedir-referencia">Punto de referencia</label>
+                        <input id="carrito-pedir-referencia" name="referencia" type="text" maxlength="200" placeholder="Barrio, local o lugar cercano..." disabled required>
+                    </div>
                     <button class="carrito-pedir-checkout" type="button" disabled>
                         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                         <span>Continuar por WhatsApp</span>
@@ -247,6 +264,10 @@
     const subtotalElement = document.querySelector('.carrito-pedir-subtotal strong');
     const launcherSubtotal = document.querySelector('.carrito-pedir-launcher-subtotal strong');
     const checkoutButton = document.querySelector('.carrito-pedir-checkout');
+    const deliveryOptions = [...document.querySelectorAll('input[name="carrito-modalidad"]')];
+    const deliveryAddress = document.querySelector('.carrito-pedir-delivery-address');
+    const addressInput = document.querySelector('#carrito-pedir-direccion');
+    const referenceInput = document.querySelector('#carrito-pedir-referencia');
     const productBackdrop = document.querySelector('.pedido-producto-backdrop');
     const productModalTitle = document.querySelector('#pedido-producto-title');
     const productModalDescription = document.querySelector('.pedido-producto-description');
@@ -548,8 +569,36 @@
         if (event.key === 'Escape' && !backdrop.hidden) closeCart();
     });
 
+    deliveryOptions.forEach((option) => option.addEventListener('change', () => {
+        const needsDeliveryAddress = option.value === 'domicilio' && option.checked;
+        deliveryAddress.hidden = !needsDeliveryAddress;
+        addressInput.disabled = !needsDeliveryAddress;
+        referenceInput.disabled = !needsDeliveryAddress;
+        if (needsDeliveryAddress) addressInput.focus();
+    }));
+
     checkoutButton.addEventListener('click', () => {
         if (cart.size === 0) return;
+
+        const selectedDelivery = deliveryOptions.find((option) => option.checked);
+        if (!selectedDelivery) {
+            deliveryOptions[0].setCustomValidity('Selecciona dónde recibirás el pedido.');
+            deliveryOptions[0].reportValidity();
+            deliveryOptions[0].setCustomValidity('');
+            return;
+        }
+        if (selectedDelivery.value === 'domicilio' && (!addressInput.value.trim() || !referenceInput.value.trim())) {
+            if (!addressInput.value.trim()) {
+                addressInput.setCustomValidity('Escribe la dirección de entrega.');
+                addressInput.reportValidity();
+                addressInput.setCustomValidity('');
+            } else {
+                referenceInput.setCustomValidity('Escribe un punto de referencia.');
+                referenceInput.reportValidity();
+                referenceInput.setCustomValidity('');
+            }
+            return;
+        }
 
         const selectedProducts = [...cart.values()];
         const hasUnpricedItems = selectedProducts.some((product) => product.price === 0);
@@ -558,14 +607,19 @@
                 const priceDetails = product.price > 0
                     ? formatMoney(product.price * product.quantity)
                     : 'precio por confirmar';
-                const instruction = product.instructions ? `\n  Instrucción especial: ${product.instructions}` : '';
-                return `- ${product.quantity} x ${product.name}: ${priceDetails}${instruction}`;
+                const instruction = product.instructions
+                    ? `\n  *Instrucción para este producto:* ${product.instructions}`
+                    : '';
+                return `- *${product.quantity} x ${product.name}* - ${priceDetails}${instruction}`;
             });
         const subtotal = selectedProducts.reduce((sum, product) => sum + product.price * product.quantity, 0);
         const totalLabel = hasUnpricedItems
-            ? `Subtotal de productos con precio: ${formatMoney(subtotal)}\nHay productos con precio por confirmar.`
-            : `Total: ${formatMoney(subtotal)}`;
-        const message = `Hola, quiero hacer este pedido:\n\n${lines.join('\n')}\n\n${totalLabel}`;
+            ? `*Subtotal de productos con precio:* ${formatMoney(subtotal)}\n*Hay productos con precio por confirmar.*`
+            : `*Total: ${formatMoney(subtotal)}*`;
+        const deliveryDetails = selectedDelivery.value === 'domicilio'
+            ? `*ENTREGA A DOMICILIO*\n*Dirección:* ${addressInput.value.trim()}\n*Punto de referencia:* ${referenceInput.value.trim()}`
+            : `*MODALIDAD:* Pasaré a recogerlo al punto físico`;
+        const message = `*Hola, quiero hacer este pedido:*\n\n*PRODUCTOS*\n${lines.join('\n\n')}\n\n${deliveryDetails}\n\n${totalLabel}`;
         window.open(`https://wa.me/573234382813?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     });
 
