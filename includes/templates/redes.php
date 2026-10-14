@@ -20,15 +20,17 @@
       </a>
       <div class="text">TikTok</div>
     </li>
-    <li class="iso-pro">
-      <span></span>
-      <span></span>
-      <span></span>
-      <a href="https://wa.me/573234382813" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <i class="svg fa-brands fa-whatsapp" aria-hidden="true"></i>
-      </a>
-      <div class="text">WhatsApp</div>
-    </li>
+    <?php if (empty($GLOBALS['adminPage'])): ?>
+      <li class="iso-pro">
+        <span></span>
+        <span></span>
+        <span></span>
+        <a href="https://wa.me/573234382813" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="svg fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <div class="text">WhatsApp</div>
+      </li>
+    <?php endif; ?>
   </ul>
 </div>
 

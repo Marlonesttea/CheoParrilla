@@ -48,23 +48,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso administrativo</title>
-    <link rel="stylesheet" href="../assets/css/paginas/login.css">
+    <link rel="stylesheet" href="../assets/css/paginas/login.css?v=<?= filemtime(__DIR__ . '/../assets/css/paginas/login.css') ?>">
 </head>
 <body>
     <form method="POST" class="form">
-        <p class="heading">Acceso administrativo</p>
+        <img class="login-mark" src="../img/logoc.png" alt="" aria-hidden="true">
+        <h1 class="heading">Iniciar sesión</h1>
+        <p class="login-description">Ingresa tus datos para acceder al panel.</p>
 
         <?php foreach ($errores as $error): ?>
             <div class="login-error"><?= htmlspecialchars($error) ?></div>
         <?php endforeach; ?>
 
-        <label for="username">Usuario</label>
-        <input id="username" class="input" name="username" placeholder="Usuario" type="text" autocomplete="username" required>
+        <label class="visually-hidden" for="username">Nombre de usuario</label>
+        <input id="username" class="input" name="username" placeholder="Nombre de usuario" type="text" autocomplete="username" required>
 
-        <label for="password">Contraseña</label>
+        <label class="visually-hidden" for="password">Contraseña</label>
         <input id="password" class="input" name="password" placeholder="Contraseña" type="password" autocomplete="current-password" required>
 
-        <button class="btn" type="submit">Ingresar</button>
+        <button class="btn" type="submit">Entrar</button>
     </form>
 </body>
 </html>

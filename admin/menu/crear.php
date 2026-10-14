@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 $adminPage = true;
+$adminMenuPage = true;
 $scripts = ['app', 'editar'];
 
 require_once __DIR__ . '/../../includes/config/database.php';
@@ -101,9 +102,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 incluirTemplates('header');
 ?>
-<section class="admin-container admin-container-admin">
-    <main class="admin-card">
-        <h1>Crear Plato</h1>
+<section class="dashboard-shell admin-menu-shell" aria-label="Administración de platos">
+    <?php $adminMenuActive = 'create'; include __DIR__ . '/../../includes/templates/admin_menu_sidebar.php'; ?>
+
+    <main class="dashboard-main admin-menu-main">
+        <header class="dashboard-heading admin-menu-heading">
+            <div>
+                <p class="dashboard-eyebrow">CHEO PARRILLA / MENÚ</p>
+                <h1>Crear plato</h1>
+                <p class="dashboard-description">Añade una nueva opción a la carta.</p>
+            </div>
+        </header>
+
+        <section class="admin-card" aria-label="Formulario de creación de plato">
 
         <?php if ($mensaje): ?>
             <p class="mensajeOk"><?= $mensaje ?></p>
@@ -139,13 +150,13 @@ incluirTemplates('header');
             <?php endif; ?>
 
             <label>Precio</label>
-            <input type="number" name="precio" min="0" value="<?= $precio ?>" style="color: black;">
+            <input type="number" name="precio" min="0" value="<?= $precio ?>">
             <?php if (isset($errores['precio'])): ?>
                 <p class="error"><?= $errores['precio'] ?></p>
             <?php endif; ?>
 
             <label>Orden</label>
-            <input type="number" name="orden" value="<?= $orden ?>" style="color: black;">
+            <input type="number" name="orden" value="<?= $orden ?>">
 
             <label>
                 <input type="checkbox" name="activo" <?= $activo ? 'checked' : '' ?>> Activo
@@ -167,6 +178,7 @@ incluirTemplates('header');
 
         <a href="index.php" class="menu-btn-volver">⬅ Volver al listado</a>
         <a href="<?php echo BASE_URL; ?>admin/index.php" class="menu-btn-volver">⬅ Volver al panel</a>
+        </section>
     </main>
 </section>
 

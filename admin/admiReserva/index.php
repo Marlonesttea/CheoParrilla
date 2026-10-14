@@ -103,11 +103,7 @@ mensaje_guardado();
             <td><strong><?= limpiar(hora_bonita($r['hora'])) ?></strong></td>
             <td><?= limpiar($r['codigo']) ?></td>
             <td><?= limpiar($r['nombre']) ?></td>
-            <td>
-                <a href="https://wa.me/57<?= limpiar($r['telefono']) ?>" target="_blank" rel="noopener">
-                    <?= limpiar($r['telefono']) ?>
-                </a>
-            </td>
+            <td><?= limpiar($r['telefono']) ?></td>
             <td><?= (int)$r['personas'] ?></td>
             <td class="pnl-nota"><?= limpiar($r['notas'] ?? '') ?></td>
             <td><span class="pnl-etiqueta"><?= limpiar(str_replace('_', ' ', $r['estado'])) ?></span></td>

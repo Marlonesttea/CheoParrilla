@@ -21,7 +21,7 @@
 <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL;?>img/logoc.ico">
 </head>
 
-<body class="<?= !empty($adminPage) ? 'admin-page' : '' ?>">
+<body class="<?= !empty($adminPage) ? 'admin-page' : '' ?> <?= !empty($GLOBALS['adminDashboard']) ? 'admin-dashboard-page' : '' ?> <?= !empty($GLOBALS['adminMenuPage']) ? 'admin-menu-page' : '' ?>">
     <!-- navBar -->
     <header class="header">
         <div class="container nav">
@@ -87,4 +87,6 @@
             </div>
         </div>
     </header>
-    <?php include __DIR__ . '/despliegue.php'; ?>
+    <?php if (empty($GLOBALS['adminPage'])): ?>
+        <?php include __DIR__ . '/despliegue.php'; ?>
+    <?php endif; ?>

@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../../includes/funciones.php';
 auth();
 $adminPage = true;
+$adminMenuPage = true;
 
 require_once __DIR__ . '/../../includes/config/database.php';
 $db = conectarDB();
@@ -19,10 +20,19 @@ $resultado = mysqli_query($db, $query);
 
 ?>
 
-<section class="container menu-container">
+<section class="dashboard-shell admin-menu-shell" aria-label="Administración de platos">
+    <?php $adminMenuActive = 'list'; include __DIR__ . '/../../includes/templates/admin_menu_sidebar.php'; ?>
 
-    <main class="menu-card">
-        <h1>Listado de Platos</h1>
+    <main class="dashboard-main admin-menu-main">
+        <header class="dashboard-heading admin-menu-heading">
+            <div>
+                <p class="dashboard-eyebrow">CHEO PARRILLA / MENÚ</p>
+                <h1>Listado de platos</h1>
+                <p class="dashboard-description">Consulta y organiza los platos de tu carta.</p>
+            </div>
+        </header>
+
+        <section class="menu-card" aria-label="Listado de platos">
 
         <?php if (isset($_GET['ok'])): ?>
             <p class="mensajeOk" id="mensajeOk">✅ Plato guardado con éxito</p>
@@ -79,7 +89,7 @@ $resultado = mysqli_query($db, $query);
                 <?php endwhile; ?>
             </tbody>
         </table>
-
+        </section>
     </main>
 </section>
 

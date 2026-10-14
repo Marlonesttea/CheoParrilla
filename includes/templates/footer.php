@@ -30,9 +30,11 @@
                     <a href="https://www.tiktok.com/@cheo.parilla" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                         <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
                     </a>
-                    <a href="https://wa.me/573234382813" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                    </a>
+                    <?php if (empty($GLOBALS['adminPage'])): ?>
+                        <a href="https://wa.me/573234382813" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div><a href="<?php echo BASE_URL; ?>admin/index.php" class="footer-panel-link" title="Abrir panel administrativo">⚙ Panel</a>

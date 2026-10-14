@@ -57,31 +57,56 @@ function panel_cabecera(string $titulo, string $activo = ''): void
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= limpiar($titulo) ?> | Panel de reservas</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         <link rel="stylesheet" href="../../reservas/css/reservas.css">
-        <link rel="stylesheet" href="../../reservas/css/panel.css">
+        <link rel="stylesheet" href="../../reservas/css/panel.css?v=<?= filemtime(__DIR__ . '/../../reservas/css/panel.css') ?>">
     </head>
     <body class="rsv-admin-page">
-    <header class="rsv-header">
-        <span class="rsv-marca">Panel de reservas</span>
-        <a class="rsv-volver" href="../index.php">&lsaquo; Panel principal</a>
-    </header>
-
-    <nav class="pnl-menu">
-        <?php foreach ($menu as $archivo => $texto): ?>
-            <a href="<?= $archivo ?>" class="<?= $activo === $archivo ? 'pnl-activo' : '' ?>">
-                <?= $texto ?>
+    <div class="rsv-admin-shell">
+        <aside class="rsv-admin-sidebar">
+            <a class="dashboard-brand" href="../index.php" aria-label="Cheo Parrilla, panel administrativo">
+                <span class="dashboard-brand-mark"><img src="../../img/logoc.png" alt="" aria-hidden="true"></span>
+                <span><strong>Cheo</strong><small>ADMINISTRACIÓN</small></span>
             </a>
-        <?php endforeach; ?>
-    </nav>
 
-    <main class="pnl-main">
-        <h1><?= limpiar($titulo) ?></h1>
+            <p class="dashboard-nav-label">MENÚ PRINCIPAL</p>
+            <nav class="dashboard-nav" aria-label="Administración">
+                <a class="dashboard-nav-link" href="../index.php">
+                    <i class="fa-solid fa-chart-pie" aria-hidden="true"></i><span>Resumen</span>
+                </a>
+                <a class="dashboard-nav-link" href="../menu/index.php">
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i><span>Platos</span>
+                </a>
+                <a class="dashboard-nav-link" href="../menu/crear.php">
+                    <i class="fa-solid fa-circle-plus" aria-hidden="true"></i><span>Crear plato</span>
+                </a>
+                <a class="dashboard-nav-link is-active" href="index.php" aria-current="page">
+                    <i class="fa-regular fa-calendar-check" aria-hidden="true"></i><span>Reservas</span>
+                </a>
+            </nav>
+
+            <a class="dashboard-exit" href="../../index.php">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span>Volver al sitio</span>
+            </a>
+        </aside>
+
+        <div class="rsv-admin-content">
+            <nav class="pnl-menu">
+                <?php foreach ($menu as $archivo => $texto): ?>
+                    <a href="<?= $archivo ?>" class="<?= $activo === $archivo ? 'pnl-activo' : '' ?>">
+                        <?= $texto ?>
+                    </a>
+                <?php endforeach; ?>
+            </nav>
+
+            <main class="pnl-main">
+                <h1><?= limpiar($titulo) ?></h1>
     <?php
 }
 
 function panel_pie(): void
 {
-    echo '</main></body></html>';
+    echo '</main></div></div></body></html>';
 }
 
 /** Muestra el mensaje verde o rojo que quedó guardado tras un cambio. */
