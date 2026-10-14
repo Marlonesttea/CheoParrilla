@@ -9,9 +9,13 @@
             <div>
                 <h4>Enlaces</h4>
                 <a href="index.php" class="link-fueguito">Inicio</a>
-                <a href="menu.php" class="link-fueguito">Menú</a>
                 <a href="index.php#galeria" class="link-fueguito">Galeria</a>
+                <a href="nosotros.php" class="link-fueguito">Nosotros</a>
+                <a href="menu.php" class="link-fueguito">Menú</a>
+                <a href="pedir.php" class="link-fueguito">Pedir</a>
+                <a href="reservas.php" class="link-fueguito">Reservas</a>
                 <a href="contacto.php" class="link-fueguito">Contacto</a>
+
             </div>
 
             <div>
