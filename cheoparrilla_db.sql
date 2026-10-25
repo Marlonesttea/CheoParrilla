@@ -41,7 +41,7 @@ CREATE TABLE `categorias` (
 INSERT INTO `categorias` (`id`, `nombre`, `slug`, `orden`) VALUES
 (1, 'Asados y Carnes', 'asados', 1),
 (2, 'Hamburguesas Artesanales', 'hamburguesas', 2),
-(3, 'Combo de Hamburguesas', 'combo-hamburguesas', 3),
+(3, 'Combos', 'combos', 3),
 (4, 'Salchipapas', 'salchipapas', 4),
 (5, 'Perros y Perras Artesanales', 'perros', 5),
 (6, 'Bebidas', 'bebidas', 7),

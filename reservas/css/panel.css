@@ -232,6 +232,7 @@ body.rsv-admin-page {
         display: block;
     }
     .rsv-admin-sidebar {
+        position: relative;
         min-height: 0;
         padding: 14px 16px 10px;
         border-right: 0;
@@ -240,9 +241,21 @@ body.rsv-admin-page {
     .rsv-admin-sidebar .dashboard-brand {
         padding: 0 2px 13px;
     }
-    .rsv-admin-sidebar .dashboard-nav-label,
-    .rsv-admin-sidebar .dashboard-exit {
+    .rsv-admin-sidebar .dashboard-nav-label {
         display: none;
+    }
+    .rsv-admin-sidebar .dashboard-exit {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        min-height: 36px;
+        margin: 0;
+        padding: 0 10px;
+        border: 1px solid var(--rsv-borde);
+        border-radius: 6px;
+        background: #fff;
+        font-size: 12px;
+        z-index: 1;
     }
     .rsv-admin-sidebar .dashboard-nav {
         display: flex;

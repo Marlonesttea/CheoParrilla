@@ -57,13 +57,13 @@ include 'includes/templates/loader.php';
             </div>
 
             <div class="card" style="margin-bottom: 25px;">
-                <img src="img/combos-menu.png" alt="Combo_Hamburguesas">
+                <img src="img/combos-menu.png" alt="Combos">
                 <div class="card-body">
-                    <h3 class="carrusel-name">Combo de Hamburguesas</h3>
+                    <h3 class="carrusel-name">Combos</h3>
                     <p>Explora o pide esta categoría.</p>
                     <div class="acciones-tarjeta">
-                        <a class="enlace-tarjeta" href="menu.php#combo-hamburguesas">Ver menú</a>
-                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#combohambPedir">Pedir</a>
+                        <a class="enlace-tarjeta" href="menu.php#combos">Ver menú</a>
+                        <a class="enlace-tarjeta enlace-tarjeta--pedido" href="pedir.php#combosPedir">Pedir</a>
                     </div>
                 </div>
             </div>

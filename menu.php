@@ -24,7 +24,7 @@ include 'includes/templates/loader.php';
 	<nav class="carta-categorias" aria-label="Categorías de la carta">
 		<a href="#asados">Asados y Carnes</a>
 		<a href="#hamburguesas">Hamburguesas Artesanales</a>
-		<a href="#combo-hamburguesas">Combo de Hamburguesas</a>
+		<a href="#combos">Combos</a>
 		<a href="#salchipapas">Salchipapas</a>
 		<a href="#perros">Perros y Perras Artesanales</a>
 		<a href="#otros">Otros</a>

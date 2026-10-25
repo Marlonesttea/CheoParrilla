@@ -528,9 +528,28 @@ body.admin-dashboard-page .footer {
         height: 36px;
     }
 
-    .dashboard-nav-label,
-    .dashboard-exit {
+    .dashboard-nav-label {
         display: none;
+    }
+
+    .dashboard-exit {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+        display: flex;
+        min-height: 36px;
+        margin: 0;
+        padding: 0 10px;
+        border: 1px solid #2b2e31;
+        border-radius: 6px;
+        background: #111315;
+        color: #f4f0ed;
+        font-size: 12px;
+        z-index: 1;
+    }
+
+    .dashboard-exit i {
+        width: auto;
     }
 
     .dashboard-nav {
